@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acaa9e67-9858-49c2-b4e5-1a0b64fca3e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/All Axis Backgrounds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/All Axis Backgrounds/AllAxis_Outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/All Axis Backgrounds/AllAxis_Outline.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Handles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Handles/Handle_Plain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Handles/Handle_Plain.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Asset Packs/JoystickTrimmed.unitypackage.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/PlayerControlFPS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/PlayerControlFPS.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ControllerScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ControllerScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +104,7 @@
       <updated>1724669297421</updated>
       <workItem from="1724669300028" duration="3608000" />
       <workItem from="1724962796445" duration="2115000" />
-      <workItem from="1725871252485" duration="2855000" />
+      <workItem from="1725871252485" duration="5485000" />
     </task>
     <servers />
   </component>
