@@ -13,6 +13,11 @@ public class PlayerControlFPS : MonoBehaviour
     [SerializeField]
     private float playerSpeed = 2.0f;
 
+    public bool onScreenJoystick = true;
+
+
+    
+    
     private void Awake()
     {
         //instantiate our actions class so we can access the input system
@@ -36,21 +41,12 @@ public class PlayerControlFPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
+         Vector3 moveController = new Vector3(moveVector.x, 0, moveVector.y);    
         
-
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("F");
-        }
         
-        Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
-        Vector3 moveController = new Vector3(moveVector.x, 0, moveVector.y);
         controller.Move((moveController * (Time.deltaTime * playerSpeed)));
-        if (moveVector != Vector2.zero)
-        {
-            Debug.Log("Move");
-          //  gameObject.transform.forward = moveVector;
-        }
+       
         
     }
     
