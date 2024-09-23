@@ -61,6 +61,7 @@ public class PlayerControlFPS : MonoBehaviour
     {
         Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
         _moveDirection = new Vector3(moveVector.x, 0, moveVector.y);
+        _moveDirection = _myTransform.TransformDirection(_moveDirection);
         _myController.Move((_moveDirection * (playerSpeed * Time.deltaTime)));
     }
 
