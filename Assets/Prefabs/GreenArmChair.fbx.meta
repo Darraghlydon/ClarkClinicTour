@@ -3,7 +3,17 @@ guid: fc325906a21b6404f9e880dee148a36f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenChair
+    second: {fileID: 2100000, guid: e3393dff024235749b62051a6acc326b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoddenChairLeg
+    second: {fileID: 2100000, guid: e6c58542fdb689647941bb35efdca508, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,17 @@ guid: d9b95d37cf8315f45b6657e6d9991f19
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlueChair
+    second: {fileID: 2100000, guid: d2ba0a86a6bd9dd408091848f657ac72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoddenChairLeg
+    second: {fileID: 2100000, guid: e6c58542fdb689647941bb35efdca508, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
