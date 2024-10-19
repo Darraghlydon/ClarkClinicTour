@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acaa9e67-9858-49c2-b4e5-1a0b64fca3e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/PlayerTransformController.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/PlayerTransformController.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/HeartMonitorWarning.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/HeartMonitorWarning.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/HeartRateMonitorAlarm.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/HeartRateMonitorAlarm.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MonitorTexture.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MonitorTexture.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckifPlayerisLooking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckifPlayerisLooking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeyboardAndMouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KeyboardAndMouseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DarraghExperimenting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DarraghExperimenting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawECGScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawECGScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player/PlayerControlFPS.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -86,10 +94,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26608">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26608" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -109,7 +117,7 @@
       <workItem from="1724962796445" duration="2115000" />
       <workItem from="1725871252485" duration="5485000" />
       <workItem from="1728287853461" duration="1219000" />
-      <workItem from="1729362665586" duration="2454000" />
+      <workItem from="1729362665586" duration="7381000" />
     </task>
     <servers />
   </component>

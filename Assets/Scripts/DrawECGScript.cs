@@ -9,12 +9,20 @@ public class DrawECGScript : MonoBehaviour
     public int height = 100; // Height of the texture
     public float speed = 1f; // Speed at which the wave moves
 
+    public float pWaveMultiplier;
+    public float qWaveMultiplier;
+    public float rWaveMultiplier;
+    public float sWaveMultiplier;
+    public float tWaveMultiplier;
+    
+    
     public RawImage ecgDisplay; // Reference to the RawImage component
 
     private Texture2D texture;
     private float time;
     private int currentX;
 
+    public Color textureColor = Color.green;
     void Start()
     {
         // Initialize the texture
@@ -63,7 +71,7 @@ public class DrawECGScript : MonoBehaviour
         // Draw the ECG value at the current position
         if (y >= 0 && y < height)
         {
-            texture.SetPixel(currentX, y, Color.green); // Set the ECG pixel
+            texture.SetPixel(currentX, y, textureColor); // Set the ECG pixel
         }
 
         // Clear the previous column before moving on to the next
@@ -85,15 +93,15 @@ public class DrawECGScript : MonoBehaviour
     float SimulateECG(float t)
     {
         // P Wave: small upward wave
-        float pWave = 0.1f * Mathf.Sin(2 * Mathf.PI * (t - 0.2f) * 10) * Mathf.Exp(-((t - 0.2f) * 30) * ((t - 0.2f) * 30));
+        float pWave = pWaveMultiplier * Mathf.Sin(2 * Mathf.PI * (t - 0.2f) * 10) * Mathf.Exp(-((t - 0.2f) * 30) * ((t - 0.2f) * 30));
 
         // QRS Complex: sharp peak and trough
-        float qWave = -0.15f * Mathf.Exp(-((t - 0.35f) * 50) * ((t - 0.35f) * 50));
-        float rWave = 0.8f * Mathf.Exp(-((t - 0.4f) * 100) * ((t - 0.4f) * 100));
-        float sWave = -0.2f * Mathf.Exp(-((t - 0.45f) * 50) * ((t - 0.45f) * 50));
+        float qWave = qWaveMultiplier * Mathf.Exp(-((t - 0.35f) * 50) * ((t - 0.35f) * 50));
+        float rWave = rWaveMultiplier * Mathf.Exp(-((t - 0.4f) * 100) * ((t - 0.4f) * 100));
+        float sWave = sWaveMultiplier * Mathf.Exp(-((t - 0.45f) * 50) * ((t - 0.45f) * 50));
 
         // T Wave: smaller, longer upward wave
-        float tWave = 0.3f * Mathf.Sin(2 * Mathf.PI * (t - 0.6f) * 5) * Mathf.Exp(-((t - 0.6f) * 20) * ((t - 0.6f) * 20));
+        float tWave = tWaveMultiplier * Mathf.Sin(2 * Mathf.PI * (t - 0.6f) * 5) * Mathf.Exp(-((t - 0.6f) * 20) * ((t - 0.6f) * 20));
 
         // Combined ECG signal
         return pWave + qWave + rWave + sWave + tWave;

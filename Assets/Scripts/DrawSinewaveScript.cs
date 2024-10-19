@@ -48,7 +48,7 @@ public class DrawSinewaveScript : MonoBehaviour
         {
             float yValue = Mathf.Sin((x + time * 100f) * frequency * Mathf.PI / 180f) * amplitude;
             int y = Mathf.FloorToInt((yValue + 1) * 0.5f * height);
-
+            
             if (y >= 0 && y < height)
             {
                 pixels[x + y * width] = Color.green;
