@@ -18,6 +18,11 @@ public class HRValueScript : MonoBehaviour
     private float moveToTargetTiming = 2f;
 
     private float targetChangeInterval = 120f;
+    
+    public AudioSource alarmAudioSource;
+    public AudioClip alarmClip;
+
+    public AudioClip warningClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,13 +46,23 @@ public class HRValueScript : MonoBehaviour
         _myText.text = currentValue.ToString();
         if (currentValue>  alarmThreshold && currentValue < warningThreshold)
         {
-            //FAO SM: Add audio here
-            print("Warning Sound");
+           alarmAudioSource.clip = warningClip;
+           if(!alarmAudioSource.isPlaying)
+               alarmAudioSource.Play();
+        
         }
         else if (currentValue< alarmThreshold)
         {
-            //FAO SM: Add audio here
-            print("Alarm Sound");
+            alarmAudioSource.clip = alarmClip;
+            if(!alarmAudioSource.isPlaying)
+                alarmAudioSource.Play();
+        
         }
+        else
+        {
+            if(alarmAudioSource.isPlaying)
+                alarmAudioSource.Stop();
+        }
+        
     }
 }
