@@ -13,7 +13,7 @@ public class HRValueScript : MonoBehaviour
     public int currentValue;
     public int warningThreshold;
     public int alarmThreshold;
-
+    public bool audioEnabled;
     private float lerpValue = 0f;
     private float moveToTargetTiming = 2f;
 
@@ -44,25 +44,28 @@ public class HRValueScript : MonoBehaviour
         lerpValue = Mathf.Abs(1f/(currentValue-targetValue));
         currentValue = (int)Mathf.Lerp(currentValue, targetValue, lerpValue );
         _myText.text = currentValue.ToString();
-        if (currentValue>  alarmThreshold && currentValue < warningThreshold)
+        if (audioEnabled)
         {
-           alarmAudioSource.clip = warningClip;
-           if(!alarmAudioSource.isPlaying)
-               alarmAudioSource.Play();
-        
+            if (currentValue > alarmThreshold && currentValue < warningThreshold)
+            {
+                alarmAudioSource.clip = warningClip;
+                if (!alarmAudioSource.isPlaying)
+                    alarmAudioSource.Play();
+
+            }
+            else if (currentValue < alarmThreshold)
+            {
+                alarmAudioSource.clip = alarmClip;
+                if (!alarmAudioSource.isPlaying)
+                    alarmAudioSource.Play();
+
+            }
+            else
+            {
+                if (alarmAudioSource.isPlaying)
+                    alarmAudioSource.Stop();
+            }
         }
-        else if (currentValue< alarmThreshold)
-        {
-            alarmAudioSource.clip = alarmClip;
-            if(!alarmAudioSource.isPlaying)
-                alarmAudioSource.Play();
-        
-        }
-        else
-        {
-            if(alarmAudioSource.isPlaying)
-                alarmAudioSource.Stop();
-        }
-        
+
     }
 }

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acaa9e67-9858-49c2-b4e5-1a0b64fca3e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/InfoPoint.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/InfoPoint.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GlowPulse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GlowPulse.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene/NavMesh-TextureAtlas.WardModel.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene/NavMesh-TextureAtlas.WardModel.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +114,7 @@
       <workItem from="1729362665586" duration="7381000" />
       <workItem from="1730729641193" duration="881000" />
       <workItem from="1732217147229" duration="593000" />
-      <workItem from="1734610124840" duration="984000" />
+      <workItem from="1734610124840" duration="2351000" />
     </task>
     <servers />
   </component>
