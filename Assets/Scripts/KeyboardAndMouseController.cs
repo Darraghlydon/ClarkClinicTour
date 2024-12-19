@@ -22,7 +22,9 @@ public class KeyboardAndMouseController : MonoBehaviour
     private float _xRotation;
     private float _yRotation;
     private Vector3 _moveDirection;
+    private bool pauseMovement;
     
+  
     [SerializeField] 
     private float lookSensitivity;
         
@@ -78,10 +80,20 @@ public class KeyboardAndMouseController : MonoBehaviour
         cameraTransform.localRotation = Quaternion.Euler(_xRotation,0,0);
         myTransform.rotation = Quaternion.Euler(0,_yRotation,0);
     }
-    
+
+    public void PauseMovementForAudio(float _pauseTime)
+    {
+        pauseMovement = true;
+        Invoke("UnPauseMovement", _pauseTime);
+    }
+    void UnPauseMovement()
+    {
+        pauseMovement = false;
+    }
     void HandleMovement(){
         // Get keyboard input values
-
+        if(pauseMovement)
+            return;
         Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
         _moveDirection = new Vector3(moveVector.x, 0, moveVector.y);
     
@@ -93,5 +105,7 @@ public class KeyboardAndMouseController : MonoBehaviour
         
          
     }
+    
+    
 
 }
