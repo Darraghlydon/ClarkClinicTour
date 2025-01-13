@@ -1,9 +1,69 @@
 fileFormatVersion: 2
-guid: cb51d6629ec2321449d205f657b4cb7c
+guid: a167353869e992343bd1d52afb73a14b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Blue
+    second: {fileID: 2100000, guid: c9e1c7ca4eac5ec428294d8af291a5f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Colour
+    second: {fileID: 2100000, guid: 12cb8a7a9272dbf4091e376ac7f561cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Metal
+    second: {fileID: 2100000, guid: 1ac219960dbaa3d4d97d8884669f13fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Push Plaque Black
+    second: {fileID: 2100000, guid: 0540cbafda2dd5e44bc10dd5e35c6b6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Warning Sign_
+    second: {fileID: 2100000, guid: aa64fa7a122433847adf38ec369199bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor Plan Image
+    second: {fileID: 2100000, guid: 11e7ebdbbbc76b44c958476e3cc830bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 4ef5ab3b17a4f3342861f49a6d532104, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutsidePlayerView Material
+    second: {fileID: 2100000, guid: 213fbca8fcb143c4ca585f8c3f2d45bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlayerView Material
+    second: {fileID: 2100000, guid: 4272ea99d82590142b08780c10110d25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign Black
+    second: {fileID: 2100000, guid: c4b2542f2d41db64b9dd943897d51c8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign Metal
+    second: {fileID: 2100000, guid: e7903cf3aa78e874292fc029341ed212, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall Base Colour
+    second: {fileID: 2100000, guid: 8985a9c750721fe4d87b7e18c81f5a36, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -14,7 +74,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    removeConstantScaleCurves: 1
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -61,10 +121,10 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
-    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinLightmapResolution: 20
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
@@ -101,7 +161,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
+  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
