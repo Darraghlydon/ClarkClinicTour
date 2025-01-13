@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: 5d21b3f8fb8dfa34ab33486990f13c29
+guid: 52365e8f4262267408459e98ad345bd9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grey
-    second: {fileID: 2100000, guid: 0cc525e5decc1d2488198c45f2056d82, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IncubatorMaterial
-    second: {fileID: 2100000, guid: 030d6b90e4ccf5c42b98a26efaf2c46c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Perspex
-    second: {fileID: 2100000, guid: bcce7ecc0591cb8409a9faba51d6a1ee, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White
-    second: {fileID: 2100000, guid: 13a18f07d4d331741bfc167b76418d11, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
