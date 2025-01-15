@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44601065, g: 0.49576896, b: 0.5744543, a: 1}
+  m_IndirectSpecularColor: {r: 0.45064545, g: 0.50060976, b: 0.574967, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1714,7 +1714,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fc325906a21b6404f9e880dee148a36f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.82
+      value: 7.846
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc325906a21b6404f9e880dee148a36f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1722,7 +1722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc325906a21b6404f9e880dee148a36f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.47
+      value: -11.387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc325906a21b6404f9e880dee148a36f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13202,7 +13202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &948996574
 Transform:
   m_ObjectHideFlags: 0
@@ -23864,15 +23864,15 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -23904,7 +23904,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -23924,7 +23924,7 @@ Transform:
   m_GameObject: {fileID: 1645650798}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4419773, y: -0.6116329, z: 0.0056757703, w: 0.6561472}
-  m_LocalPosition: {x: 0, y: 0, z: 0.020000458}
+  m_LocalPosition: {x: 32.1, y: -35.7, z: -33.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24363,11 +24363,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9158885832943827747, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -9158885832943827747, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8781122481700299570, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24519,11 +24519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4662645733291072114, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4662645733291072114, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4662645733291072114, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_ScaleInLightmap
@@ -24653,6 +24653,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 439634878003701757, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 542418961178212098, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.926
@@ -24719,7 +24723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1534242359961119516, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1553671817286356549, guid: 09610044d45dfd547b6711ac4a6b9bd9, type: 3}
       propertyPath: m_StaticEditorFlags
