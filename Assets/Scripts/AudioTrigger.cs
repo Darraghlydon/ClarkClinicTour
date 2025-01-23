@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AudioTrigger : MonoBehaviour
 {
+    [SerializeField] float _resetTriggerTimeSeconds =30f;
     private AudioSource audioSource;
     private Renderer rend;
     public bool waitingForCooldown = false;
@@ -48,7 +49,7 @@ public class AudioTrigger : MonoBehaviour
             rend.enabled = false;
             waitingForCooldown = true;
             playerController.PauseMovementForAudio(audioSource.clip.length);
-            Invoke("ResetTrigger", 30f);
+            Invoke("ResetTrigger", _resetTriggerTimeSeconds);
         }
     }
 }
