@@ -5,46 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acaa9e67-9858-49c2-b4e5-1a0b64fca3e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Bed Spaces.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Bed Spaces.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Drug Room.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Drug Room.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Encompass.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Encompass.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/FireExit.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/FireExit.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Linen Cupboard.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Linen Cupboard.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Monitor.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Monitor.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Nurses station.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Nurses station.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Parent Toilet.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Parent Toilet.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Playroom.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Playroom.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Side room.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Side room.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Sinks.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Sinks.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Sluice.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Sluice.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Ward Kitchen.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Ward Kitchen.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Welcome to CC.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/Welcome to CC.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/InfoPoint.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/InfoPoint.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Cylinder.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Cylinder.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/GlowPulse.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/GlowPulse.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/GlowingMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/GlowingMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene/NavMesh-TextureAtlas.WardModel.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene/NavMesh-TextureAtlas.WardModel.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeyboardAndMouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KeyboardAndMouseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +19,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player/PlayerControlFPS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -77,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Navmesh-Updates",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -85,6 +49,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\3053263\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\3053263\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\3053263\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -97,7 +68,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.51f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -105,7 +76,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.51f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -149,6 +120,7 @@
       <workItem from="1730729641193" duration="881000" />
       <workItem from="1732217147229" duration="593000" />
       <workItem from="1734610124840" duration="5868000" />
+      <workItem from="1740758081066" duration="604000" />
     </task>
     <servers />
   </component>

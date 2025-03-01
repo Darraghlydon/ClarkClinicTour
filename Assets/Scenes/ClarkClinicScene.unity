@@ -1057,7 +1057,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1533,7 +1533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &115975150
@@ -2414,7 +2414,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2922,7 +2922,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3355,7 +3355,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6298,7 +6298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &417214080
@@ -8388,7 +8388,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 18e646e3634eda24587199d180573645, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 49b45f9bda699f34e8d16adaf09a1628, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8486,7 +8486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &565234424
@@ -10662,7 +10662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &766557831
@@ -11480,7 +11480,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11752,7 +11752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &859403185
@@ -11937,7 +11937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &872725905
@@ -12429,7 +12429,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -13504,7 +13504,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -14950,7 +14950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362672597570428116, guid: 953546b02bcec3e48bf0e22504398e6e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.68513775
+      value: 0.7366542
       objectReference: {fileID: 0}
     - target: {fileID: 6362672597570428116, guid: 953546b02bcec3e48bf0e22504398e6e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14958,7 +14958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362672597570428116, guid: 953546b02bcec3e48bf0e22504398e6e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.72841364
+      value: -0.6762697
       objectReference: {fileID: 0}
     - target: {fileID: 6362672597570428116, guid: 953546b02bcec3e48bf0e22504398e6e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -14970,7 +14970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362672597570428116, guid: 953546b02bcec3e48bf0e22504398e6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -93.507
+      value: -85.106
       objectReference: {fileID: 0}
     - target: {fileID: 6362672597570428116, guid: 953546b02bcec3e48bf0e22504398e6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -15198,7 +15198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1067649979
@@ -15404,7 +15404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1078726222
@@ -15935,7 +15935,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d1e01ba879b5242a75a26ef1ac6152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18466,7 +18466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1330894072
@@ -19013,7 +19013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1355864935
@@ -22912,7 +22912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1598336918
@@ -24195,7 +24195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1646052722
@@ -28621,7 +28621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1683465999
@@ -28761,7 +28761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &1712712935
@@ -31942,7 +31942,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 18e646e3634eda24587199d180573645, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9569648f283aafa42a6a7540d91d4447, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -32040,7 +32040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &2003631465
@@ -32180,7 +32180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 60
+  _resetTriggerTimeSeconds: 80
   waitingForCooldown: 0
   playerController: {fileID: 1939267201330982685}
 --- !u!114 &2013534692
@@ -34217,7 +34217,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 54dd532db437d5645ab5953f6097e206, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AudioTrigger : MonoBehaviour
 {
-    [SerializeField] float _resetTriggerTimeSeconds =30f;
+    [SerializeField] float _resetTriggerTimeSeconds =80f;
     private AudioSource audioSource;
     private Renderer rend;
     public bool waitingForCooldown = false;
