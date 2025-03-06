@@ -204,7 +204,7 @@ MonoBehaviour:
   maxUpAngle: 40
   maxDownAngle: 40
   mainCamera: {fileID: 7623240563001660357}
-  lookSensitivity: 0.25
+  lookSensitivity: 0.5
 --- !u!195 &2239995835750328054
 NavMeshAgent:
   m_ObjectHideFlags: 0
