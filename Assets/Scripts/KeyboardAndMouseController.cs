@@ -23,8 +23,9 @@ public class KeyboardAndMouseController : MonoBehaviour
     private float _yRotation;
     private Vector3 _moveDirection;
     private bool pauseMovement;
-    
-  
+
+
+
     [SerializeField] 
     private float lookSensitivity;
         
@@ -42,17 +43,27 @@ public class KeyboardAndMouseController : MonoBehaviour
     void OnEnable()
     {
         _playerActions.Player.Enable();
+        //if (!IsWebGLMobile())
+        //{
+            //Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
+        //}
     }
     void OnDisable()
     {
         _playerActions.Player.Disable();
+        //if (!IsWebGLMobile())
+        //{
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+        //}
     }
 
     
     public void Update()
     {
         HandleMovement();
-        HandleLook();
+        HandleLook();        
     }
     
     void OnInteract(InputAction.CallbackContext context)
@@ -78,7 +89,7 @@ public class KeyboardAndMouseController : MonoBehaviour
        
         //Add the rotation to the camera for up and down, and to the player to spin around
         cameraTransform.localRotation = Quaternion.Euler(_xRotation,0,0);
-        myTransform.rotation = Quaternion.Euler(0,_yRotation,0);
+        myTransform.rotation = Quaternion.Euler(0,_yRotation+180,0);
     }
 
     public void PauseMovementForAudio(float _pauseTime)
@@ -97,15 +108,17 @@ public class KeyboardAndMouseController : MonoBehaviour
         Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
         _moveDirection = new Vector3(moveVector.x, 0, moveVector.y);
     
-
         // Apply keyboard movement
         myTransform.Translate(Vector3.forward * (_moveDirection.z * Time.deltaTime * keyboardForwardSpeed));
         myTransform.Translate(Vector3.right * (_moveDirection.x * Time.deltaTime * keyboardHorizontalSpeed));
 
-        
-         
+
     }
-    
-    
+
+    bool IsWebGLMobile()
+    {
+        return SystemInfo.deviceType == DeviceType.Handheld;
+    }
+
 
 }
