@@ -43,20 +43,22 @@ public class KeyboardAndMouseController : MonoBehaviour
     void OnEnable()
     {
         _playerActions.Player.Enable();
-        //if (!IsWebGLMobile())
-        //{
-            //Cursor.lockState = CursorLockMode.Locked;
-            //Cursor.visible = false;
-        //}
+        // Lock and disable cursor in non-mobile mode
+        if (!IsWebGLMobile())
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
     void OnDisable()
     {
         _playerActions.Player.Disable();
-        //if (!IsWebGLMobile())
-        //{
-            //Cursor.lockState = CursorLockMode.None;
-            //Cursor.visible = true;
-        //}
+        // Unlock and enable cursor in non-mobile mode
+        if (!IsWebGLMobile())
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     
