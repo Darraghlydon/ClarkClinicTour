@@ -19933,7 +19933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1422166144 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
   m_PrefabInstance: {fileID: 1431306865}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1431306865
@@ -19944,55 +19944,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 351343936}
     m_Modifications:
-    - target: {fileID: 2344188606324470576, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: 919132149155446097, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_Name
-      value: bathroom_item_016
+      value: SinkMinusToothpaste
       objectReference: {fileID: 0}
-    - target: {fileID: 2344188606324470576, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.526
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.322
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -17.668
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7140308
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.70011437
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -88.872
       objectReference: {fileID: 0}
-    - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -20000,7 +19992,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f39263a4c2e95124cba138039de7048b, type: 3}
 --- !u!1001 &1438067199
 PrefabInstance:
   m_ObjectHideFlags: 0
