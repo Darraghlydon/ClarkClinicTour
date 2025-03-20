@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,7 +41,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     {
         _playerActions.Player.Enable();
         // Lock and disable cursor in non-mobile mode
-        if (!IsWebGLMobile())
+        if (!WebGLPlatformChecker.IsWebGLMobile())
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -54,7 +51,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     {
         _playerActions.Player.Disable();
         // Unlock and enable cursor in non-mobile mode
-        if (!IsWebGLMobile())
+        if (!WebGLPlatformChecker.IsWebGLMobile())
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -117,10 +114,10 @@ public class KeyboardAndMouseController : MonoBehaviour
 
     }
 
-    bool IsWebGLMobile()
-    {
-        return SystemInfo.deviceType == DeviceType.Handheld;
-    }
+    //bool IsWebGLMobile()
+    //{
+    //    return SystemInfo.deviceType == DeviceType.Handheld;
+    //}
 
 
 }
