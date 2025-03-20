@@ -114,10 +114,4 @@ public class KeyboardAndMouseController : MonoBehaviour
 
     }
 
-    //bool IsWebGLMobile()
-    //{
-    //    return SystemInfo.deviceType == DeviceType.Handheld;
-    //}
-
-
 }

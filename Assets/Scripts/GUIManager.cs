@@ -48,18 +48,12 @@ public class GUIManager : MonoBehaviour
     {
         _playerActions.Player.Enable();
         _playerActions.Player.Menu.performed += DisplayPauseScreen;
-        // Subscribe to the OnKeyPress event
-        //EventManager.OnKeyPress += HandleKeyPress;
-        //EventManager.OnButtonPress += HandleButtonPress;
     }
 
     void OnDisable()
     {
         _playerActions.Player.Disable();
         _playerActions.Player.Menu.performed -= DisplayPauseScreen;
-        // Unsubscribe to the OnKeyPress event
-        //EventManager.OnKeyPress -= HandleKeyPress;
-        //EventManager.OnButtonPress -= HandleButtonPress;
     }
 
     private void EnableMouse()
@@ -106,9 +100,9 @@ public class GUIManager : MonoBehaviour
 
 
             default:
+                Unpause();
                 break;
         }
-
         _currentState = newState;
     }
 
@@ -183,6 +177,7 @@ public class GUIManager : MonoBehaviour
             SwitchState(_storedUIState);
             _storedUIState = UIState.Default;
         }
+
     }
 
     public void LoadMainMenu()
