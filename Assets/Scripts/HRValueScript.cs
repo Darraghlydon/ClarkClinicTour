@@ -12,10 +12,13 @@ public class HRValueScript : MonoBehaviour
     public int targetValue;
     public int currentValue;
     public int warningThreshold;
+    public int minimumValue = 70;
+    public int maximumValue = 140;
     public int alarmThreshold;
     public bool audioEnabled;
     private float lerpValue = 0f;
     private float moveToTargetTiming = 2f;
+    
 
     private float targetChangeInterval = 120f;
     
@@ -27,16 +30,17 @@ public class HRValueScript : MonoBehaviour
     void Start()
     {
         _myText = GetComponent<TMP_Text>();
+        
         InvokeRepeating("MoveToTargetValue",0,moveToTargetTiming);
         
-        InvokeRepeating("ChangeTarget",targetChangeInterval,targetChangeInterval);
+        InvokeRepeating("ChangeTarget",0,targetChangeInterval);
     }
 
    
     private void ChangeTarget()
     {
         lerpValue = 0;
-        targetValue = Random.Range(40, 130);
+        targetValue = Random.Range(minimumValue, maximumValue);
     }
     private void MoveToTargetValue()
     {
