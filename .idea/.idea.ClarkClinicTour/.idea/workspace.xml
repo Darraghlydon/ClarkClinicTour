@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acaa9e67-9858-49c2-b4e5-1a0b64fca3e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Children's Heartbest Trust Shirt-20250729T122440Z-1-001/Children_s Heartbest Trust Shirt/Female_with_mask_lambert9_MetallicSmoothness 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Children's Heartbest Trust Shirt-20250729T122440Z-1-001/Children_s Heartbest Trust Shirt/Female_with_mask_lambert9_MetallicSmoothness 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Children's Heartbest Trust Shirt-20250729T122440Z-1-001/Children_s Heartbest Trust Shirt/Female_with_mask_lambert9_Normal 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Children's Heartbest Trust Shirt-20250729T122440Z-1-001/Children_s Heartbest Trust Shirt/Female_with_mask_lambert9_Normal 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Materials/CHT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Materials/CHT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/CharacterAudio/CHT.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/VoiceOvers/CharacterAudio/CHT.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClarkClinicTour/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Models/Characters/Materials/CHTOutfit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Models/Characters/Materials/CHTOutfit.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClarkClinicScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HRValueScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +51,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -49,22 +61,18 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\3053263\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\3053263\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\3053263\\AppData\\Local\\Symbols\\src"
-    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\ClarkClinicTour.exe" />
+      <option name="EXE_PATH" value="D:/OneDrive - Queen's University Belfast/Clark Clinic/FunDayBuild\ClarkClinicTour.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -73,6 +81,9 @@
       <option name="WORKING_DIRECTORY" value="C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -81,6 +92,9 @@
       <option name="WORKING_DIRECTORY" value="C:\Users\3053263\Unity3D\CHTClarkClinic\ClarkClinicTour" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -88,9 +102,13 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -98,9 +116,13 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -122,6 +144,7 @@
       <workItem from="1734610124840" duration="5868000" />
       <workItem from="1740758081066" duration="604000" />
       <workItem from="1753711227617" duration="455000" />
+      <workItem from="1754487609550" duration="619000" />
     </task>
     <servers />
   </component>

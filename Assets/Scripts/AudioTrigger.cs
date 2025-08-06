@@ -7,9 +7,15 @@ public class AudioTrigger : MonoBehaviour
     private Renderer rend;
     public bool waitingForCooldown = false;
     public KeyboardAndMouseController playerController;
+    private bool attachedToCharacter = false;
     void Start()
     {
         rend = GetComponent<Renderer>();
+        if (rend == null)
+        {
+            attachedToCharacter = true;
+        }
+
         // Get the AudioSource component
         audioSource = GetComponent<AudioSource>();
       // playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<KeyboardAndMouseController>();
@@ -19,10 +25,10 @@ public class AudioTrigger : MonoBehaviour
     // Trigger detection
     private void OnTriggerEnter(Collider other) // For 3D Colliders
     {
-        print("Player is hre" + other.tag);
+      
         if (other.CompareTag("Player")&&!waitingForCooldown) // Ensure the player has the "Player" tag
         {
-            print("Player is playing");
+            
             PlayAudio();
         }
     }
@@ -46,7 +52,9 @@ public class AudioTrigger : MonoBehaviour
         if (audioSource && !audioSource.isPlaying)
         {
             audioSource.Play();
-            rend.enabled = false;
+            if(!attachedToCharacter)
+                rend.enabled = false;
+            
             waitingForCooldown = true;
             playerController.PauseMovementForAudio(audioSource.clip.length);
             Invoke("ResetTrigger", _resetTriggerTimeSeconds);
