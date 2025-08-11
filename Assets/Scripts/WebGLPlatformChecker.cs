@@ -7,6 +7,7 @@ public class WebGLPlatformChecker : MonoBehaviour
     [DllImport("__Internal")]
     private static extern int IsMobile();
     [SerializeField] private TMP_Text infoText;
+    [SerializeField] private GameObject onScreenSticks;
 
     public static bool IsWebGLMobile()
     {
@@ -24,12 +25,14 @@ public class WebGLPlatformChecker : MonoBehaviour
             Debug.Log("Running on WebGL - Mobile");
             infoText.text = "Mobile";
             infoText.enabled = true;
+            onScreenSticks.SetActive(true);
         }
         else
         {
             Debug.Log("Running on WebGL - Desktop");
             infoText.text = "Not Mobile";
             infoText.enabled = true;
+            onScreenSticks.SetActive(false);
         }
     }
 
