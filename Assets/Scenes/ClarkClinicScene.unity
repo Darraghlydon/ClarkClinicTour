@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &115975150
@@ -6479,7 +6479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &417214080
@@ -8987,7 +8987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &565234424
@@ -10508,7 +10508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 25
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &654998715
@@ -11959,7 +11959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &766557831
@@ -13050,7 +13050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &859403185
@@ -13235,7 +13235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &872725905
@@ -16921,7 +16921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1067649979
@@ -17127,7 +17127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1078726222
@@ -19284,7 +19284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 17
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1196302659
@@ -20681,7 +20681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1330894072
@@ -20911,7 +20911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 34
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1332882495
@@ -21460,7 +21460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1355864935
@@ -22321,7 +22321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.481
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22407,7 +22407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 16
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1411354563
@@ -27509,7 +27509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1598336918
@@ -28792,7 +28792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1646052722
@@ -33218,7 +33218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1683465999
@@ -33395,7 +33395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1712712935
@@ -34062,7 +34062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 17
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1731731489
@@ -34697,7 +34697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.481
+      value: 0.374
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34783,7 +34783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 19
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1789217539
@@ -37165,7 +37165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 56
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1989120805
@@ -37492,7 +37492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &2003631465
@@ -37632,7 +37632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &2013534692
