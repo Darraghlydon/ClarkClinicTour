@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &115975150
@@ -3483,6 +3483,14 @@ PrefabInstance:
     - target: {fileID: 5888367694955324355, guid: 6a9ddb2ae56481c49a59184bc357a40a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139753890640934725, guid: 6a9ddb2ae56481c49a59184bc357a40a, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139753890640934725, guid: 6a9ddb2ae56481c49a59184bc357a40a, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6499,7 +6507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &417214080
@@ -9010,7 +9018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &565234424
@@ -10099,6 +10107,7 @@ Transform:
   - {fileID: 1228807508}
   - {fileID: 1645650800}
   - {fileID: 319263567}
+  - {fileID: 766223028}
   m_Father: {fileID: 297199258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &622466719
@@ -10420,6 +10429,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 654998713}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 654998717}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &654998711 stripped
 Transform:
@@ -10540,7 +10552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 25
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &654998715
@@ -10564,6 +10576,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.21, y: 0, z: 0.51}
+--- !u!208 &654998717
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654998712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &659401842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11880,6 +11908,100 @@ Transform:
   - {fileID: 1411354560}
   m_Father: {fileID: 297199258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766223027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766223028}
+  - component: {fileID: 766223029}
+  m_Layer: 0
+  m_Name: Area Light (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766223028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766223027}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.08, y: 2.59, z: 0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 611130098}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!108 &766223029
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766223027}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 3
+  m_Shape: 0
+  m_Color: {r: 0.9009434, g: 0.9885704, b: 1, a: 1}
+  m_Intensity: 0.6
+  m_Range: 2
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 15.082659, y: 56.527954}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &766557823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
@@ -11999,7 +12121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &766557831
@@ -13097,7 +13219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &859403185
@@ -13284,7 +13406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &872725905
@@ -14944,6 +15066,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc325906a21b6404f9e880dee148a36f, type: 3}
   m_PrefabInstance: {fileID: 106023624}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &968963240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+  m_PrefabInstance: {fileID: 1826227893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &968963243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968963240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &976849172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16992,7 +17138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1067649979
@@ -17200,7 +17346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1078726222
@@ -19250,6 +19396,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1196302657}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196302661}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1196302655 stripped
 Transform:
@@ -19370,7 +19519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 17
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1196302659
@@ -19394,6 +19543,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.02, y: 0, z: 0.51}
+--- !u!208 &1196302661
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196302656}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1210320445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20780,7 +20945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1330894072
@@ -20892,6 +21057,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1332882493}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1332882497}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1332882491 stripped
 Transform:
@@ -21012,7 +21180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 34
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1332882495
@@ -21036,6 +21204,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.22, y: 0, z: 0.51}
+--- !u!208 &1332882497
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332882492}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1338957112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21565,7 +21749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1355864935
@@ -22427,7 +22611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.481
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22490,6 +22674,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1411354562}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411354566}
   m_SourcePrefab: {fileID: 100100000, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
 --- !u!4 &1411354560 stripped
 Transform:
@@ -22513,7 +22700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 16
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1411354563
@@ -22634,6 +22821,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!208 &1411354566
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411354561}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1412779182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27623,7 +27826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1598336918
@@ -28916,7 +29119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1646052722
@@ -33348,7 +33551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1683465999
@@ -33527,7 +33730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &1712712935
@@ -34077,6 +34280,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731731487}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731731491}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1731731485 stripped
 Transform:
@@ -34197,7 +34403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 17
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1731731489
@@ -34221,6 +34427,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.02, y: 0, z: 0.51}
+--- !u!208 &1731731491
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731731486}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &1741562051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c07f1e455ea98a3489d57360b88e7ee2, type: 3}
@@ -34836,7 +35058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.481
+      value: 0.374
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34899,6 +35121,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1789217538}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1789217542}
   m_SourcePrefab: {fileID: 100100000, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
 --- !u!4 &1789217536 stripped
 Transform:
@@ -34922,7 +35147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 19
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1789217539
@@ -35043,6 +35268,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!208 &1789217542
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789217537}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1792076531
 GameObject:
   m_ObjectHideFlags: 0
@@ -35277,7 +35518,7 @@ Transform:
   m_GameObject: {fileID: 1817820737}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 1.4419, y: 2.047, z: 2.844}
+  m_LocalPosition: {x: 1.4419, y: 2.047, z: 2.785}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35380,16 +35621,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 297199258}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.38
+      value: 36.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.18
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.52
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35420,9 +35673,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c938c95c64c9346af88263b8f75f6c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c938c95c64c9346af88263b8f75f6c, type: 2}
     - target: {fileID: 919132149155446097, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
       propertyPath: m_Name
       value: ClarkCeiling
@@ -35438,7 +35711,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 968963243}
   m_SourcePrefab: {fileID: 100100000, guid: 52365e8f4262267408459e98ad345bd9, type: 3}
 --- !u!1 &1836108920
 GameObject:
@@ -35854,7 +36130,7 @@ Transform:
   m_GameObject: {fileID: 1908715440}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 1.4419, y: 2.047, z: 1.743}
+  m_LocalPosition: {x: 1.52, y: 2.047, z: 1.682}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37205,6 +37481,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1989120803}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1989120807}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1989120801 stripped
 Transform:
@@ -37325,7 +37604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 56
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!65 &1989120805
@@ -37349,6 +37628,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.22, y: 0, z: -0.06}
+--- !u!208 &1989120807
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989120802}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1991733562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37654,7 +37949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &2003631465
@@ -37796,7 +38091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 90
   waitingForCooldown: 0
   playerController: {fileID: 896725090674080870}
 --- !u!114 &2013534692
