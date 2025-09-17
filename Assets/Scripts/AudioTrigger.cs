@@ -45,7 +45,8 @@ public class AudioTrigger : MonoBehaviour
     private void ResetTrigger()
     {
         waitingForCooldown = false;
-        rend.enabled = true;
+        if(!attachedToCharacter)
+            rend.enabled = true;
     }
     private void PlayAudio()
     {
