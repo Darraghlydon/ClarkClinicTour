@@ -58,7 +58,7 @@ public class GUIManager : MonoBehaviour
 
     private void EnableMouse()
     {
-        if (!WebGLPlatformChecker.IsWebGLMobile())
+        if (!PlatformManager.IsTouchScreen())
         {
             Cursor.lockState = CursorLockMode.None;
         }
@@ -66,7 +66,7 @@ public class GUIManager : MonoBehaviour
 
     private void DisableMouse()
     {
-        if (!WebGLPlatformChecker.IsWebGLMobile())
+        if (!PlatformManager.IsTouchScreen())
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
