@@ -20,7 +20,7 @@
                     "type": "Value",
                     "id": "5dbfc6a1-80f4-4835-a5d6-57e2bd3d7979",
                     "expectedControlType": "Vector2",
-                    "processors": "ScaleVector2(x=4,y=4)",
+                    "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -28,7 +28,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "76eee0c9-b1ef-46a7-b364-3893a014d81f",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -159,7 +159,7 @@
                     "id": "e3d4318e-aa4a-4c28-8e46-49dc396848a5",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=4,y=4)",
                     "groups": "",
                     "action": "Look",
                     "isComposite": false,
