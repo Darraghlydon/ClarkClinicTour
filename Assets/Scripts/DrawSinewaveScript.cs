@@ -15,6 +15,7 @@ public class DrawSinewaveScript : MonoBehaviour
 
     private Texture2D texture;
     private float time;
+    private Color[] pixels;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class DrawSinewaveScript : MonoBehaviour
 
         // Assign the texture to the RawImage component
         ecgDisplay.texture = texture;
+        pixels = new Color[width * height];
     }
 
     void Update()
@@ -35,7 +37,7 @@ public class DrawSinewaveScript : MonoBehaviour
 
     void DrawECG()
     {
-        Color[] pixels = new Color[width * height];
+
 
         // Clear the texture to black
         for (int i = 0; i < pixels.Length; i++)
