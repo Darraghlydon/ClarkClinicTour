@@ -41,7 +41,10 @@ public class AudioTrigger : MonoBehaviour
         }
     }
 
-
+    public bool IsAudioPlaying()
+    { 
+        return audioSource.isPlaying; 
+    }
     private void ResetTrigger()
     {
         waitingForCooldown = false;

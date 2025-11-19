@@ -4,7 +4,7 @@ using TMPro;
 public class PlatformUIController : MonoBehaviour
 {
     [SerializeField] private TMP_Text _infoText;
-    [SerializeField] private GameObject _mobileGUI;
+    [SerializeField] private GameObject[] _mobileGUIObjects;
 
     void Start()
     {
@@ -18,10 +18,13 @@ public class PlatformUIController : MonoBehaviour
         }
 
         // Show mobile GUI on touch-like devices,
-        if (_mobileGUI != null)
+        if (_mobileGUIObjects != null)
         {
             bool useTouchControls = PlatformManager.IsTouchScreen();
-            _mobileGUI.SetActive(useTouchControls);
+            foreach (var obj in _mobileGUIObjects)
+            {
+                obj.SetActive(useTouchControls);
+            }
         }
 
         Debug.Log($"[PlatformUIController] Running on: {platform}");

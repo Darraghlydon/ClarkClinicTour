@@ -7,19 +7,21 @@ public class CharacterRotationController : MonoBehaviour
     private Quaternion _originalRotation;
     private bool _shouldRotateToTarget = false;
     private Transform _target;
+    private AudioTrigger _audioTrigger;
 
     void Start()
     {
         _originalRotation = transform.rotation;
+        _audioTrigger = GetComponent<AudioTrigger>();
     }
 
     void Update()
     {
-        if (_shouldRotateToTarget && _target != null)
+        if (_shouldRotateToTarget && _target != null && _audioTrigger.IsAudioPlaying())
         {
             // Get direction to target but remove vertical component (Y)
             Vector3 direction = _target.position - transform.position;
-            direction.y = 0f;  // 🔹 prevents tilting
+            direction.y = 0f;  
 
             if (direction.sqrMagnitude > 0.001f)
             {
@@ -59,12 +61,12 @@ public class CharacterRotationController : MonoBehaviour
         _shouldRotateToTarget = true;
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform == _target)
-        {
-            _shouldRotateToTarget = false;
-            _target = null;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.transform == _target)
+    //    {
+    //        _shouldRotateToTarget = false;
+    //        _target = null;
+    //    }
+    //}
 }
