@@ -137,6 +137,15 @@ public class GUIManager : MonoBehaviour
         }
     }
 
+    public void DisplayPauseScreen()
+    {
+        if (CheckForOpenScreens() == false)
+        {
+            DeactivateScreens();
+            SwitchState(UIState.Pause);
+        }
+    }
+
     public void DisplayControlMethodScreen()
     {
         DeactivateScreens();
