@@ -40,6 +40,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     void OnEnable()
     {
         _playerActions.Player.Enable();
+        Events.AudioStart.Subscribe(PauseMovementForAudio);
+        Events.AudioStop.Subscribe(UnPauseMovement);
         // Lock and disable cursor in non-mobile mode
         //if (PlatformManager.IsTouchScreen())
         //{
@@ -50,6 +52,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     void OnDisable()
     {
         _playerActions.Player.Disable();
+        Events.AudioStart.Unsubscribe(PauseMovementForAudio);
+        Events.AudioStop.Unsubscribe(UnPauseMovement);
         // Unlock and enable cursor in non-mobile mode
         //if (Platform.IsMobile())
         //{
@@ -67,7 +71,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     
     void OnInteract(InputAction.CallbackContext context)
     {
-        Debug.Log("Interact!");
+        Events.AudioSkip.Publish();
     }
 
 
@@ -91,7 +95,7 @@ public class KeyboardAndMouseController : MonoBehaviour
         myTransform.rotation = Quaternion.Euler(0,_yRotation+180,0);
     }
 
-    public void PauseMovementForAudio(float _pauseTime)
+    public void PauseMovementForAudio()
     {
         pauseMovement = true;
     }
