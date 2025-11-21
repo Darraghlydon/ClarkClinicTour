@@ -71,7 +71,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     
     void OnInteract(InputAction.CallbackContext context)
     {
-        Events.AudioSkip.Publish();
+        Events.AudioStop.Publish();
     }
 
 

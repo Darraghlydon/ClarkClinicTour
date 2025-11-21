@@ -165,7 +165,7 @@ public class GUIManager : MonoBehaviour
             {
                 _isMobileSkipEnabled = false;
             }
-                _mobileOnScreenSticks.SetActive(false);
+            _mobileOnScreenSticks.SetActive(false);
         }
     }
 
@@ -186,6 +186,7 @@ public class GUIManager : MonoBehaviour
     {
         if (_useTouchControls)
         {
+            _isMobileSkipEnabled = true;
             _mobileSkipButton.SetActive(true);
         }
     }
@@ -194,6 +195,7 @@ public class GUIManager : MonoBehaviour
     {
         if (_useTouchControls)
         {
+            _isMobileSkipEnabled = false;
             _mobileSkipButton.SetActive(false);
         }
     }
@@ -202,7 +204,7 @@ public class GUIManager : MonoBehaviour
     {
         if (_useTouchControls)
         {
-            Events.AudioSkip.Publish();
+            Events.AudioStop.Publish();
         }
     }
 
