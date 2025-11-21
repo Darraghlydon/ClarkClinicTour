@@ -18,7 +18,9 @@ public class GUIManager : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseScreen;
     [SerializeField] private GameObject _startScreen;
-    [SerializeField] private GameObject _controlMethodSelectorScreen;
+    [SerializeField] private GameObject _controls;
+    [SerializeField] private GameObject _desktopControls;
+    [SerializeField] private GameObject _mobileControls;
     [SerializeField] private GameObject _creditsScreen;
     [SerializeField] private KeyboardAndMouseController _keyBoardAndMouseController;
     [SerializeField] private GameObject _defaultButtonReturn;
@@ -51,8 +53,18 @@ public class GUIManager : MonoBehaviour
         _currentState = UIState.Start;
         SwitchState(_currentState);
         _useTouchControls = PlatformManager.IsTouchScreen();
-        Debug.Log(_useTouchControls);
-        var platform = PlatformManager.Current;
+        if (_useTouchControls)
+        {
+            _mobileControls.SetActive(true);
+            _desktopControls.SetActive(false);
+        }
+        else
+        {
+            _mobileControls.SetActive(false);
+            _desktopControls.SetActive(true);
+        }
+
+            var platform = PlatformManager.Current;
 
         // Debug / info label
         if (_infoText != null)
@@ -110,7 +122,7 @@ public class GUIManager : MonoBehaviour
                 _storedUIState = _currentState;
                 EnableMouse();
                 Pause();
-                _controlMethodSelectorScreen.SetActive(true);
+                _controls.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(_defaultButtonControls);
                 break;
             case UIState.Credits:
@@ -240,7 +252,7 @@ public class GUIManager : MonoBehaviour
 
     private bool CheckForOpenScreens()
     {
-        if (_startScreen.activeSelf == true||_pauseScreen.activeSelf == true || _controlMethodSelectorScreen.activeSelf == true|| _creditsScreen.activeSelf == true)
+        if (_startScreen.activeSelf == true||_pauseScreen.activeSelf == true || _controls.activeSelf == true|| _creditsScreen.activeSelf == true)
         {
             return true;
         }
@@ -256,7 +268,7 @@ public class GUIManager : MonoBehaviour
         Unpause();
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(false);
-        _controlMethodSelectorScreen.SetActive(false);
+        _controls.SetActive(false);
         _creditsScreen.SetActive(false);
 
         if (_storedUIState != UIState.Default)
