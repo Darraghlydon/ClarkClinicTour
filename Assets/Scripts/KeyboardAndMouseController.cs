@@ -94,9 +94,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     public void PauseMovementForAudio(float _pauseTime)
     {
         pauseMovement = true;
-        Invoke("UnPauseMovement", _pauseTime);
     }
-    void UnPauseMovement()
+    public void UnPauseMovement()
     {
         pauseMovement = false;
     }
