@@ -88,11 +88,6 @@ public class AudioTrigger : MonoBehaviour
         }
     }
 
-    private void StopAudio(InputAction.CallbackContext context)
-    {
-        _audioSource.Stop();
-    }
-
     private void StopAudio()
     {
         _audioSource.Stop();

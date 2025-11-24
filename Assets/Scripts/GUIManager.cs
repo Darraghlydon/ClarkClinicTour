@@ -227,6 +227,8 @@ public class GUIManager : MonoBehaviour
     {
         if (_useTouchControls & _subtitlesSkip & _audioSkip)
         {
+            _audioSkip = false;
+            _subtitlesSkip = false;
             _isMobileSkipEnabled = false;
             _mobileSkipButton.SetActive(false);
         }
