@@ -10843,6 +10843,7 @@ MonoBehaviour:
   _mobilePauseButton: {fileID: 134414417}
   _mobileSkipButton: {fileID: 662547725}
   _mobileOnScreenSticks: {fileID: 1706706599}
+  _subtitles: {fileID: 1247302034}
   _infoText: {fileID: 691836261}
 --- !u!4 &500597928
 Transform:
@@ -48638,10 +48639,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleText: "This is our nurse\u2019s station. Please do not disturb staff during
-    handover unless it is an emergency. There is a central monitor here that links
-    to each bed space. This allows the nursing team to remotely monitor your child's
-    vitals at all times."
+  _subtitleText: You may notice there are lots of PCs present on the ward. As the
+    trust is now paperless, we use Encompass to catalogue patient information. Staff
+    will also use iPhone-like devices called Rovers to handle patient checks.
 --- !u!114 &1970688233
 MonoBehaviour:
   m_ObjectHideFlags: 0
