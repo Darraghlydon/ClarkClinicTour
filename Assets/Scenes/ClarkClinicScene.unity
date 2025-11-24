@@ -208,6 +208,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1078726222}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1078726227}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!4 &18915541 stripped
 Transform:
@@ -1854,6 +1857,20 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &115975155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115975142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is one of our side rooms these are for infectious patients,
+    so we have to prioritise their usage.
 --- !u!1 &118473441
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,6 +4259,82 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d9b95d37cf8315f45b6657e6d9991f19, type: 3}
   m_PrefabInstance: {fileID: 709506163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &283439552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283439553}
+  - component: {fileID: 283439555}
+  - component: {fileID: 283439554}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &283439553
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283439552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2036382871}
+  m_Father: {fileID: 1247302035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &283439554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283439552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.050980393, g: 0.043137256, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &283439555
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283439552}
+  m_CullTransparentMesh: 1
 --- !u!1 &283628142
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,6 +4992,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1646052722}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1646052727}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &333509271
 PrefabInstance:
@@ -8849,6 +8945,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1355864935}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1355864940}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &417214072 stripped
 GameObject:
@@ -8991,6 +9090,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &417214085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417214072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is our ward kitchen, which parents are not permitted to access,
+    however there are communal kitchen facilities available within our parent accommodation.
+    If you need to access these facilities, ask your nurse for a key. For sterilising
+    bottles and other feeding equipment, please speak to your named nurse.
 --- !u!1001 &422172854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9001,7 +9116,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3
+      value: 0.827
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9009,7 +9124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.19
+      value: -15.051
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9080,6 +9195,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2003631465}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2003631470}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &431818636
 PrefabInstance:
@@ -10911,7 +11029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.57
+      value: -10.899
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10982,6 +11100,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 565234424}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565234429}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!4 &527888208 stripped
 Transform:
@@ -12192,6 +12313,20 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &565234429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565234416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is our playroom. The play specialist will provide age-appropriate
+    toys for your child to bring to their bedside.
 --- !u!1001 &572688658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12281,6 +12416,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 115975150}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 115975155}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &580594647
 GameObject:
@@ -13628,6 +13766,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1330894072}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1330894077}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &624336996
 GameObject:
@@ -13898,6 +14039,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 654998721}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 654998723}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &654998711 stripped
 Transform:
@@ -14072,6 +14216,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &654998723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654998712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Hi, I'm the play specialist on Clark Clinic. I wear a yellow uniform.
+    Sometimes when you have to come into hospital, you can feel a wee bit anxious.
+    But my job on the ward is to come and introduce myself to you and find out what
+    you're interested in so that I can find in my many cupboards something to occupy
+    you while you're in hospital to make your day go a wee bit more quickly and more
+    enjoyable for you.
 --- !u!1 &659339471
 GameObject:
   m_ObjectHideFlags: 0
@@ -16295,6 +16457,24 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &766557836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766557823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Welcome to Clark Clinic, the regional paediatric cardiology ward
+    in Northern Ireland. Our visiting times here are unrestricted, and we allow up
+    to two adult visitors per bed space. Unfortunately, visiting children are not
+    permitted on the ward unless under exceptional circumstances and must be approved
+    by the nurse in charge. Where possible, we ask that you are here for handover,
+    which takes place at 7.30am and 7.30pm each day.
 --- !u!1 &781548210
 GameObject:
   m_ObjectHideFlags: 0
@@ -17629,6 +17809,7 @@ RectTransform:
   - {fileID: 219451003}
   - {fileID: 1294444481}
   - {fileID: 1430402140}
+  - {fileID: 1247302035}
   m_Father: {fileID: 500597928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18089,6 +18270,21 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &859403190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859403177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is the room we use for making up medicines, which requires
+    full concentration. For this reason, it is important that you do not disturb
+    nurses when they are here unless it's an emergency.
 --- !u!4 &864113037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7644371589040740708, guid: 81892958a59ac934ebde15322699d154, type: 3}
@@ -18275,6 +18471,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &872725910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872725897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is a monitor attached to your child. It measures your child
+    oxygen saturation, heart rate and heart rhythm. When the alarm or warning bell
+    goes off, the nursing team will get an alert at the nurse's station and will
+    take action as needed.
 --- !u!1001 &881987314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20308,6 +20520,7 @@ Transform:
   - {fileID: 115975143}
   - {fileID: 565234417}
   - {fileID: 2003631458}
+  - {fileID: 1970688231}
   - {fileID: 1712712928}
   - {fileID: 1067649972}
   - {fileID: 1355864928}
@@ -21391,6 +21604,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1683465999}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1683466004}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &1007907485
 PrefabInstance:
@@ -22627,6 +22843,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1067649984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067649971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is a patient bathroom. Parents can use this whilst on the ward.
+    Showers and toilets are also available in the children's heartbeat trust parent
+    accommodation within the hospital. If you need to access these facilities, please
+    ask the nurse in charge for your key.
 --- !u!1001 &1073375585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22834,6 +23066,20 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1078726227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078726214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Dirty laundry is handled here. When nurses wash your child's clothes,
+    they will be left here for you to collect.
 --- !u!1 &1081640517
 GameObject:
   m_ObjectHideFlags: 0
@@ -23213,6 +23459,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 872725905}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 872725910}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &1099348197
 GameObject:
@@ -24857,6 +25106,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1712712935}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1712712940}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &1172630713
 GameObject:
@@ -25544,6 +25796,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1196302665}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196302667}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1196302655 stripped
 Transform:
@@ -25718,6 +25973,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &1196302667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196302656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Hi, I'm a family support worker for Children's Heartbeat Trust,
+    a local children's charity offering practical and emotional support to families
+    in Northern Ireland who have a child with congenital heart disease. We have a
+    great relationship here with the Team on Clark Clinic and you can find a member
+    of our support team here three times a week with a friendly face, a listening
+    ear and lots of ways to help support local heart families through our specialist
+    support services at each stage of your journey with congenital heart disease.
 --- !u!1001 &1210320445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26377,6 +26651,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f40623a2929e94a9438c34df92744f, type: 3}
+--- !u!1 &1247302034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247302035}
+  - component: {fileID: 1247302036}
+  m_Layer: 5
+  m_Name: Subtitles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1247302035
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247302034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 283439553}
+  m_Father: {fileID: 846396402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 1000, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1247302036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247302034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08cabab412760947a732ebeb832d112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleController
+  _subtitleTextField: {fileID: 2036382872}
+  _subtitlePanel: {fileID: 283439552}
+  _maxCharsPerChunk: 96
+  _secondsPerChunk: 8
 --- !u!1 &1249095130
 GameObject:
   m_ObjectHideFlags: 0
@@ -27731,6 +28058,20 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1330894077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330894064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is one of our side rooms these are for infectious patients,
+    so we have to prioritise their usage.
 --- !u!1 &1331142269
 GameObject:
   m_ObjectHideFlags: 0
@@ -27891,6 +28232,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1332882501}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1332882503}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1332882491 stripped
 Transform:
@@ -28065,6 +28409,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &1332882503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332882492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: We have a very long name, Cardiac Physiologists. We are a group
+    of staff who carry out a range of tests which help the doctor to diagnose and
+    monitor your heart condition. These include ECG, ECHO, exercise stress test,
+    ambulatory ECG monitoring and pacemaker checks. Sometimes we come to you on the
+    war to do these tests but usually you come downstairs to see us in our room.
+    We have iPads to entertain you so it's great fun. Even when you're not in Clark
+    Clinic you may come back to visit us in a department downstairs and have all
+    these tests done.
 --- !u!1001 &1338957112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28431,6 +28795,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2013534692}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2013534697}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &1348286890
 GameObject:
@@ -28783,6 +29150,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1355864940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355864927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is a monitor attached to your child. It measures your child
+    oxygen saturation, heart rate and heart rhythm. When the alarm or warning bell
+    goes off, the nursing team will get an alert at the nurse's station and will
+    take action as needed.
 --- !u!1001 &1357235318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30036,6 +30419,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1411354570}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411354572}
   m_SourcePrefab: {fileID: 100100000, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
 --- !u!4 &1411354560 stripped
 Transform:
@@ -30210,6 +30596,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &1411354572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411354561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: I am one of the consultant paediatric cardiologists here on Clark
+    Clinic. My job is looking after babies and children with heart problems. You
+    might see me on the ward or at the outpatient clinic. I hope you enjoy the tour.
 --- !u!1001 &1412779182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36603,6 +37004,20 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1598336923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598336910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Because our patients are vulnerable, please adhere to strict hand
+    washing and hand sanitizing guidelines using the sinks provided.
 --- !u!1 &1600057724
 GameObject:
   m_ObjectHideFlags: 0
@@ -37930,6 +38345,21 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1646052727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646052714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: These are bed spaces. We ask you to keep this area as clear as possible
+    so that nurses can move freely around the bed in order to access equipment at
+    all times.
 --- !u!1 &1649504330
 GameObject:
   m_ObjectHideFlags: 0
@@ -42715,6 +43145,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1683466004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683465991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is a monitor attached to your child. It measures your child
+    oxygen saturation, heart rate and heart rhythm. When the alarm or warning bell
+    goes off, the nursing team will get an alert at the nurse's station and will
+    take action as needed.
 --- !u!1 &1689611205
 GameObject:
   m_ObjectHideFlags: 0
@@ -43211,6 +43657,21 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &1712712940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712712927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is the linen cupboard, where you will find spare linen. If
+    you are staying in Children's Heartbeat Trust's parent accommodation, please
+    take sheets and pillows with you on the way out of the ward.
 --- !u!1001 &1714964836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43401,6 +43862,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 859403185}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 859403190}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &1719730849
 PrefabInstance:
@@ -43721,6 +44185,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1067649979}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1067649984}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &1731731484
 PrefabInstance:
@@ -43817,6 +44284,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731731495}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731731497}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1731731485 stripped
 Transform:
@@ -43991,6 +44461,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &1731731497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731731486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Hi, I'm the ward manager. I wear a red coloured tunic. My job is
+    to ensure the smooth running of the ward, managing all the staff behind the scenes
+    and being at hand if you or your parents have any questions. You will also see
+    me helping out on the ward and looking after patients as well.
 --- !u!4 &1741562051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c07f1e455ea98a3489d57360b88e7ee2, type: 3}
@@ -45149,6 +45635,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1789217546}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1789217548}
   m_SourcePrefab: {fileID: 100100000, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
 --- !u!4 &1789217536 stripped
 Transform:
@@ -45323,6 +45812,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &1789217548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789217537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Hello, I'm a staff nurse here at Clark Clinic. You may see me around
+    helping to look after you. I'll be doing possibly some observations with you,
+    for example blood pressure, temperature, counting your breathing. I may maybe
+    need to give you some medication also or put up some feeds for you.
 --- !u!1 &1792076531
 GameObject:
   m_ObjectHideFlags: 0
@@ -46103,6 +46608,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 417214080}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 417214085}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &1843171842
 PrefabInstance:
@@ -46783,6 +47291,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1598336918}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1598336923}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1 &1923943177 stripped
 GameObject:
@@ -48104,6 +48615,163 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c826aa9322f7c048bfffd117f388605, type: 3}
+--- !u!1 &1970688230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+  m_PrefabInstance: {fileID: 2049569011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1970688231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+  m_PrefabInstance: {fileID: 2049569011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1970688232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970688230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: "This is our nurse\u2019s station. Please do not disturb staff during
+    handover unless it is an emergency. There is a central monitor here that links
+    to each bed space. This allows the nursing team to remotely monitor your child's
+    vitals at all times."
+--- !u!114 &1970688233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970688230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
+--- !u!114 &1970688234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970688230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resetTriggerTimeSeconds: 90
+  WaitingForCooldown: 0
+--- !u!82 &1970688235
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970688230}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5d9773ab4978beb4caea81944a6a2977, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1972366406
 GameObject:
   m_ObjectHideFlags: 0
@@ -48433,6 +49101,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1989120811}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1989120813}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1989120801 stripped
 Transform:
@@ -48607,6 +49278,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   rotationSpeed: 180
+--- !u!114 &1989120813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989120802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: Clinical psychologists are part of the care team in Clark Clinic.
+    Our role with inpatients is to help support children and their families to cope
+    with the experience of being in hospital and the many challenges this brings.
+    This might be offering emotional support to parents while their child is awaiting
+    surgery and helping them think about useful coping skills or how best to support
+    siblings. It might be supporting and preparing children if they are anxious about
+    procedures such as blood tests, cannulas or surgery. Or helping young people
+    understand their heart condition and manage the demands of being unwell and in
+    hospital, including if they are feeling worried or low in mood. Clinical psychology
+    support is available to all inpatients during their stay in Clark Clinic. If
+    you would like to speak with a clinical psychologist, please ask your nurse or
+    doctor to make a referral for you, and we will arrange to meet with you as soon
+    as we can.
 --- !u!4 &1993781164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f4f868382337c049b7c1cb1e6af092d, type: 3}
@@ -48834,6 +49530,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &2003631470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003631457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: "This is our nurse\u2019s station. Please do not disturb staff during
+    handover unless it is an emergency. There is a central monitor here that links
+    to each bed space. This allows the nursing team to remotely monitor your child's
+    vitals at all times."
 --- !u!1 &2013534684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
@@ -48975,6 +49687,20 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &2013534697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013534684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleText: This is a fire exit, please use in case of emergency only, otherwise
+    these are for staff access at all times.
 --- !u!1001 &2015316370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49296,6 +50022,142 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4903036904833120933, guid: b3a3db7ed95dd604d8a03cb4d8af3e24, type: 3}
   m_PrefabInstance: {fileID: 2035139651}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2036382870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036382871}
+  - component: {fileID: 2036382873}
+  - component: {fileID: 2036382872}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2036382871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036382870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283439553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -70}
+  m_SizeDelta: {x: 920, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2036382872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036382870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 199e67642a04691468c92ca3387f0178, type: 2}
+  m_sharedMaterial: {fileID: -6609767437675825324, guid: 199e67642a04691468c92ca3387f0178, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2036382873
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036382870}
+  m_CullTransparentMesh: 1
 --- !u!1 &2039524474
 GameObject:
   m_ObjectHideFlags: 0
@@ -49527,6 +50389,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e35bf3853bc61bc4db420b729010bacd, type: 3}
   m_PrefabInstance: {fileID: 1351084996}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2049569011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 948996574}
+    m_Modifications:
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.918
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.613
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208492814550551327, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208492814550551327, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Name
+      value: InfoPointEncompass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474868993031364132, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474868993031364132, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970688235}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970688234}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970688233}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970688232}
+  m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &2050492394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51863,6 +52818,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 766557831}
+    - targetCorrespondingSourceObject: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 766557836}
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
 --- !u!1001 &3978185974806221618
 PrefabInstance:

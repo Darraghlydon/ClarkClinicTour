@@ -111,5 +111,6 @@ public static class Events
 {
     public static readonly GameEvent AudioStart = new();
     public static readonly GameEvent AudioStop = new();
-
+    public static readonly GameEvent AudioSkip = new();
+    public static readonly GameEvent<string> DisplaySubtitle = new();
 }

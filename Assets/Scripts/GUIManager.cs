@@ -79,6 +79,7 @@ public class GUIManager : MonoBehaviour
         _playerActions.Player.Enable();
         _playerActions.Player.Menu.performed += DisplayPauseScreen;
         Events.AudioStart.Subscribe(EnableSkipButton);
+        Events.AudioSkip.Subscribe(DisableSkipButton);
         Events.AudioStop.Subscribe(DisableSkipButton);
         SetupNavigationForWebGL();
     }
@@ -88,6 +89,7 @@ public class GUIManager : MonoBehaviour
         _playerActions.Player.Disable();
         _playerActions.Player.Menu.performed -= DisplayPauseScreen;
         Events.AudioStart.Unsubscribe(EnableSkipButton);
+        Events.AudioSkip.Unsubscribe(DisableSkipButton);
         Events.AudioStop.Unsubscribe(DisableSkipButton);
     }
 
@@ -216,7 +218,7 @@ public class GUIManager : MonoBehaviour
     {
         if (_useTouchControls)
         {
-            Events.AudioStop.Publish();
+            Events.AudioSkip.Publish();
         }
     }
 

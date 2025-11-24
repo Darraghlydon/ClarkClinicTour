@@ -42,6 +42,7 @@ public class KeyboardAndMouseController : MonoBehaviour
         _playerActions.Player.Enable();
         Events.AudioStart.Subscribe(PauseMovementForAudio);
         Events.AudioStop.Subscribe(UnPauseMovement);
+        Events.AudioSkip.Subscribe(UnPauseMovement);
         // Lock and disable cursor in non-mobile mode
         //if (PlatformManager.IsTouchScreen())
         //{
@@ -54,6 +55,7 @@ public class KeyboardAndMouseController : MonoBehaviour
         _playerActions.Player.Disable();
         Events.AudioStart.Unsubscribe(PauseMovementForAudio);
         Events.AudioStop.Unsubscribe(UnPauseMovement);
+        Events.AudioSkip.Unsubscribe(UnPauseMovement);
         // Unlock and enable cursor in non-mobile mode
         //if (Platform.IsMobile())
         //{
@@ -71,7 +73,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     
     void OnInteract(InputAction.CallbackContext context)
     {
-        Events.AudioStop.Publish();
+        Events.AudioSkip.Publish();
     }
 
 

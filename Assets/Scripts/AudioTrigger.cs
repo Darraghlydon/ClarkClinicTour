@@ -10,6 +10,7 @@ public class AudioTrigger : MonoBehaviour
     private Renderer _rend;
     public bool WaitingForCooldown = false;
     private bool _attachedToCharacter = false;
+    private Collider _collider;
 
     public void Awake()
     {
@@ -19,6 +20,7 @@ public class AudioTrigger : MonoBehaviour
     void Start()
     {
         _rend = GetComponent<Renderer>();
+        _collider = GetComponent<Collider>();
         if (_rend == null)
         {
             _attachedToCharacter = true;
@@ -30,12 +32,12 @@ public class AudioTrigger : MonoBehaviour
 
     void OnEnable()
     {
-        Events.AudioStop.Subscribe(StopAudio);
+        Events.AudioSkip.Subscribe(StopAudio);
     }
 
     void OnDisable()
     {
-        Events.AudioStop.Unsubscribe(StopAudio);
+        Events.AudioSkip.Unsubscribe(StopAudio);
     }
 
     // Trigger detection
@@ -56,6 +58,7 @@ public class AudioTrigger : MonoBehaviour
     private void ResetTrigger()
     {
         WaitingForCooldown = false;
+        _collider.enabled = true;
         if (!_attachedToCharacter)
             _rend.enabled = true;
     }
@@ -67,7 +70,7 @@ public class AudioTrigger : MonoBehaviour
             Events.AudioStart.Publish();
             if (!_attachedToCharacter)
                 _rend.enabled = false;
-            
+            _collider.enabled = false;
             WaitingForCooldown = true;
             Invoke("WaitForAudio",_audioSource.clip.length);
             Invoke("ResetTrigger",_resetTriggerTimeSeconds);
