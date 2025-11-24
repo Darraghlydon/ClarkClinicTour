@@ -13,6 +13,7 @@ public class SubtitleController : MonoBehaviour
     [Header("Subtitle Timing")]
     [SerializeField] private int _maxCharsPerChunk = 45;
     [SerializeField] private float _secondsPerChunk = 2.5f;
+    [SerializeField] private float _minimumWaitTime = 2f;
 
     private Coroutine currentCoroutine;
     private Queue<string> subtitleQueue = new Queue<string>();
@@ -25,13 +26,13 @@ public class SubtitleController : MonoBehaviour
 
     private void OnEnable()
     {
-        Events.DisplaySubtitle.Subscribe(OnSubtitleRequested);
+        Events.DisplaySubtitles.Subscribe(OnSubtitleRequested);
         Events.AudioSkip.Subscribe(SkipSubtitles);
     }
 
     private void OnDisable()
     {
-        Events.DisplaySubtitle.Unsubscribe(OnSubtitleRequested);
+        Events.DisplaySubtitles.Unsubscribe(OnSubtitleRequested);
         Events.AudioSkip.Unsubscribe(SkipSubtitles);
     }
 
@@ -47,7 +48,6 @@ public class SubtitleController : MonoBehaviour
 
 private void OnSubtitleRequested(string fullSubtitle)
     {
-        // PRIORITY BEHAVIOR — new subtitle interrupts immediately
         if (currentCoroutine != null)
         {
             StopCoroutine(currentCoroutine);
@@ -55,14 +55,12 @@ private void OnSubtitleRequested(string fullSubtitle)
         }
 
         _subtitlePanel.SetActive(true);
-        subtitleQueue.Clear();     // Clear older pending chunks
-        _subtitleTextField.text = "";  // Clear UI now
+        subtitleQueue.Clear();    
+        _subtitleTextField.text = "";  
 
-        // Split and enqueue new chunks
         foreach (var chunk in SplitIntoChunks(fullSubtitle, _maxCharsPerChunk))
             subtitleQueue.Enqueue(chunk);
 
-        // Start the new display coroutine
         currentCoroutine = StartCoroutine(ProcessQueue());
     }
 
@@ -83,25 +81,19 @@ private void OnSubtitleRequested(string fullSubtitle)
             if (isLastChunk)
             {
                 float fillRatio = nextChunk.Length / (float)_maxCharsPerChunk;
-                // e.g., 50/200 = 0.25
-
                 waitTime = _secondsPerChunk * fillRatio;
-
-                // Optional safety clamp so tiny fragments still show briefly:
-                Debug.Log(waitTime);
-                waitTime = Mathf.Max(waitTime, 5f);
+                waitTime = Mathf.Max(waitTime, _minimumWaitTime);
             }
-            Debug.Log("Final Wait Time: " + waitTime);
+
             yield return new WaitForSeconds(waitTime);
         }
 
         _subtitlePanel.SetActive(false);
         _subtitleTextField.text = "";
         isDisplaying = false;
+        Events.SubtitlesSkip.Publish();
     }
 
-
-    // Splits text without cutting words
     private List<string> SplitIntoChunks(string text, int maxChars)
     {
         List<string> chunks = new List<string>();
@@ -113,7 +105,6 @@ private void OnSubtitleRequested(string fullSubtitle)
 
         foreach (string word in words)
         {
-            // If adding the word exceeds max chars, commit the current chunk
             if (current.Length + word.Length + 1 > maxChars)
             {
                 chunks.Add(current.ToString());
@@ -126,7 +117,6 @@ private void OnSubtitleRequested(string fullSubtitle)
             current.Append(word);
         }
 
-        // Add the last chunk
         if (current.Length > 0)
             chunks.Add(current.ToString());
 

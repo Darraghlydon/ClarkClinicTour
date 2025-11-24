@@ -7,6 +7,6 @@ public class SubtitleSource : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Events.DisplaySubtitle.Publish(_subtitleText);
+        Events.DisplaySubtitles.Publish(_subtitleText);
     }
 }

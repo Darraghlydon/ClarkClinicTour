@@ -26703,7 +26703,8 @@ MonoBehaviour:
   _subtitleTextField: {fileID: 2036382872}
   _subtitlePanel: {fileID: 283439552}
   _maxCharsPerChunk: 96
-  _secondsPerChunk: 8
+  _secondsPerChunk: 7.5
+  _minimumWaitTime: 2
 --- !u!1 &1249095130
 GameObject:
   m_ObjectHideFlags: 0

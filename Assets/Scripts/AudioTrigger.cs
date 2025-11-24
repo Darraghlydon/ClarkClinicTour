@@ -33,11 +33,13 @@ public class AudioTrigger : MonoBehaviour
     void OnEnable()
     {
         Events.AudioSkip.Subscribe(StopAudio);
+        Events.AudioStop.Subscribe(StopAudio);
     }
 
     void OnDisable()
     {
         Events.AudioSkip.Unsubscribe(StopAudio);
+        Events.AudioStop.Subscribe(StopAudio);
     }
 
     // Trigger detection
@@ -66,6 +68,7 @@ public class AudioTrigger : MonoBehaviour
     {
         if (_audioSource && !_audioSource.isPlaying)
         {
+            Events.AudioStop.Publish();
             _audioSource.Play();
             Events.AudioStart.Publish();
             if (!_attachedToCharacter)
