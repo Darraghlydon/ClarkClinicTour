@@ -1,32 +1,24 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameEvent
 {
-    private event Action GameAction;
+    private Action GameAction = delegate { };
 
     public void Publish()
     {
-        try
+        foreach (Action a in GameAction.GetInvocationList())
         {
-            GameAction?.Invoke();
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"Error invoking event: {ex.Message}");
+            try { a(); }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Error in subscriber {a.Method.Name}: {ex}");
+            }
         }
     }
 
-    public void Subscribe(Action subscriber)
-    {
-        GameAction += subscriber;
-    }
-
-    public void Unsubscribe(Action subscriber)
-    {
-        GameAction -= subscriber;
-    }
+    public void Subscribe(Action subscriber) => GameAction += subscriber;
+    public void Unsubscribe(Action subscriber) => GameAction -= subscriber;
 
     public void DebugSubscribers()
     {
@@ -39,29 +31,22 @@ public class GameEvent
 
 public class GameEvent<T>
 {
-    private event Action<T> GameAction = delegate { };
+    private Action<T> GameAction = delegate { };
 
     public void Publish(T param)
     {
-        try
+        foreach (Action<T> a in GameAction.GetInvocationList())
         {
-            GameAction?.Invoke(param);
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"Error invoking event: {ex.Message}");
+            try { a(param); }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Error in subscriber {a.Method.Name}: {ex}");
+            }
         }
     }
 
-    public void Subscribe(Action<T> subscriber)
-    {
-        GameAction += subscriber;
-    }
-
-    public void Unsubscribe(Action<T> subscriber)
-    {
-        GameAction -= subscriber;
-    }
+    public void Subscribe(Action<T> subscriber) => GameAction += subscriber;
+    public void Unsubscribe(Action<T> subscriber) => GameAction -= subscriber;
 
     public void DebugSubscribers()
     {
@@ -74,29 +59,22 @@ public class GameEvent<T>
 
 public class GameEvent<S, T>
 {
-    private event Action<S, T> GameAction = delegate { };
+    private Action<S, T> GameAction = delegate { };
 
     public void Publish(S param1, T param2)
     {
-        try
+        foreach (Action<S, T> a in GameAction.GetInvocationList())
         {
-            GameAction?.Invoke(param1, param2);
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"Error invoking event: {ex.Message}");
+            try { a(param1, param2); }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Error in subscriber {a.Method.Name}: {ex}");
+            }
         }
     }
 
-    public void Subscribe(Action<S, T> subscriber)
-    {
-        GameAction += subscriber;
-    }
-
-    public void Unsubscribe(Action<S, T> subscriber)
-    {
-        GameAction -= subscriber;
-    }
+    public void Subscribe(Action<S, T> subscriber) => GameAction += subscriber;
+    public void Unsubscribe(Action<S, T> subscriber) => GameAction -= subscriber;
 
     public void DebugSubscribers()
     {
@@ -109,9 +87,13 @@ public class GameEvent<S, T>
 
 public static class Events
 {
-    public static readonly GameEvent AudioStart = new();
-    public static readonly GameEvent AudioStop = new();
-    public static readonly GameEvent AudioSkip = new();
+    // Audio
+    public static readonly GameEvent<AudioTrigger> AudioStart = new();
+    public static readonly GameEvent<AudioTrigger> AudioStop = new();
+    public static readonly GameEvent AudioSkip = new(); // global command
+
+    // Subtitles
     public static readonly GameEvent<string> DisplaySubtitles = new();
     public static readonly GameEvent SubtitlesSkip = new();
+    public static readonly GameEvent SubtitlesStop = new();
 }

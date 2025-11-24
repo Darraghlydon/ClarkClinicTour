@@ -1,95 +1,81 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class AudioTrigger : MonoBehaviour
 {
-    [SerializeField] float _resetTriggerTimeSeconds =80f;
+    [SerializeField] float _resetTriggerTimeSeconds = 80f;
+
     private AudioSource _audioSource;
     private Renderer _rend;
-    public bool WaitingForCooldown = false;
-    private bool _attachedToCharacter = false;
     private Collider _collider;
 
-    public void Awake()
+    public bool WaitingForCooldown = false;
+    private bool _attachedToCharacter = false;
+
+    private void Awake()
     {
-  
-        //_playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<KeyboardAndMouseController>();
-    }
-    void Start()
-    {
+        _audioSource = GetComponent<AudioSource>();
         _rend = GetComponent<Renderer>();
         _collider = GetComponent<Collider>();
         if (_rend == null)
         {
             _attachedToCharacter = true;
         }
-
-        // Get the AudioSource component
-        _audioSource = GetComponent<AudioSource>();
-     }
-
-    void OnEnable()
-    {
-        Events.AudioSkip.Subscribe(StopAudio);
-        Events.AudioStop.Subscribe(StopAudio);
     }
 
-    void OnDisable()
+    private void OnTriggerEnter(Collider other)
     {
-        Events.AudioSkip.Unsubscribe(StopAudio);
-        Events.AudioStop.Subscribe(StopAudio);
-    }
-
-    // Trigger detection
-    private void OnTriggerEnter(Collider other) // For 3D Colliders
-    {
-      
-        if (other.CompareTag("Player")&&!WaitingForCooldown) // Ensure the player has the "Player" tag
+        if (other.CompareTag("Player") && !WaitingForCooldown)
         {
-            
             PlayAudio();
         }
     }
 
     public bool IsAudioPlaying()
-    { 
-        return _audioSource.isPlaying; 
-    }
-    private void ResetTrigger()
     {
-        WaitingForCooldown = false;
-        _collider.enabled = true;
-        if (!_attachedToCharacter)
-            _rend.enabled = true;
+        return _audioSource != null && _audioSource.isPlaying;
     }
+
     private void PlayAudio()
     {
         if (_audioSource && !_audioSource.isPlaying)
         {
-            Events.AudioStop.Publish();
             _audioSource.Play();
-            Events.AudioStart.Publish();
+            Events.AudioStart.Publish(this);
+
             if (!_attachedToCharacter)
                 _rend.enabled = false;
+
             _collider.enabled = false;
             WaitingForCooldown = true;
-            Invoke("WaitForAudio",_audioSource.clip.length);
-            Invoke("ResetTrigger",_resetTriggerTimeSeconds);
+
+            Invoke("NotifyAudioFinished", _audioSource.clip.length);
+            Invoke("ResetTrigger", _resetTriggerTimeSeconds);
         }
     }
 
-    private void WaitForAudio()
+    private void NotifyAudioFinished()
     {
-        if (_audioSource.isPlaying)
+        // Called after clip length — treat as finished regardless of isPlaying flag
+        Events.AudioStop.Publish(this);
+    }
+
+    private void ResetTrigger()
+    {
+        WaitingForCooldown = false;
+        _collider.enabled = true;
+
+        if (!_attachedToCharacter)
+            _rend.enabled = true;
+    }
+
+    // Called by GUIManager when skip is pressed
+    public void StopAudioExternally()
+    {
+        if (_audioSource && _audioSource.isPlaying)
         {
-            Events.AudioStop.Publish();
+            _audioSource.Stop();
+            Events.AudioStop.Publish(this);
         }
-    }
-
-    private void StopAudio()
-    {
-        _audioSource.Stop();
+        CancelInvoke(nameof(NotifyAudioFinished));
     }
 }

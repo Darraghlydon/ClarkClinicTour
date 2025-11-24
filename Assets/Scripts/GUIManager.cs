@@ -40,6 +40,7 @@ public class GUIManager : MonoBehaviour
     private bool _subtitlesSkip;
     private UIState _currentState;
     private UIState _storedUIState = UIState.Default;
+    private AudioTrigger _activeAudioTrigger;
 
     public void Awake()
     {
@@ -80,10 +81,13 @@ public class GUIManager : MonoBehaviour
     {
         _playerActions.Player.Enable();
         _playerActions.Player.Menu.performed += DisplayPauseScreen;
-        Events.AudioStart.Subscribe(EnableSkipButton);
-        Events.AudioSkip.Subscribe(AudioSkip);
-        Events.AudioStop.Subscribe(AudioSkip);
+
+        Events.AudioStart.Subscribe(OnAudioStarted);
+        Events.AudioStop.Subscribe(OnAudioStopped);
+
         Events.SubtitlesSkip.Subscribe(SubtitlesSkip);
+        Events.SubtitlesStop.Subscribe(OnSubtitlesStopped);  // FIXED
+
         SetupNavigationForWebGL();
     }
 
@@ -91,10 +95,32 @@ public class GUIManager : MonoBehaviour
     {
         _playerActions.Player.Disable();
         _playerActions.Player.Menu.performed -= DisplayPauseScreen;
-        Events.AudioStart.Unsubscribe(EnableSkipButton);
-        Events.AudioSkip.Unsubscribe(AudioSkip);
-        Events.AudioStop.Unsubscribe(AudioSkip);
-        Events.SubtitlesSkip.Subscribe(SubtitlesSkip);
+
+        Events.AudioStart.Unsubscribe(OnAudioStarted);
+        Events.AudioStop.Unsubscribe(OnAudioStopped);
+
+        Events.SubtitlesSkip.Unsubscribe(SubtitlesSkip);
+        Events.SubtitlesStop.Unsubscribe(OnSubtitlesStopped); // FIXED
+    }
+
+    private void OnAudioStarted(AudioTrigger trigger)
+    {
+        _activeAudioTrigger = trigger;
+        EnableSkipButton();
+    }
+
+    private void OnAudioStopped(AudioTrigger trigger)
+    {
+        if (_activeAudioTrigger == trigger)
+            _activeAudioTrigger = null;
+
+        AudioSkip(); // keep your existing GUI skip-flag flow
+    }
+
+    private void OnSubtitlesStopped()
+    {
+        _subtitlesSkip = true;
+        DisableSkipButton();
     }
 
     private void AudioSkip()
@@ -225,7 +251,7 @@ public class GUIManager : MonoBehaviour
 
     private void DisableSkipButton()
     {
-        if (_useTouchControls & _subtitlesSkip & _audioSkip)
+        if (_useTouchControls && _subtitlesSkip && _audioSkip)
         {
             _audioSkip = false;
             _subtitlesSkip = false;
@@ -234,11 +260,16 @@ public class GUIManager : MonoBehaviour
         }
     }
 
-    public void TriggerAudioSkipEvent()
+    public void TriggerSkipEvents()
     {
         if (_useTouchControls)
         {
-            Events.AudioSkip.Publish();
+            // Stop only the currently playing audio trigger
+            if (_activeAudioTrigger != null)
+                _activeAudioTrigger.StopAudioExternally();
+
+            // Subtitles are global, so just skip them
+            Events.SubtitlesSkip.Publish();
         }
     }
 

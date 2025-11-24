@@ -27,13 +27,13 @@ public class SubtitleController : MonoBehaviour
     private void OnEnable()
     {
         Events.DisplaySubtitles.Subscribe(OnSubtitleRequested);
-        Events.AudioSkip.Subscribe(SkipSubtitles);
+        Events.SubtitlesSkip.Subscribe(SkipSubtitles);
     }
 
     private void OnDisable()
     {
         Events.DisplaySubtitles.Unsubscribe(OnSubtitleRequested);
-        Events.AudioSkip.Unsubscribe(SkipSubtitles);
+        Events.SubtitlesSkip.Unsubscribe(SkipSubtitles);
     }
 
     private void SkipSubtitles() { 
@@ -91,7 +91,7 @@ private void OnSubtitleRequested(string fullSubtitle)
         _subtitlePanel.SetActive(false);
         _subtitleTextField.text = "";
         isDisplaying = false;
-        Events.SubtitlesSkip.Publish();
+        Events.SubtitlesStop.Publish();
     }
 
     private List<string> SplitIntoChunks(string text, int maxChars)

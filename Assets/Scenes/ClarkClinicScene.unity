@@ -14482,7 +14482,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 500597927}
         m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
-        m_MethodName: TriggerAudioSkipEvent
+        m_MethodName: TriggerSkipEvents
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
