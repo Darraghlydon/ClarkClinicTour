@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class AudioTrigger : MonoBehaviour
 {
-    [SerializeField] float _resetTriggerTimeSeconds = 80f;
+    [SerializeField] private float _resetTriggerTimeSeconds = 80f;
+    [SerializeField] private GameObject _infoSign;
 
     private AudioSource _audioSource;
     private Renderer _rend;
@@ -20,6 +21,7 @@ public class AudioTrigger : MonoBehaviour
         {
             _attachedToCharacter = true;
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,6 +47,9 @@ public class AudioTrigger : MonoBehaviour
             if (!_attachedToCharacter)
                 _rend.enabled = false;
 
+            if (_infoSign != null)
+                _infoSign.SetActive(false);
+
             _collider.enabled = false;
             WaitingForCooldown = true;
 
@@ -66,6 +71,8 @@ public class AudioTrigger : MonoBehaviour
 
         if (!_attachedToCharacter)
             _rend.enabled = true;
+        if(_infoSign!=null)
+            _infoSign.SetActive(false);
     }
 
     // Called by GUIManager when skip is pressed
