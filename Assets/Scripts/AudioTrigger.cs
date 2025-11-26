@@ -72,7 +72,7 @@ public class AudioTrigger : MonoBehaviour
         if (!_attachedToCharacter)
             _rend.enabled = true;
         if(_infoSign!=null)
-            _infoSign.SetActive(false);
+            _infoSign.SetActive(true);
     }
 
     // Called by GUIManager when skip is pressed
