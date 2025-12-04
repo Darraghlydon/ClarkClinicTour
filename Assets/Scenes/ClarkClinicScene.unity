@@ -10860,7 +10860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2
+      value: -0.041
       objectReference: {fileID: 0}
     - target: {fileID: 3153623316322625930, guid: 044d704b2e31b66408f552d22b5eb7bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14545,7 +14545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4753954548288855837, guid: 22968b1ed0322b345b8a7765e7da2593, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.84
+      value: -1.663
       objectReference: {fileID: 0}
     - target: {fileID: 4753954548288855837, guid: 22968b1ed0322b345b8a7765e7da2593, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16689,7 +16689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &827067422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25991,7 +25991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Coding: \t\tDarragh Lydon\n\t\t\tAaron Tasker-Lynch \n\nModelling:\tKaty
+  m_text: "Coding: \t\tAaron Tasker-Lynch\n\t\t\tDarragh Lydon\n\nModelling:\tKaty
     McCarron\n\t\t\tLauren Osborne\n\t\t\tAaron Tasker-Lynch\n\t\t\tShelby Hanna\t
     \t\n\nSound:\t\tDarragh Lydon\t\t\n\nNarration:\t[TBC]\n\nSpecial Thanks: \t[TBC]\n\t\t\n\n\n"
   m_isRightToLeft: 0
@@ -36350,7 +36350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453743369652892654, guid: 0ffbe53056e469546976734e20d89c5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.63
+      value: 1.631
       objectReference: {fileID: 0}
     - target: {fileID: 5453743369652892654, guid: 0ffbe53056e469546976734e20d89c5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36358,7 +36358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453743369652892654, guid: 0ffbe53056e469546976734e20d89c5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.122
+      value: -0.033
       objectReference: {fileID: 0}
     - target: {fileID: 5453743369652892654, guid: 0ffbe53056e469546976734e20d89c5a, type: 3}
       propertyPath: m_LocalRotation.w
