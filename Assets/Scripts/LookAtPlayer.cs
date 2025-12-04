@@ -15,7 +15,14 @@ public class LookAtPlayer : MonoBehaviour
     {
         if (_player == null) return;
 
-        // Rotate this object to face the player
-        transform.LookAt(_player);
+        // Direction to the player but ignoring vertical difference
+        Vector3 direction = _player.position - transform.position;
+        direction.y = 0f; // Stop looking up/down
+
+        if (direction.sqrMagnitude > 0.001f) // Avoid zero-length direction
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = targetRotation;
+        }
     }
 }
