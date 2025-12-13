@@ -20569,7 +20569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
-      value: This is a monitor attached to your child. It measures your child oxygen
+      value: This is a monitor attached to your child. It measures your child's oxygen
         saturation, heart rate and heart rhythm. When the alarm or warning bell goes
         off, the nursing team will get an alert at the nurse's station and will take
         action as needed.
@@ -22166,7 +22166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
-      value: This is a monitor attached to your child. It measures your child oxygen
+      value: This is a monitor attached to your child. It measures your child's oxygen
         saturation, heart rate and heart rhythm. When the alarm or warning bell goes
         off, the nursing team will get an alert at the nurse's station and will take
         action as needed.
