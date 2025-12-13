@@ -93,7 +93,7 @@ public static class Events
     public static readonly GameEvent AudioSkip = new(); // global command
 
     // Subtitles
-    public static readonly GameEvent<string> DisplaySubtitles = new();
+    public static readonly GameEvent<string,float> DisplaySubtitles = new();
     public static readonly GameEvent SubtitlesSkip = new();
     public static readonly GameEvent SubtitlesStop = new();
 }

@@ -12,11 +12,26 @@ public class SubtitleController : MonoBehaviour
 
     [Header("Subtitle Timing")]
     [SerializeField] private int _maxCharsPerChunk = 45;
-    [SerializeField] private float _secondsPerChunk = 2.5f;
-    [SerializeField] private float _minimumWaitTime = 2f;
+
+    // Optional safety clamps
+    [SerializeField] private float _minimumChunkWaitTime = 0.15f; // avoids 0-second waits
+    [SerializeField] private float _minimumLastChunkWaitTime = 2f; // if you still want the last chunk to linger
 
     private Coroutine currentCoroutine;
-    private Queue<string> subtitleQueue = new Queue<string>();
+
+    private struct SubtitleChunk
+    {
+        public string Text;
+        public float Duration;
+
+        public SubtitleChunk(string text, float duration)
+        {
+            Text = text;
+            Duration = duration;
+        }
+    }
+
+    private Queue<SubtitleChunk> subtitleQueue = new Queue<SubtitleChunk>();
     private bool isDisplaying = false;
 
     private void Awake()
@@ -26,6 +41,7 @@ public class SubtitleController : MonoBehaviour
 
     private void OnEnable()
     {
+        // IMPORTANT: your event must now publish (string subtitle, float audioLengthSeconds)
         Events.DisplaySubtitles.Subscribe(OnSubtitleRequested);
         Events.SubtitlesSkip.Subscribe(SkipSubtitles);
     }
@@ -36,17 +52,20 @@ public class SubtitleController : MonoBehaviour
         Events.SubtitlesSkip.Unsubscribe(SkipSubtitles);
     }
 
-    private void SkipSubtitles() { 
+    private void SkipSubtitles()
+    {
         if (currentCoroutine != null)
         {
             StopCoroutine(currentCoroutine);
             currentCoroutine = null;
-            _subtitleTextField.text = "";
-            _subtitlePanel.SetActive(false);
         }
+
+        subtitleQueue.Clear();
+        _subtitleTextField.text = "";
+        _subtitlePanel.SetActive(false);
     }
 
-private void OnSubtitleRequested(string fullSubtitle)
+    private void OnSubtitleRequested(string fullSubtitle, float audioLengthSeconds)
     {
         if (currentCoroutine != null)
         {
@@ -55,15 +74,44 @@ private void OnSubtitleRequested(string fullSubtitle)
         }
 
         _subtitlePanel.SetActive(true);
-        subtitleQueue.Clear();    
-        _subtitleTextField.text = "";  
+        subtitleQueue.Clear();
+        _subtitleTextField.text = "";
 
-        foreach (var chunk in SplitIntoChunks(fullSubtitle, _maxCharsPerChunk))
-            subtitleQueue.Enqueue(chunk);
+        // Split into text chunks
+        List<string> chunks = SplitIntoChunks(fullSubtitle, _maxCharsPerChunk);
+
+        // Count total words across the full subtitle
+        int totalWordCount = CountWords(fullSubtitle);
+
+        if (totalWordCount <= 0 || audioLengthSeconds <= 0f)
+        {
+            // Fallback: just enqueue with a small default duration so something displays
+            foreach (var c in chunks)
+                subtitleQueue.Enqueue(new SubtitleChunk(c, _minimumChunkWaitTime));
+        }
+        else
+        {
+            float secondsPerWord = audioLengthSeconds / totalWordCount;
+
+            // Queue each chunk with duration based on its word count
+            for (int i = 0; i < chunks.Count; i++)
+            {
+                string chunkText = chunks[i];
+                int chunkWordCount = CountWords(chunkText);
+
+                float duration = chunkWordCount * secondsPerWord;
+                duration = Mathf.Max(duration, _minimumChunkWaitTime);
+
+                bool isLast = (i == chunks.Count - 1);
+                if (isLast)
+                    duration = Mathf.Max(duration, _minimumLastChunkWaitTime);
+
+                subtitleQueue.Enqueue(new SubtitleChunk(chunkText, duration));
+            }
+        }
 
         currentCoroutine = StartCoroutine(ProcessQueue());
     }
-
 
     private IEnumerator ProcessQueue()
     {
@@ -71,21 +119,10 @@ private void OnSubtitleRequested(string fullSubtitle)
 
         while (subtitleQueue.Count > 0)
         {
-            string nextChunk = subtitleQueue.Dequeue();
-            _subtitleTextField.text = nextChunk;
+            SubtitleChunk next = subtitleQueue.Dequeue();
+            _subtitleTextField.text = next.Text;
 
-            bool isLastChunk = subtitleQueue.Count == 0;
-
-            float waitTime = _secondsPerChunk;
-
-            if (isLastChunk)
-            {
-                float fillRatio = nextChunk.Length / (float)_maxCharsPerChunk;
-                waitTime = _secondsPerChunk * fillRatio;
-                waitTime = Mathf.Max(waitTime, _minimumWaitTime);
-            }
-
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(next.Duration);
         }
 
         _subtitlePanel.SetActive(false);
@@ -121,5 +158,13 @@ private void OnSubtitleRequested(string fullSubtitle)
             chunks.Add(current.ToString());
 
         return chunks;
+    }
+
+    private int CountWords(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text)) return 0;
+
+        // Split on whitespace, ignore empty entries
+        return text.Split((char[])null, System.StringSplitOptions.RemoveEmptyEntries).Length;
     }
 }

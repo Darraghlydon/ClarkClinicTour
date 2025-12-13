@@ -23789,8 +23789,8 @@ PrefabInstance:
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
       value: This is the linen cupboard, where you will find spare linen. If you
-        are staying in Children's Harper Trust's parent accommodation, please take
-        sheets and pillows with you on the way out of the ward.
+        are staying in Children's Heartbeat Trust's parent accommodation, please
+        take sheets and pillows with you on the way out of the ward.
       objectReference: {fileID: 0}
     - target: {fileID: 6947259178206989630, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Resource
@@ -25627,8 +25627,8 @@ MonoBehaviour:
   _subtitleTextField: {fileID: 2036382872}
   _subtitlePanel: {fileID: 283439552}
   _maxCharsPerChunk: 96
-  _secondsPerChunk: 7.5
-  _minimumWaitTime: 2
+  _minimumChunkWaitTime: 0.15
+  _minimumLastChunkWaitTime: 2
 --- !u!1 &1249095130
 GameObject:
   m_ObjectHideFlags: 0
