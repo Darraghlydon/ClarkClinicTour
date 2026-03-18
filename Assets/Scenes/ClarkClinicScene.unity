@@ -325,6 +325,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 353398151}
     m_Modifications:
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10601,6 +10605,37 @@ PrefabInstance:
       addedObject: {fileID: 374906985}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07f1e455ea98a3489d57360b88e7ee2, type: 3}
+--- !u!1 &556127694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556127695}
+  m_Layer: 0
+  m_Name: ---MANAGERS---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &556127695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556127694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &561953797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14071,6 +14106,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
       value: 
@@ -15453,6 +15492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1409475014}
     m_Modifications:
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -15519,7 +15562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.3884
+      value: 0.3829
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16863,6 +16906,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
       value: 
@@ -17437,6 +17484,10 @@ PrefabInstance:
     - target: {fileID: 5651319298378458944, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
@@ -19064,6 +19115,10 @@ PrefabInstance:
     - target: {fileID: 5651319298378458944, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
@@ -22825,6 +22880,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 917099072}
     m_Modifications:
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -25355,12 +25414,20 @@ PrefabInstance:
       value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5042575602013731662, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042575602013731662, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5651319298378458944, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
@@ -25440,7 +25507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.3042
+      value: -0.323
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -31335,6 +31402,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1113548788}
     m_Modifications:
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -31397,11 +31468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0315
+      value: -0.0372
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.3884
+      value: 0.3821
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -36497,6 +36568,10 @@ PrefabInstance:
     - target: {fileID: 5651319298378458944, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
@@ -43039,6 +43114,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
       value: 
@@ -43097,7 +43176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.246
+      value: -0.2486
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43117,11 +43196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.3042
+      value: -0.3232
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.164
+      value: 1.1685
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -45068,6 +45147,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
       value: 
@@ -45216,6 +45299,10 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -45278,11 +45365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0315
+      value: -0.0391
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.3884
+      value: 0.3807
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -51637,6 +51724,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 979100665}
     m_Modifications:
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -51699,11 +51790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0315
+      value: -0.0387
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.3884
+      value: 0.3824
       objectReference: {fileID: 0}
     - target: {fileID: 8059178541843086841, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -53894,6 +53985,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 5887399736494340149, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7956372582188751586, guid: 035c801f281ea4647b96ad60cd38a6b3, type: 3}
       propertyPath: alarmClip
       value: 
@@ -54273,6 +54368,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4137520934644799897, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137520934644799897, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
       objectReference: {fileID: 0}
@@ -54400,3 +54499,4 @@ SceneRoots:
   - {fileID: 458214059}
   - {fileID: 1272429707}
   - {fileID: 1416129082}
+  - {fileID: 556127695}
