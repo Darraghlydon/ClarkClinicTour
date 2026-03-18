@@ -27,12 +27,13 @@ public class DrawSinewaveScript : MonoBehaviour
         // Assign the texture to the RawImage component
         ecgDisplay.texture = texture;
         pixels = new Color[width * height];
+        DrawECG();
     }
 
     void Update()
     {
-        time += Time.deltaTime * speed;
-        DrawECG();
+        //time += Time.deltaTime * speed;
+        //DrawECG();
     }
 
     void DrawECG()

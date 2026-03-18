@@ -21,6 +21,7 @@ public class DrawECGScript : MonoBehaviour
     private Texture2D texture;
     private float time;
     private int currentX;
+    private Renderer rend;
 
     public Color textureColor = Color.green;
     void Start()
@@ -35,18 +36,22 @@ public class DrawECGScript : MonoBehaviour
 
         // Clear the texture initially
         ClearTexture();
+
+        // Draw new ECG data
+        DrawECGOnce();
+
+        rend = GetComponent<Renderer>();
+
     }
 
     void Update()
     {
         // Advance time
-        time += Time.deltaTime * speed;
+        //time += Time.deltaTime * speed;
 
         // Draw new ECG data
-        DrawECG();
+        //DrawECG();
 
-        // Apply the changes to the texture
-        texture.Apply();
     }
 
     void ClearTexture()
@@ -79,6 +84,46 @@ public class DrawECGScript : MonoBehaviour
 
         // Move to the next x position
         currentX = (currentX + 1) % width;
+
+        // Apply the changes to the texture
+        texture.Apply();
+    }
+
+    void DrawECGOnce()
+    {
+        int previousY = -1;
+
+        for (int x = 0; x < width; x++)
+        {
+            float t = (float)x / (width - 1);   // 0 to 1 across the width
+            float yValue = SimulateECG(t);
+
+            int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
+            y = Mathf.Clamp(y, 0, height - 1);
+
+            texture.SetPixel(x, y, textureColor);
+
+            // Optional: join gaps between points so it looks like a line
+            if (previousY != -1)
+            {
+                DrawVerticalLine(x, previousY, y, textureColor);
+            }
+
+            previousY = y;
+        }
+
+        void DrawVerticalLine(int x, int y1, int y2, Color color)
+        {
+            int minY = Mathf.Min(y1, y2);
+            int maxY = Mathf.Max(y1, y2);
+
+            for (int y = minY; y <= maxY; y++)
+            {
+                texture.SetPixel(x, y, color);
+            }
+        }
+
+        texture.Apply();
     }
 
     void ClearPreviousColumn()
