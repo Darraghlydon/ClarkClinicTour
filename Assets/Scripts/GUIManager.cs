@@ -78,6 +78,8 @@ public class GUIManager : MonoBehaviour
         }
     }
 
+
+
     void OnEnable()
     {
         _playerActions.Player.Enable();
@@ -87,7 +89,7 @@ public class GUIManager : MonoBehaviour
         Events.AudioStop.Subscribe(OnAudioStopped);
 
         Events.SubtitlesSkip.Subscribe(SubtitlesSkip);
-        Events.SubtitlesStop.Subscribe(OnSubtitlesStopped);  // FIXED
+        Events.SubtitlesStop.Subscribe(OnSubtitlesStopped);  
 
         SetupNavigationForWebGL();
     }
