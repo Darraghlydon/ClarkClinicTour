@@ -29,6 +29,9 @@ public class KeyboardAndMouseController : MonoBehaviour
     private Transform _infoPointPlayerOrientation;
 
     private Vector3 _directionToFace;
+    private bool _isAutoAligning;
+    private bool _isInfoPointAudioActive;
+    private Coroutine _updateOrientationCoroutine;
 
     private void Awake()
     {
@@ -94,9 +97,17 @@ public class KeyboardAndMouseController : MonoBehaviour
     {
         _pauseMovement = true;
         _pauseLook = true;
+
+        _isInfoPointAudioActive = true;
+        _isAutoAligning = true;
+
         _activeInfoPointController = infoPointController;
         _infoPointPlayerOrientation = _activeInfoPointController.GetInfoPointPlayerOrientation();
-        StartCoroutine(UpdatePlayerOrientation());
+
+        if (_updateOrientationCoroutine != null)
+            StopCoroutine(_updateOrientationCoroutine);
+
+        _updateOrientationCoroutine = StartCoroutine(UpdatePlayerOrientation());
     }
 
     IEnumerator UpdatePlayerOrientation()
@@ -106,9 +117,9 @@ public class KeyboardAndMouseController : MonoBehaviour
             yield break;
 
         // Thresholds and speeds used for the automatic alignment
-        float rotationThreshold = 0.5f;   // How close in degrees we need to be before considering rotation complete
-        float positionThreshold = 0.5f;   // How close in world units we need to be before considering movement complete
-        float pitchThreshold = 0.5f;        // How close in world units we need to be before considering pitch movement complete
+        float rotationThreshold = 0.1f;   // How close in degrees we need to be before considering rotation complete
+        float positionThreshold = 0.1f;   // How close in world units we need to be before considering movement complete
+        float pitchThreshold = 0.1f;        // How close in world units we need to be before considering pitch movement complete
         float rotationSpeed = 180f;       // Degrees per second for auto-rotation
         float moveSpeed = 1.5f;           // Units per second for auto-movement
 
@@ -230,7 +241,6 @@ public class KeyboardAndMouseController : MonoBehaviour
         }
 
         // Sync the controller's stored yaw values with the new transform rotation
-        // so the camera does not snap back when manual look resumes
         float syncedY = transform.eulerAngles.y - 180f;
         _targetYRotation = syncedY;
         _yRotation = syncedY;
@@ -239,19 +249,41 @@ public class KeyboardAndMouseController : MonoBehaviour
         _targetXRotation = 0f;
         cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
-        // Once auto-rotation is finished, allow the player to look around again,
-        // but only if the audio is still playing
-        if (_activeInfoPointController != null && _activeInfoPointController.IsAudioPlaying())
+        // Auto-alignment is now finished
+        _isAutoAligning = false;
+        _updateOrientationCoroutine = null;
+
+        // Allow look once alignment is finished, but only while audio is still active
+        if (_isInfoPointAudioActive)
         {
             _pauseLook = false;
         }
+
+        // Movement only resumes when both alignment and audio are done
+        TryRestoreControl();
     }
 
+    private void TryRestoreControl()
+    {
+        // Only restore movement when both audio and auto-alignment are finished
+        if (!_isInfoPointAudioActive && !_isAutoAligning)
+        {
+            _pauseMovement = false;
+            _pauseLook = false;
+
+            _activeInfoPointController = null;
+            _infoPointPlayerOrientation = null;
+        }
+    }
 
     private void UnPauseMovement(InfoPointController infoPointController)
     {
-        _pauseMovement = false;
-        _pauseLook = false;
+        // Ignore stop events from older / different info points
+        if (infoPointController != _activeInfoPointController)
+            return;
+
+        _isInfoPointAudioActive = false;
+        TryRestoreControl();
     }
 
     private void HandleMovement()

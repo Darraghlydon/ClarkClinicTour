@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointSluice
@@ -4325,6 +4329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointBedSpaces
@@ -8389,6 +8397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointMonitor
@@ -8461,6 +8473,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
@@ -10037,6 +10053,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointPlayroom
@@ -11162,6 +11182,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
@@ -12459,6 +12483,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
@@ -14300,7 +14328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 302925494}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 406917454}
@@ -21156,6 +21184,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointMonitor (2)
@@ -22549,6 +22581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointMonitor (1)
@@ -23777,6 +23813,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
@@ -26267,7 +26307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 515497449}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 2165195986465151114}
@@ -30064,7 +30104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 538768194}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 522187056}
@@ -30265,6 +30305,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
@@ -32348,7 +32392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 1760577996}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 340680638}
@@ -38478,6 +38522,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointWelcomeToClark
@@ -44122,6 +44170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointDrugRoom
@@ -44534,6 +44586,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
@@ -46200,7 +46256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 1890517260}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 475390644}
@@ -47775,7 +47831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 812576015}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 898559232}
@@ -48599,6 +48655,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointWardKitchen
@@ -49141,6 +49201,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointSinks
@@ -49581,7 +49645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1968921410
 Transform:
   m_ObjectHideFlags: 0
@@ -52256,7 +52320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
-  _resetTriggerTimeSeconds: 80
+  _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 845170301}
   movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 1176295681}
@@ -53141,6 +53205,10 @@ PrefabInstance:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _resetTriggerTimeSeconds
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
