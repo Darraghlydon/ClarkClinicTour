@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class KeyboardAndMouseController : MonoBehaviour
@@ -22,8 +25,10 @@ public class KeyboardAndMouseController : MonoBehaviour
     private float _yRotation;
     private Vector3 _moveDirection;
 
-    private bool pauseMovement;
-    private AudioTrigger _activeAudioTrigger;
+    private bool _pauseMovement;
+    private bool _pauseLook;
+    private InfoPointController _activeInfoPointController;
+    private Transform _infoPointPlayerOrientation;
 
     private void Awake()
     {
@@ -37,16 +42,16 @@ public class KeyboardAndMouseController : MonoBehaviour
     private void OnEnable()
     {
         _playerActions.Player.Enable();
-        Events.AudioStart.Subscribe(PauseMovementForAudio);
-        Events.AudioStop.Subscribe(UnPauseMovement);
+        Events.InfoPointStart.Subscribe(PauseMovementForAudio);
+        Events.InfoPointStop.Subscribe(UnPauseMovement);
     }
 
     private void OnDisable()
     {
         _playerActions.Player.Disable();
 
-        Events.AudioStart.Unsubscribe(PauseMovementForAudio);
-        Events.AudioStop.Unsubscribe(UnPauseMovement);
+        Events.InfoPointStart.Unsubscribe(PauseMovementForAudio);
+        Events.InfoPointStop.Unsubscribe(UnPauseMovement);
     }
 
     private void OnDestroy()
@@ -62,13 +67,14 @@ public class KeyboardAndMouseController : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if (_activeAudioTrigger != null)
-            _activeAudioTrigger.StopAudioExternally();
+        if (_activeInfoPointController != null)
+            _activeInfoPointController.StopAudioExternally();
         Events.SubtitlesSkip.Publish();
     }
 
     private void HandleLook()
     {
+        if (_pauseLook) return;
         Vector2 lookVector = _playerActions.Player.Look.ReadValue<Vector2>();
 
         _targetYRotation += lookVector.x * lookSensitivity;
@@ -84,20 +90,79 @@ public class KeyboardAndMouseController : MonoBehaviour
     }
 
 
-    private void PauseMovementForAudio(AudioTrigger trigger)
+    private void PauseMovementForAudio(InfoPointController infoPointController)
     {
-        pauseMovement = true;
-        _activeAudioTrigger = trigger;
+        _pauseMovement = true;
+        _pauseLook = true;
+        _activeInfoPointController = infoPointController;
+        _infoPointPlayerOrientation = _activeInfoPointController.GetInfoPointPlayerOrientation();
+        StartCoroutine(UpdatePlayerOrientation());
     }
 
-    private void UnPauseMovement(AudioTrigger sender)
+    IEnumerator UpdatePlayerOrientation()
     {
-        pauseMovement = false;
+        if (_infoPointPlayerOrientation == null)
+            yield break;
+
+        float rotationThreshold = 0.5f;
+        float rotationSpeed = 180f; // degrees per second
+
+        while (true)
+        {
+            if (_infoPointPlayerOrientation == null)
+                yield break;
+
+            Vector3 directionToTarget = _infoPointPlayerOrientation.forward;
+            directionToTarget.y = 0f;
+
+            if (directionToTarget.sqrMagnitude < 0.001f)
+                yield return null;
+
+            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation,
+                targetRotation,
+                rotationSpeed * Time.deltaTime
+            );
+
+            float angleDifference = Quaternion.Angle(transform.rotation, targetRotation);
+
+            if (angleDifference <= rotationThreshold)
+                break;
+
+            yield return null;
+        }
+
+        Vector3 finalDirection = _infoPointPlayerOrientation.forward;
+        finalDirection.y = 0f;
+
+        if (finalDirection.sqrMagnitude > 0.001f)
+        {
+            Quaternion finalRotation = Quaternion.LookRotation(finalDirection);
+            transform.rotation = finalRotation;
+        }
+
+        float syncedY = transform.eulerAngles.y - 180f;
+        _targetYRotation = syncedY;
+        _yRotation = syncedY;
+
+        if (_activeInfoPointController != null && _activeInfoPointController.IsAudioPlaying())
+        {
+            _pauseLook = false;
+        }
+    }
+
+
+    private void UnPauseMovement(InfoPointController infoPointController)
+    {
+        _pauseMovement = false;
+        _pauseLook = false;
     }
 
     private void HandleMovement()
     {
-        if (pauseMovement) return;
+        if (_pauseMovement) return;
 
         Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
         _moveDirection = new Vector3(moveVector.x, 0, moveVector.y);

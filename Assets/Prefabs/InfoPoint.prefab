@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2165195987547046454}
   - component: {fileID: 2208492814550551327}
   - component: {fileID: 6947259178206989630}
-  - component: {fileID: 5002757189407056957}
   - component: {fileID: 6349502749347307868}
   - component: {fileID: 3214998453494395885}
+  - component: {fileID: 2892922969026672317}
   m_Layer: 6
   m_Name: InfoPoint
   m_TagString: Untagged
@@ -157,21 +157,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5002757189407056957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3159635902519941919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c929f0bb070af4187afab6b56fb9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _resetTriggerTimeSeconds: 90
-  _infoSign: {fileID: 1359918255246597254}
-  WaitingForCooldown: 0
 --- !u!114 &6349502749347307868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +191,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
   _subtitleText: Because our patients are vulnerable, please adhere to strict hand
     washing and hand sanitizing guidelines using the sinks provided.
+--- !u!114 &2892922969026672317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3159635902519941919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e979f63440fe7439b5b80889aceb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
+  _resetTriggerTimeSeconds: 80
+  _infoSign: {fileID: 4575717636044998872}
+  _playerOrientation: {fileID: 2165195987547046454}
+  WaitingForCooldown: 0
 --- !u!1001 &3578931748422722975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,8 +273,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4240773513854343532, guid: d5cb402de0ed6fc4fa65d957ee0cc469, type: 3}
   m_PrefabInstance: {fileID: 3578931748422722975}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1359918255246597254 stripped
+--- !u!1 &4575717636044998872 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2555103412921334041, guid: d5cb402de0ed6fc4fa65d957ee0cc469, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1020871828667198791, guid: d5cb402de0ed6fc4fa65d957ee0cc469, type: 3}
   m_PrefabInstance: {fileID: 3578931748422722975}
   m_PrefabAsset: {fileID: 0}

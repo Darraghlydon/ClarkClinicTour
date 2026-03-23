@@ -41,7 +41,7 @@ public class GUIManager : MonoBehaviour
     private bool _subtitlesSkip;
     private UIState _currentState;
     private UIState _storedUIState = UIState.Default;
-    private AudioTrigger _activeAudioTrigger;
+    private InfoPointController _activeInfoPointController;
 
     public void Awake()
     {
@@ -85,8 +85,8 @@ public class GUIManager : MonoBehaviour
         _playerActions.Player.Enable();
         _playerActions.Player.Menu.performed += DisplayPauseScreen;
 
-        Events.AudioStart.Subscribe(OnAudioStarted);
-        Events.AudioStop.Subscribe(OnAudioStopped);
+        Events.InfoPointStart.Subscribe(OnAudioStarted);
+        Events.InfoPointStop.Subscribe(OnAudioStopped);
 
         Events.SubtitlesSkip.Subscribe(SubtitlesSkip);
         Events.SubtitlesStop.Subscribe(OnSubtitlesStopped);  
@@ -99,23 +99,23 @@ public class GUIManager : MonoBehaviour
         _playerActions.Player.Disable();
         _playerActions.Player.Menu.performed -= DisplayPauseScreen;
 
-        Events.AudioStart.Unsubscribe(OnAudioStarted);
-        Events.AudioStop.Unsubscribe(OnAudioStopped);
+        Events.InfoPointStart.Unsubscribe(OnAudioStarted);
+        Events.InfoPointStop.Unsubscribe(OnAudioStopped);
 
         Events.SubtitlesSkip.Unsubscribe(SubtitlesSkip);
         Events.SubtitlesStop.Unsubscribe(OnSubtitlesStopped); // FIXED
     }
 
-    private void OnAudioStarted(AudioTrigger trigger)
+    private void OnAudioStarted(InfoPointController infoPointController)
     {
-        _activeAudioTrigger = trigger;
+        _activeInfoPointController = infoPointController;
         EnableSkipButton();
     }
 
-    private void OnAudioStopped(AudioTrigger trigger)
+    private void OnAudioStopped(InfoPointController infoPointController)
     {
-        if (_activeAudioTrigger == trigger)
-            _activeAudioTrigger = null;
+        if (_activeInfoPointController == infoPointController)
+            _activeInfoPointController = null;
 
         AudioSkip(); // keep your existing GUI skip-flag flow
     }
@@ -269,8 +269,8 @@ public class GUIManager : MonoBehaviour
     {
         if (_useTouchControls)
         {
-            if (_activeAudioTrigger != null)
-                _activeAudioTrigger.StopAudioExternally();
+            if (_activeInfoPointController != null)
+                _activeInfoPointController.StopAudioExternally();
 
             Events.SubtitlesSkip.Publish();
         }

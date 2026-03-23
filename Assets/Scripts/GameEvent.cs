@@ -88,8 +88,8 @@ public class GameEvent<S, T>
 public static class Events
 {
     // Audio
-    public static readonly GameEvent<AudioTrigger> AudioStart = new();
-    public static readonly GameEvent<AudioTrigger> AudioStop = new();
+    public static readonly GameEvent<InfoPointController> InfoPointStart = new();
+    public static readonly GameEvent<InfoPointController> InfoPointStop = new();
     public static readonly GameEvent AudioSkip = new(); // global command
 
     // Subtitles

@@ -7,17 +7,17 @@ public class CharacterRotationController : MonoBehaviour
     private Quaternion _originalRotation;
     private bool _shouldRotateToTarget = false;
     private Transform _target;
-    private AudioTrigger _audioTrigger;
+    private InfoPointController _infoPointController;
 
     void Start()
     {
         _originalRotation = transform.rotation;
-        _audioTrigger = GetComponent<AudioTrigger>();
+        _infoPointController = GetComponentInChildren<InfoPointController>();
     }
 
     void Update()
     {
-        if (_shouldRotateToTarget && _target != null && _audioTrigger.IsAudioPlaying())
+        if (_shouldRotateToTarget && _target != null && _infoPointController.IsAudioPlaying())
         {
             // Get direction to target but remove vertical component (Y)
             Vector3 direction = _target.position - transform.position;
