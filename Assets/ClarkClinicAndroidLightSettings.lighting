@@ -6,7 +6,7 @@ LightingSettings:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClarkClinicLightSettings
+  m_Name: ClarkClinicAndroidLightSettings
   serializedVersion: 9
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
@@ -18,7 +18,7 @@ LightingSettings:
   m_BakeBackend: 2
   m_LightmapMaxSize: 2048
   m_LightmapSizeFixed: 0
-  m_UseMipmapLimits: 1
+  m_UseMipmapLimits: 0
   m_BakeResolution: 10
   m_Padding: 2
   m_LightmapCompression: 3
