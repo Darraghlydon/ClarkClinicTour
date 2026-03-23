@@ -1,7 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class KeyboardAndMouseController : MonoBehaviour
@@ -29,6 +27,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     private bool _pauseLook;
     private InfoPointController _activeInfoPointController;
     private Transform _infoPointPlayerOrientation;
+
+    private Vector3 _directionToFace;
 
     private void Awake()
     {
@@ -101,52 +101,146 @@ public class KeyboardAndMouseController : MonoBehaviour
 
     IEnumerator UpdatePlayerOrientation()
     {
+
         if (_infoPointPlayerOrientation == null)
             yield break;
 
-        float rotationThreshold = 0.5f;
-        float rotationSpeed = 180f; // degrees per second
+        // Thresholds and speeds used for the automatic alignment
+        float rotationThreshold = 0.5f;   // How close in degrees we need to be before considering rotation complete
+        float positionThreshold = 0.5f;   // How close in world units we need to be before considering movement complete
+        float pitchThreshold = 0.5f;        // How close in world units we need to be before considering pitch movement complete
+        float rotationSpeed = 180f;       // Degrees per second for auto-rotation
+        float moveSpeed = 1.5f;           // Units per second for auto-movement
 
+        // Determine whether this info point wants the player to move into position
+        bool shouldMove = _activeInfoPointController != null &&
+                          _activeInfoPointController.ShouldMovePlayerToInfoPoint();
+
+        // Keep updating until the player has finished rotating and moving
         while (true)
         {
             if (_infoPointPlayerOrientation == null)
                 yield break;
 
-            Vector3 directionToTarget = _infoPointPlayerOrientation.forward;
-            directionToTarget.y = 0f;
+            // Default to current position in case movement is not required
+            Vector3 targetPosition = transform.position;
 
-            if (directionToTarget.sqrMagnitude < 0.001f)
+            if (shouldMove)
+            {
+                // Use the info point's position as the target position,
+                targetPosition = _infoPointPlayerOrientation.position;
+                targetPosition.y = transform.position.y;
+
+                // Move the player toward the target
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    targetPosition,
+                    moveSpeed * Time.deltaTime
+                );
+            }
+
+            if (shouldMove)
+            {
+                // For normal info points face the direction defined by the orientation object's forward vector
+                _directionToFace = _infoPointPlayerOrientation.forward;
+                _directionToFace.y = 0f; 
+            }
+            else
+            {
+                // For character interactions face toward the target's position instead
+                _directionToFace = _infoPointPlayerOrientation.position - myTransform.position;
+                _directionToFace.y = 0f; 
+            }
+
+            // If the direction is too small wait until next frame and try again
+            if (_directionToFace.sqrMagnitude < 0.001f)
+            {
                 yield return null;
+                continue;
+            }
 
-            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+            // Create the target rotation
+            Quaternion targetRotation = Quaternion.LookRotation(_directionToFace);
 
+            // Rotate toward the desired rotation
             transform.rotation = Quaternion.RotateTowards(
                 transform.rotation,
                 targetRotation,
                 rotationSpeed * Time.deltaTime
             );
 
+            _xRotation = Mathf.MoveTowards(_xRotation, 0f, rotationSpeed * Time.deltaTime);
+            _targetXRotation = _xRotation;
+            cameraTransform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+
+            // Determine angle distance from target
             float angleDifference = Quaternion.Angle(transform.rotation, targetRotation);
 
-            if (angleDifference <= rotationThreshold)
-                break;
+            bool pitchComplete = Mathf.Abs(_xRotation) <= pitchThreshold;
+
+            if (shouldMove)
+            {
+                float distance = Vector3.Distance(transform.position, targetPosition);
+
+                if (angleDifference <= rotationThreshold && distance <= positionThreshold && pitchComplete)
+                {
+                    break;
+                }
+            }
+            else
+            {
+                if (angleDifference <= rotationThreshold && pitchComplete)
+                {
+                    break;
+                }
+            }
+
+
 
             yield return null;
         }
 
-        Vector3 finalDirection = _infoPointPlayerOrientation.forward;
-        finalDirection.y = 0f;
+        if (shouldMove)
+        {
+            // Snap exactly to the final target position at the end
+            Vector3 finalPosition = _infoPointPlayerOrientation.position;
+            finalPosition.y = transform.position.y;
+            transform.position = finalPosition;
+        }
+
+        Vector3 finalDirection;
+
+        if (shouldMove)
+        {
+            // For normal info points, final facing direction is the orientation object's forward
+            finalDirection = _infoPointPlayerOrientation.forward;
+        }
+        else
+        {
+            // For character interactions, final facing direction is toward the target's position
+            finalDirection = _infoPointPlayerOrientation.position - myTransform.position;
+        }
+
+        finalDirection.y = 0f; 
 
         if (finalDirection.sqrMagnitude > 0.001f)
         {
-            Quaternion finalRotation = Quaternion.LookRotation(finalDirection);
-            transform.rotation = finalRotation;
+            // Snap exactly to the final target rotation
+            transform.rotation = Quaternion.LookRotation(finalDirection);
         }
 
+        // Sync the controller's stored yaw values with the new transform rotation
+        // so the camera does not snap back when manual look resumes
         float syncedY = transform.eulerAngles.y - 180f;
         _targetYRotation = syncedY;
         _yRotation = syncedY;
 
+        _xRotation = 0f;
+        _targetXRotation = 0f;
+        cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+
+        // Once auto-rotation is finished, allow the player to look around again,
+        // but only if the audio is still playing
         if (_activeInfoPointController != null && _activeInfoPointController.IsAudioPlaying())
         {
             _pauseLook = false;

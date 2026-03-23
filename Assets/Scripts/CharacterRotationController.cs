@@ -61,12 +61,4 @@ public class CharacterRotationController : MonoBehaviour
         _shouldRotateToTarget = true;
     }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.transform == _target)
-    //    {
-    //        _shouldRotateToTarget = false;
-    //        _target = null;
-    //    }
-    //}
 }

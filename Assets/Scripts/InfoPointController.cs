@@ -5,6 +5,7 @@ public class InfoPointController : MonoBehaviour
 {
     [SerializeField] private float _resetTriggerTimeSeconds = 80f;
     [SerializeField] private GameObject _infoSign;
+    [SerializeField] private bool movePlayerToInfoPoint = true;
     [SerializeField] private Transform _playerOrientation;
 
     private AudioSource _audioSource;
@@ -95,5 +96,9 @@ public class InfoPointController : MonoBehaviour
     public Transform GetInfoPointPlayerOrientation()
     {
         return _playerOrientation;
+    }
+    public bool ShouldMovePlayerToInfoPoint()
+    {
+        return movePlayerToInfoPoint;
     }
 }
