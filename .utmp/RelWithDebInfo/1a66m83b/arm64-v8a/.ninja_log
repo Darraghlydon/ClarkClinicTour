@@ -1,5 +1,5 @@
 # ninja log v5
-2	91	7960101573667177	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c0fcede04e4cc79a
-91	170	7960101574429201	C:/GitHub/ClarkClinicTour/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a66m83b/obj/arm64-v8a/libswappywrapper.so	1a8819b839d89110
-1	95	7960103831299780	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c0fcede04e4cc79a
-96	179	7960103832137253	C:/GitHub/ClarkClinicTour/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a66m83b/obj/arm64-v8a/libswappywrapper.so	1a8819b839d89110
+2	699	7960556298595254	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c0fcede04e4cc79a
+699	953	7960556301119073	C:/GitHub/ClarkClinicTour/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a66m83b/obj/arm64-v8a/libswappywrapper.so	1a8819b839d89110
+1	427	7960938960501055	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c0fcede04e4cc79a
+428	594	7960938962165418	C:/GitHub/ClarkClinicTour/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a66m83b/obj/arm64-v8a/libswappywrapper.so	1a8819b839d89110
