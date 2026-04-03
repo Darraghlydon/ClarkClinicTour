@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class DrawSinewaveScript : MonoBehaviour
 {
-    public int width = 500; // Width of the texture
-    public int height = 100; // Height of the texture
+    public int width = 50; // Width of the texture
+    public int height = 10; // Height of the texture
     public float frequency = 1f; // Frequency of the sine wave
     public float amplitude = 0.5f; // Amplitude of the wave
     public float speed = 1f; // Speed at which the wave moves
@@ -32,8 +32,8 @@ public class DrawSinewaveScript : MonoBehaviour
 
     void Update()
     {
-        //time += Time.deltaTime * speed;
-        //DrawECG();
+        time += Time.deltaTime * speed;
+        DrawECG();
     }
 
     void DrawECG()
