@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UI;
 
 public class DrawSinewaveScript : MonoBehaviour
@@ -10,6 +11,7 @@ public class DrawSinewaveScript : MonoBehaviour
     public float frequency = 1f; // Frequency of the sine wave
     public float amplitude = 0.5f; // Amplitude of the wave
     public float speed = 1f; // Speed at which the wave moves
+    [SerializeField] private int lineThickness = 3;
 
     public RawImage ecgDisplay; // Reference to the RawImage component
 
@@ -54,7 +56,8 @@ public class DrawSinewaveScript : MonoBehaviour
             
             if (y >= 0 && y < height)
             {
-                pixels[x + y * width] = Color.green;
+                // pixels[x + y * width] = Color.green;
+                DrawThickPixel(x, y, Color.green);
             }
         }
 
@@ -62,4 +65,20 @@ public class DrawSinewaveScript : MonoBehaviour
         texture.SetPixels(pixels);
         texture.Apply();
     }
+
+    void DrawThickPixel(int x, int y, Color color)
+    {
+        int halfThickness = lineThickness / 2;
+
+        for (int offset = -halfThickness; offset <= halfThickness; offset++)
+        {
+            int drawY = y + offset;
+
+            if (drawY >= 0 && drawY < height)
+            {
+                pixels[x + drawY * width] = color;
+            }
+        }
+    }
+
 }

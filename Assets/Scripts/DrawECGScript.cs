@@ -14,8 +14,10 @@ public class DrawECGScript : MonoBehaviour
     public float rWaveMultiplier;
     public float sWaveMultiplier;
     public float tWaveMultiplier;
-    
-    
+
+    [SerializeField] private int lineThickness = 3;
+
+
     public RawImage ecgDisplay; // Reference to the RawImage component
 
     private Texture2D texture;
@@ -70,6 +72,21 @@ public class DrawECGScript : MonoBehaviour
         texture.Apply();
     }
 
+    void DrawThickPixel(int x, int y, Color color)
+    {
+        int halfThickness = lineThickness / 2;
+
+        for (int offset = -halfThickness; offset <= halfThickness; offset++)
+        {
+            int drawY = y + offset;
+
+            if (drawY >= 0 && drawY < height)
+            {
+                texture.SetPixel(x, drawY, color);
+            }
+        }
+    }
+
     void DrawECG()
     {
         // Generate a new ECG value
@@ -80,7 +97,8 @@ public class DrawECGScript : MonoBehaviour
         // Draw the ECG value at the current position
         if (y >= 0 && y < height)
         {
-            texture.SetPixel(currentX, y, textureColor); // Set the ECG pixel
+            // texture.SetPixel(currentX, y, textureColor); // Set the ECG pixel
+            DrawThickPixel(currentX, y, textureColor);
         }
 
         // Clear the previous column before moving on to the next
@@ -105,7 +123,8 @@ public class DrawECGScript : MonoBehaviour
             int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
             y = Mathf.Clamp(y, 0, height - 1);
 
-            texture.SetPixel(x, y, textureColor);
+            //texture.SetPixel(x, y, textureColor);
+            DrawThickPixel(x, y, textureColor);
 
             // Optional: join gaps between points so it looks like a line
             if (previousY != -1)
@@ -123,7 +142,8 @@ public class DrawECGScript : MonoBehaviour
 
             for (int y = minY; y <= maxY; y++)
             {
-                texture.SetPixel(x, y, color);
+                //texture.SetPixel(x, y, color);
+                DrawThickPixel(x, y, color);
             }
         }
 
