@@ -66,7 +66,7 @@ MonoBehaviour:
   rWaveMultiplier: 0.51
   sWaveMultiplier: 0.36
   tWaveMultiplier: 0
-  lineThickness: 3
+  lineThickness: 5
   framesPerUpdate: 10
   _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   ecgDisplay: {fileID: 7309945693063899450}
@@ -164,7 +164,7 @@ MonoBehaviour:
   rWaveMultiplier: 0.8
   sWaveMultiplier: -0.2
   tWaveMultiplier: 0.3
-  lineThickness: 3
+  lineThickness: 5
   framesPerUpdate: 10
   _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   ecgDisplay: {fileID: 4091010290830624081}
@@ -904,7 +904,7 @@ MonoBehaviour:
   amplitude: 0.5
   speed: 1
   ecgDisplay: {fileID: 2294654780061109275}
-  lineThickness: 3
+  lineThickness: 5
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   framesPerUpdate: 10
   _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2506992058130175174
 MonoBehaviour:
   m_ObjectHideFlags: 0
