@@ -17,6 +17,8 @@ public class DrawECGScript : MonoBehaviour
 
     [SerializeField] private int lineThickness = 3;
 
+    [Header("Update Control")]
+    [SerializeField] private int framesPerUpdate = 10; // 1 = every frame, 10 = every 10 frames
 
     public RawImage ecgDisplay; // Reference to the RawImage component
 
@@ -25,7 +27,11 @@ public class DrawECGScript : MonoBehaviour
     private int currentX;
     private Renderer rend;
 
+    private int frameCounter;
+    private float accumulatedDeltaTime;
+
     public Color textureColor = Color.green;
+
     void Awake()
     {
         // Initialize the texture
@@ -43,6 +49,7 @@ public class DrawECGScript : MonoBehaviour
 
         rend = GetComponent<Renderer>();
 
+        framesPerUpdate = Mathf.Max(1, framesPerUpdate);
     }
 
     public void InitialiseDisplay()
@@ -52,12 +59,29 @@ public class DrawECGScript : MonoBehaviour
 
     void Update()
     {
-        // Advance time
-        time += Time.deltaTime * speed;
+        frameCounter++;
+        accumulatedDeltaTime += Time.deltaTime;
 
-        // Draw new ECG data
-        DrawECG();
+        if (frameCounter < framesPerUpdate)
+            return;
 
+        int stepsToRun = frameCounter;
+        float stepDeltaTime = accumulatedDeltaTime / stepsToRun;
+
+        frameCounter = 0;
+        accumulatedDeltaTime = 0f;
+
+        for (int i = 0; i < stepsToRun; i++)
+        {
+            // Advance time
+            time += stepDeltaTime * speed;
+
+            // Draw new ECG data
+            DrawECGStep();
+        }
+
+        // Apply the changes to the texture
+        texture.Apply();
     }
 
     void ClearTexture()
@@ -87,12 +111,13 @@ public class DrawECGScript : MonoBehaviour
         }
     }
 
-    void DrawECG()
+    void DrawECGStep()
     {
         // Generate a new ECG value
         float t = time % 1f; // Simulate one heartbeat cycle per second
         float yValue = SimulateECG(t);
-        int y = Mathf.FloorToInt((yValue + 1) * 0.5f * height);
+        int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
+        y = Mathf.Clamp(y, 0, height - 1);
 
         // Draw the ECG value at the current position
         if (y >= 0 && y < height)
@@ -106,9 +131,6 @@ public class DrawECGScript : MonoBehaviour
 
         // Move to the next x position
         currentX = (currentX + 1) % width;
-
-        // Apply the changes to the texture
-        texture.Apply();
     }
 
     void DrawECGOnce()
@@ -135,19 +157,19 @@ public class DrawECGScript : MonoBehaviour
             previousY = y;
         }
 
-        void DrawVerticalLine(int x, int y1, int y2, Color color)
-        {
-            int minY = Mathf.Min(y1, y2);
-            int maxY = Mathf.Max(y1, y2);
-
-            for (int y = minY; y <= maxY; y++)
-            {
-                //texture.SetPixel(x, y, color);
-                DrawThickPixel(x, y, color);
-            }
-        }
-
         texture.Apply();
+    }
+
+    void DrawVerticalLine(int x, int y1, int y2, Color color)
+    {
+        int minY = Mathf.Min(y1, y2);
+        int maxY = Mathf.Max(y1, y2);
+
+        for (int y = minY; y <= maxY; y++)
+        {
+            //texture.SetPixel(x, y, color);
+            DrawThickPixel(x, y, color);
+        }
     }
 
     void ClearPreviousColumn()

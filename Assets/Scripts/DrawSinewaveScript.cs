@@ -1,67 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UI;
 
 public class DrawSinewaveScript : MonoBehaviour
 {
-    public int width = 50; // Width of the texture
-    public int height = 10; // Height of the texture
-    public float frequency = 1f; // Frequency of the sine wave
-    public float amplitude = 0.5f; // Amplitude of the wave
-    public float speed = 1f; // Speed at which the wave moves
-    [SerializeField] private int lineThickness = 3;
+    public int width = 50;
+    public int height = 10;
+    public float frequency = 1f;
+    public float amplitude = 0.5f;
+    public float speed = 1f;
 
-    public RawImage ecgDisplay; // Reference to the RawImage component
+    public RawImage ecgDisplay;
+
+    [SerializeField] private int lineThickness = 3;
+    [SerializeField] private Color lineColor = Color.green;
+
+    [Header("Update Control")]
+    [SerializeField] private int framesPerUpdate = 10;   // 1 = every frame, 10 = every 10 frames
 
     private Texture2D texture;
     private float time;
     private Color[] pixels;
+    private int frameCounter;
+    private float accumulatedDeltaTime;
 
     void Start()
     {
-        // Initialize the texture
         texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
-        texture.filterMode = FilterMode.Point; // Prevents blurring of the texture
-        texture.wrapMode = TextureWrapMode.Clamp; // Prevents wrapping of the texture
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp;
 
-        // Assign the texture to the RawImage component
         ecgDisplay.texture = texture;
         pixels = new Color[width * height];
+
         DrawECG();
     }
 
     void Update()
     {
-        time += Time.deltaTime * speed;
+        frameCounter++;
+        accumulatedDeltaTime += Time.deltaTime;
+
+        if (frameCounter < framesPerUpdate)
+            return;
+
+        time += accumulatedDeltaTime * speed;
+
+        frameCounter = 0;
+        accumulatedDeltaTime = 0f;
+
         DrawECG();
     }
 
     void DrawECG()
     {
-
-
-        // Clear the texture to black
         for (int i = 0; i < pixels.Length; i++)
         {
             pixels[i] = Color.black;
         }
 
-        // Draw the ECG waveform
         for (int x = 0; x < width; x++)
         {
             float yValue = Mathf.Sin((x + time * 100f) * frequency * Mathf.PI / 180f) * amplitude;
-            int y = Mathf.FloorToInt((yValue + 1) * 0.5f * height);
-            
-            if (y >= 0 && y < height)
-            {
-                // pixels[x + y * width] = Color.green;
-                DrawThickPixel(x, y, Color.green);
-            }
+            int y = Mathf.FloorToInt((yValue + 1) * 0.5f * (height - 1));
+            y = Mathf.Clamp(y, 0, height - 1);
+
+            DrawThickPixel(x, y, lineColor);
         }
 
-        // Apply the changes to the texture
         texture.SetPixels(pixels);
         texture.Apply();
     }
@@ -80,5 +87,4 @@ public class DrawSinewaveScript : MonoBehaviour
             }
         }
     }
-
 }

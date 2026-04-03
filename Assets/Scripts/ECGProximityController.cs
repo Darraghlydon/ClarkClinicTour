@@ -8,7 +8,7 @@ public class ECGProximityController : MonoBehaviour
 
     private DrawECGScript[] ecgScripts;
     private DrawSinewaveScript[] sinewaveScripts;
-    private HRValueScript[] hrValueScripts;
+    //private HRValueScript[] hrValueScripts;
     private bool _isFirstRun = true;
 
     private void Awake()
@@ -16,7 +16,7 @@ public class ECGProximityController : MonoBehaviour
         // Get all matching scripts from this object and its children
         ecgScripts = _ecgTextureObject.GetComponentsInChildren<DrawECGScript>(true);
         sinewaveScripts = _ecgTextureObject.GetComponentsInChildren<DrawSinewaveScript>(true);
-        hrValueScripts = _ecgTextureObject.GetComponentsInChildren<HRValueScript>(true);
+        // hrValueScripts = _ecgTextureObject.GetComponentsInChildren<HRValueScript>(true);
     }
 
     private void Start()
@@ -65,10 +65,10 @@ public class ECGProximityController : MonoBehaviour
                 script.enabled = state;
         }
 
-        foreach (HRValueScript script in hrValueScripts)
-        {
-            if (script != null)
-                script.enabled = state;
-        }
+        //foreach (HRValueScript script in hrValueScripts)
+        //{
+        //    if (script != null)
+        //        script.enabled = state;
+        //}
     }
 }
