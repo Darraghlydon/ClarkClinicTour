@@ -101,13 +101,17 @@ public class DrawECGScript : MonoBehaviour
     {
         int halfThickness = lineThickness / 2;
 
-        for (int offset = -halfThickness; offset <= halfThickness; offset++)
+        for (int offsetX = -halfThickness; offsetX <= halfThickness; offsetX++)
         {
-            int drawY = y + offset;
-
-            if (drawY >= 0 && drawY < height)
+            for (int offsetY = -halfThickness; offsetY <= halfThickness; offsetY++)
             {
-                texture.SetPixel(x, drawY, color);
+                int drawX = x + offsetX;
+                int drawY = y + offsetY;
+
+                if (drawX >= 0 && drawX < width && drawY >= 0 && drawY < height)
+                {
+                    texture.SetPixel(drawX, drawY, color);
+                }
             }
         }
     }
@@ -175,10 +179,22 @@ public class DrawECGScript : MonoBehaviour
 
     void ClearPreviousColumn()
     {
-        int prevX = (currentX + 1) % width;
-        for (int y = 0; y < height; y++)
+        int halfThickness = lineThickness / 2;
+        int clearXCenter = (currentX + 1) % width;
+
+        for (int offsetX = -halfThickness; offsetX <= halfThickness; offsetX++)
         {
-            texture.SetPixel(prevX, y, _backgroundColor);
+            int clearX = clearXCenter + offsetX;
+
+            while (clearX < 0)
+                clearX += width;
+
+            clearX %= width;
+
+            for (int y = 0; y < height; y++)
+            {
+                texture.SetPixel(clearX, y, _backgroundColor);
+            }
         }
     }
 
