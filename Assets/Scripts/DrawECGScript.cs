@@ -19,6 +19,7 @@ public class DrawECGScript : MonoBehaviour
 
     [Header("Update Control")]
     [SerializeField] private int framesPerUpdate = 10; // 1 = every frame, 10 = every 10 frames
+    [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0.3f);
 
     public RawImage ecgDisplay; // Reference to the RawImage component
 
@@ -90,7 +91,7 @@ public class DrawECGScript : MonoBehaviour
         {
             for (int x = 0; x < width; x++)
             {
-                texture.SetPixel(x, y, Color.black);
+                texture.SetPixel(x, y, _backgroundColor);
             }
         }
         texture.Apply();
@@ -177,7 +178,7 @@ public class DrawECGScript : MonoBehaviour
         int prevX = (currentX + 1) % width;
         for (int y = 0; y < height; y++)
         {
-            texture.SetPixel(prevX, y, Color.black);
+            texture.SetPixel(prevX, y, _backgroundColor);
         }
     }
 

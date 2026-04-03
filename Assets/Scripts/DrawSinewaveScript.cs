@@ -18,6 +18,7 @@ public class DrawSinewaveScript : MonoBehaviour
 
     [Header("Update Control")]
     [SerializeField] private int framesPerUpdate = 10;   // 1 = every frame, 10 = every 10 frames
+    [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0.3f);
 
     private Texture2D texture;
     private float time;
@@ -25,7 +26,7 @@ public class DrawSinewaveScript : MonoBehaviour
     private int frameCounter;
     private float accumulatedDeltaTime;
 
-    void Start()
+    void Awake()
     {
         texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
         texture.filterMode = FilterMode.Point;
@@ -57,7 +58,7 @@ public class DrawSinewaveScript : MonoBehaviour
     {
         for (int i = 0; i < pixels.Length; i++)
         {
-            pixels[i] = Color.black;
+            pixels[i] = _backgroundColor;
         }
 
         for (int x = 0; x < width; x++)

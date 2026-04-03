@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -4}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2708128286991202279
@@ -68,6 +68,7 @@ MonoBehaviour:
   tWaveMultiplier: 0
   lineThickness: 3
   framesPerUpdate: 10
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   ecgDisplay: {fileID: 7309945693063899450}
   textureColor: {r: 0, g: 0.020439148, b: 1, a: 1}
 --- !u!114 &7309945693063899450
@@ -132,7 +133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: 19.5}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6041718979401741356
@@ -165,6 +166,7 @@ MonoBehaviour:
   tWaveMultiplier: 0.3
   lineThickness: 3
   framesPerUpdate: 10
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   ecgDisplay: {fileID: 4091010290830624081}
   textureColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &4091010290830624081
@@ -838,7 +840,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4718918955204858982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -846,7 +848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -27.4}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4353962401819171545
@@ -905,6 +907,7 @@ MonoBehaviour:
   lineThickness: 3
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   framesPerUpdate: 10
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5042575602013731662
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,7 +33,6 @@ public class ECGProximityController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger Enter");
         if (!string.IsNullOrEmpty(targetTag) && !other.CompareTag(targetTag))
             return;
 
@@ -43,7 +42,6 @@ public class ECGProximityController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger Exit");
         if (!string.IsNullOrEmpty(targetTag) && !other.CompareTag(targetTag))
             return;
 
