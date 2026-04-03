@@ -24,7 +24,7 @@ public class DrawECGScript : MonoBehaviour
     private Renderer rend;
 
     public Color textureColor = Color.green;
-    void Start()
+    void Awake()
     {
         // Initialize the texture
         texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
@@ -38,10 +38,14 @@ public class DrawECGScript : MonoBehaviour
         ClearTexture();
 
         // Draw new ECG data
-        DrawECGOnce();
 
         rend = GetComponent<Renderer>();
 
+    }
+
+    public void InitialiseDisplay()
+    {
+        DrawECGOnce();
     }
 
     void Update()

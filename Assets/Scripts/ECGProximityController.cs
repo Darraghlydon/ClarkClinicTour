@@ -9,6 +9,7 @@ public class ECGProximityController : MonoBehaviour
     private DrawECGScript[] ecgScripts;
     private DrawSinewaveScript[] sinewaveScripts;
     private HRValueScript[] hrValueScripts;
+    private bool _isFirstRun = true;
 
     private void Awake()
     {
@@ -16,9 +17,19 @@ public class ECGProximityController : MonoBehaviour
         ecgScripts = _ecgTextureObject.GetComponentsInChildren<DrawECGScript>(true);
         sinewaveScripts = _ecgTextureObject.GetComponentsInChildren<DrawSinewaveScript>(true);
         hrValueScripts = _ecgTextureObject.GetComponentsInChildren<HRValueScript>(true);
+    }
 
+    private void Start()
+    {
+        SetProcessingState(true);
+        foreach (DrawECGScript script in ecgScripts)
+        {
+            if (script != null)
+                script.InitialiseDisplay();
+        }
         SetProcessingState(false);
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
