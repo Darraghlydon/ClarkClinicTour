@@ -7,7 +7,7 @@ public class DrawECGScript : MonoBehaviour
 {
     public int width = 50; // Width of the texture
     public int height = 10; // Height of the texture
-    public float speed = 1f; // Speed at which the wave moves
+    public float speed = 1f; // Speed at which the wave moves through its cycle
 
     public float pWaveMultiplier;
     public float qWaveMultiplier;
@@ -18,20 +18,24 @@ public class DrawECGScript : MonoBehaviour
     [SerializeField] private int lineThickness = 3;
 
     [Header("Update Control")]
-    [SerializeField] private int framesPerUpdate = 10; // 1 = every frame, 10 = every 10 frames
-    [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0.3f);
+    [SerializeField] private float secondsPerStep = 0.02f; // Time between ECG column updates
+    [SerializeField] private int maxStepsPerFrame = 10;    // Prevent too many catch-up steps in one frame
+
+    [Header("Appearance")]
+    [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0f);
 
     public RawImage ecgDisplay; // Reference to the RawImage component
+    public Color textureColor = Color.green;
 
     private Texture2D texture;
     private float time;
     private int currentX;
     private Renderer rend;
 
-    private int frameCounter;
-    private float accumulatedDeltaTime;
+    private float stepTimer;
 
-    public Color textureColor = Color.green;
+    private bool hasPreviousPoint;
+    private int previousY;
 
     void Awake()
     {
@@ -46,11 +50,11 @@ public class DrawECGScript : MonoBehaviour
         // Clear the texture initially
         ClearTexture();
 
-        // Draw new ECG data
-
         rend = GetComponent<Renderer>();
 
-        framesPerUpdate = Mathf.Max(1, framesPerUpdate);
+        lineThickness = Mathf.Max(1, lineThickness);
+        secondsPerStep = Mathf.Max(0.001f, secondsPerStep);
+        maxStepsPerFrame = Mathf.Max(1, maxStepsPerFrame);
     }
 
     public void InitialiseDisplay()
@@ -60,29 +64,28 @@ public class DrawECGScript : MonoBehaviour
 
     void Update()
     {
-        frameCounter++;
-        accumulatedDeltaTime += Time.deltaTime;
+        stepTimer += Time.deltaTime;
 
-        if (frameCounter < framesPerUpdate)
-            return;
+        int stepsThisFrame = 0;
 
-        int stepsToRun = frameCounter;
-        float stepDeltaTime = accumulatedDeltaTime / stepsToRun;
-
-        frameCounter = 0;
-        accumulatedDeltaTime = 0f;
-
-        for (int i = 0; i < stepsToRun; i++)
+        while (stepTimer >= secondsPerStep && stepsThisFrame < maxStepsPerFrame)
         {
+            stepTimer -= secondsPerStep;
+
             // Advance time
-            time += stepDeltaTime * speed;
+            time += secondsPerStep * speed;
 
             // Draw new ECG data
             DrawECGStep();
+
+            stepsThisFrame++;
         }
 
         // Apply the changes to the texture
-        texture.Apply();
+        if (stepsThisFrame > 0)
+        {
+            texture.Apply();
+        }
     }
 
     void ClearTexture()
@@ -116,6 +119,39 @@ public class DrawECGScript : MonoBehaviour
         }
     }
 
+    void DrawLine(int x0, int y0, int x1, int y1, Color color)
+    {
+        int dx = Mathf.Abs(x1 - x0);
+        int dy = Mathf.Abs(y1 - y0);
+
+        int sx = x0 < x1 ? 1 : -1;
+        int sy = y0 < y1 ? 1 : -1;
+
+        int err = dx - dy;
+
+        while (true)
+        {
+            DrawThickPixel(x0, y0, color);
+
+            if (x0 == x1 && y0 == y1)
+                break;
+
+            int e2 = 2 * err;
+
+            if (e2 > -dy)
+            {
+                err -= dy;
+                x0 += sx;
+            }
+
+            if (e2 < dx)
+            {
+                err += dx;
+                y0 += sy;
+            }
+        }
+    }
+
     void DrawECGStep()
     {
         // Generate a new ECG value
@@ -124,12 +160,20 @@ public class DrawECGScript : MonoBehaviour
         int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
         y = Mathf.Clamp(y, 0, height - 1);
 
+        int drawX = currentX;
+        int prevX = (currentX - 1 + width) % width;
+
         // Draw the ECG value at the current position
-        if (y >= 0 && y < height)
+        DrawThickPixel(drawX, y, textureColor);
+
+        // Join this point to the previous one so jumps do not appear isolated
+        if (hasPreviousPoint)
         {
-            // texture.SetPixel(currentX, y, textureColor); // Set the ECG pixel
-            DrawThickPixel(currentX, y, textureColor);
+            DrawLine(prevX, previousY, drawX, y, textureColor);
         }
+
+        previousY = y;
+        hasPreviousPoint = true;
 
         // Clear the previous column before moving on to the next
         ClearPreviousColumn();
@@ -140,7 +184,7 @@ public class DrawECGScript : MonoBehaviour
 
     void DrawECGOnce()
     {
-        int previousY = -1;
+        int previousDrawY = -1;
 
         for (int x = 0; x < width; x++)
         {
@@ -150,31 +194,18 @@ public class DrawECGScript : MonoBehaviour
             int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
             y = Mathf.Clamp(y, 0, height - 1);
 
-            //texture.SetPixel(x, y, textureColor);
             DrawThickPixel(x, y, textureColor);
 
             // Optional: join gaps between points so it looks like a line
-            if (previousY != -1)
+            if (previousDrawY != -1)
             {
-                DrawVerticalLine(x, previousY, y, textureColor);
+                DrawLine(x - 1, previousDrawY, x, y, textureColor);
             }
 
-            previousY = y;
+            previousDrawY = y;
         }
 
         texture.Apply();
-    }
-
-    void DrawVerticalLine(int x, int y1, int y2, Color color)
-    {
-        int minY = Mathf.Min(y1, y2);
-        int maxY = Mathf.Max(y1, y2);
-
-        for (int y = minY; y <= maxY; y++)
-        {
-            //texture.SetPixel(x, y, color);
-            DrawThickPixel(x, y, color);
-        }
     }
 
     void ClearPreviousColumn()
@@ -187,7 +218,9 @@ public class DrawECGScript : MonoBehaviour
             int clearX = clearXCenter + offsetX;
 
             while (clearX < 0)
+            {
                 clearX += width;
+            }
 
             clearX %= width;
 

@@ -9,7 +9,6 @@ public class ECGProximityController : MonoBehaviour
     private DrawECGScript[] ecgScripts;
     private DrawSinewaveScript[] sinewaveScripts;
     //private HRValueScript[] hrValueScripts;
-    private bool _isFirstRun = true;
 
     private void Awake()
     {

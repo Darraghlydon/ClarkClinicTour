@@ -17,14 +17,13 @@ public class DrawSinewaveScript : MonoBehaviour
     [SerializeField] private Color lineColor = Color.green;
 
     [Header("Update Control")]
-    [SerializeField] private int framesPerUpdate = 10;   // 1 = every frame, 10 = every 10 frames
+    [SerializeField] private float secondsPerUpdate = 0.02f; // Time between redraws
     [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0.3f);
 
     private Texture2D texture;
     private float time;
     private Color[] pixels;
-    private int frameCounter;
-    private float accumulatedDeltaTime;
+    private float updateTimer;
 
     void Awake()
     {
@@ -35,21 +34,21 @@ public class DrawSinewaveScript : MonoBehaviour
         ecgDisplay.texture = texture;
         pixels = new Color[width * height];
 
+        lineThickness = Mathf.Max(1, lineThickness);
+        secondsPerUpdate = Mathf.Max(0.001f, secondsPerUpdate);
+
         DrawECG();
     }
 
     void Update()
     {
-        frameCounter++;
-        accumulatedDeltaTime += Time.deltaTime;
+        updateTimer += Time.deltaTime;
 
-        if (frameCounter < framesPerUpdate)
+        if (updateTimer < secondsPerUpdate)
             return;
 
-        time += accumulatedDeltaTime * speed;
-
-        frameCounter = 0;
-        accumulatedDeltaTime = 0f;
+        time += updateTimer * speed;
+        updateTimer = 0f;
 
         DrawECG();
     }
@@ -64,7 +63,7 @@ public class DrawSinewaveScript : MonoBehaviour
         for (int x = 0; x < width; x++)
         {
             float yValue = Mathf.Sin((x + time * 100f) * frequency * Mathf.PI / 180f) * amplitude;
-            int y = Mathf.FloorToInt((yValue + 1) * 0.5f * (height - 1));
+            int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
             y = Mathf.Clamp(y, 0, height - 1);
 
             DrawThickPixel(x, y, lineColor);
