@@ -85,8 +85,8 @@ public class KeyboardAndMouseController : MonoBehaviour
 
         _targetXRotation = Mathf.Clamp(_targetXRotation, -70f, 70f);
 
-        _xRotation = Mathf.Lerp(_xRotation, _targetXRotation, mouseSmooth * Time.deltaTime);
-        _yRotation = Mathf.Lerp(_yRotation, _targetYRotation, mouseSmooth * Time.deltaTime);
+        _xRotation = Mathf.LerpAngle(_xRotation, _targetXRotation, mouseSmooth * Time.deltaTime);
+        _yRotation = Mathf.LerpAngle(_yRotation, _targetYRotation, mouseSmooth * Time.deltaTime);
 
         cameraTransform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         myTransform.rotation = Quaternion.Euler(0f, _yRotation + 180f, 0f);
