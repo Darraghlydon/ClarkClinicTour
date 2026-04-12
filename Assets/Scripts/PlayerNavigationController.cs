@@ -51,8 +51,6 @@ public class PlayerNavigationController : MonoBehaviour
                 break;
 
             case NavigationMode.InfoPoint:
-                // Info point stop is handled by the InfoPoint trigger.
-                // Optional fallback could be added here later if needed.
                 break;
         }
     }
@@ -68,9 +66,11 @@ public class PlayerNavigationController : MonoBehaviour
         agent.isStopped = false;
         agent.SetDestination(destination);
 
-        SetManualMovementEnabled(false);
-
-        Debug.Log("Navigating to free-move point: " + destination);
+        if (keyboardController != null)
+        {
+            keyboardController.BeginLevelView();
+            keyboardController.SetManualMovementEnabled(false);
+        }
     }
 
     public void MoveToInfoPoint(Vector3 destination, InfoPointController infoPoint)
@@ -81,13 +81,14 @@ public class PlayerNavigationController : MonoBehaviour
         _navigationMode = NavigationMode.InfoPoint;
         _currentTargetInfoPoint = infoPoint;
 
+        if (keyboardController != null)
+        {
+            keyboardController.BeginLevelView();
+            keyboardController.SetManualMovementEnabled(false);
+        }
+
         agent.isStopped = false;
-        Debug.Log("Destination: " + destination);
         agent.SetDestination(destination);
-
-        SetManualMovementEnabled(false);
-
-        Debug.Log("Navigating to info point: " + infoPoint.name);
     }
 
     public void StopAtInfoPoint(InfoPointController infoPoint)
@@ -99,8 +100,6 @@ public class PlayerNavigationController : MonoBehaviour
             return;
 
         StopNavigationInternal();
-
-        Debug.Log("Stopped at target info point.");
     }
 
     public void StopNavigation()
@@ -118,7 +117,6 @@ public class PlayerNavigationController : MonoBehaviour
             if (!agent.hasPath || agent.velocity.sqrMagnitude < 0.01f)
             {
                 StopNavigationInternal();
-                Debug.Log("Arrived at free-move destination.");
             }
         }
     }
@@ -133,7 +131,6 @@ public class PlayerNavigationController : MonoBehaviour
         if (moveInput.sqrMagnitude > 0.01f)
         {
             StopNavigationInternal();
-            Debug.Log("Navigation cancelled by manual input.");
         }
     }
 
@@ -147,17 +144,13 @@ public class PlayerNavigationController : MonoBehaviour
 
         _navigationMode = NavigationMode.None;
         _currentTargetInfoPoint = null;
-
-        SetManualMovementEnabled(true);
-    }
-
-    private void SetManualMovementEnabled(bool enabled)
-    {
         if (keyboardController != null)
         {
-            keyboardController.SetManualMovementEnabled(enabled);
+            keyboardController.EndLevelView();
+            keyboardController.SetManualMovementEnabled(true);
         }
     }
+
 
     public bool IsNavigationActive()
     {

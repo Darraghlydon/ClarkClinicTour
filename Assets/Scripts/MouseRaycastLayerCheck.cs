@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.AI;
 
 public class MouseRaycastLayerCheck : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class MouseRaycastLayerCheck : MonoBehaviour
     [SerializeField] private float _maxDistance = 100f;
     [SerializeField] private LayerMask _raycastLayers;
     [SerializeField] private PlayerNavigationController _playerNavigationController;
+    [SerializeField] private float _navMeshSampleDistance = 2f;
 
     private void Awake()
     {
@@ -49,13 +51,28 @@ public class MouseRaycastLayerCheck : MonoBehaviour
                     destination = orientation.position;
                 }
 
-                _playerNavigationController.MoveToInfoPoint(destination, infoPoint);
-                Debug.Log("Infopoint: " + hit.collider.gameObject.name);
+                if (NavMesh.SamplePosition(destination, out NavMeshHit navHit, _navMeshSampleDistance, NavMesh.AllAreas))
+                {
+                    destination = navHit.position;
+                    _playerNavigationController.MoveToInfoPoint(destination, infoPoint);
+                    Debug.Log("InfoPoint destination sampled to NavMesh: " + destination);
+                }
+                else
+                {
+                    Debug.LogWarning("Could not find nearby NavMesh position for info point: " + infoPoint.name);
+                }
             }
             else
             {
-                _playerNavigationController.MoveToPoint(hit.point);
-                Debug.Log("Other: " + hit.collider.gameObject.name);
+                Vector3 destination = hit.point;
+
+                if (NavMesh.SamplePosition(destination, out NavMeshHit navHit, _navMeshSampleDistance, NavMesh.AllAreas))
+                {
+                    destination = navHit.position;
+                }
+
+                _playerNavigationController.MoveToPoint(destination);
+                Debug.Log("Other destination: " + destination);
             }
         }
     }

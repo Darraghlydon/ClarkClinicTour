@@ -12788,7 +12788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 302925494}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 406917454}
   _infoPointHeading: 
   _subtitleText: Hi, I'm the play specialist on Clark Clinic. I wear a yellow uniform.
@@ -22854,7 +22854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 515497449}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 2165195986465151114}
   _infoPointHeading: 
   _subtitleText: Hi, I'm a family support worker for Children's Heartbeat Trust,
@@ -26396,7 +26396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 538768194}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 522187056}
   _infoPointHeading: 
   _subtitleText: We have a very long name, Cardiac Physiologists. We are a group
@@ -28269,7 +28269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 1760577996}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 340680638}
   _infoPointHeading: 
   _subtitleText: I am one of the consultant paediatric cardiologists here on Clark
@@ -37863,7 +37863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 1890517260}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 475390644}
   _infoPointHeading: 
   _subtitleText: Hi, I'm the ward manager. I wear a red coloured tunic. My job is
@@ -39125,7 +39125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 812576015}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 898559232}
   _infoPointHeading: 
   _subtitleText: Hello, I'm a staff nurse here at Clark Clinic. You may see me around
@@ -43612,7 +43612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 845170301}
-  _movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 0
   _playerOrientation: {fileID: 1176295681}
   _infoPointHeading: 
   _subtitleText: Clinical psychologists are part of the care team in Clark Clinic.
@@ -46604,6 +46604,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _playerNavigationController: {fileID: 896725090674080875}
+  _navMeshSampleDistance: 2
 --- !u!195 &896725090674080874 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
@@ -47061,6 +47062,18 @@ PrefabInstance:
     - target: {fileID: 6084015797555049584, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: m_Acceleration
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6395220667515791421, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_LocalPosition.y

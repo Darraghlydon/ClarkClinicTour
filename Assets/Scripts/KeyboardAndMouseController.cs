@@ -11,6 +11,9 @@ public class KeyboardAndMouseController : MonoBehaviour
     [SerializeField] private float lookSensitivity = 1f;
 
     [SerializeField] private float mouseSmooth = 18f;
+    
+    [SerializeField] private float _levelViewSpeed = 180f;
+    private bool _levelViewWhileNavigating;
 
     private float _targetXRotation;
     private float _targetYRotation;
@@ -76,8 +79,26 @@ public class KeyboardAndMouseController : MonoBehaviour
         Events.SubtitlesSkip.Publish();
     }
 
+    public void BeginLevelView()
+    {
+        _levelViewWhileNavigating = true;
+    }
+
+    public void EndLevelView()
+    {
+        _levelViewWhileNavigating = false;
+    }
+
     private void HandleLook()
     {
+        if (_levelViewWhileNavigating)
+        {
+            _targetXRotation = Mathf.MoveTowards(_targetXRotation, 0f, _levelViewSpeed * Time.deltaTime);
+            _xRotation = Mathf.MoveTowards(_xRotation, 0f, _levelViewSpeed * Time.deltaTime);
+            cameraTransform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+        }
+
+
         if (_pauseLook) return;
         Vector2 lookVector = _playerActions.Player.Look.ReadValue<Vector2>();
 
