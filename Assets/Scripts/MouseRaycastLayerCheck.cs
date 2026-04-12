@@ -24,19 +24,14 @@ public class MouseRaycastLayerCheck : MonoBehaviour
 
     private void Update()
     {
-
         if (TryGetPointerReleasePosition(out Vector2 pointerPosition))
         {
-            //if (_keyboardAndMouseController != null && _keyboardAndMouseController.IsInfoPointInteractionActive())
-            //{
-            //    return;
-            //}
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
             {
                 Debug.Log("Over GUI Element");
                 return;
             }
-            Events.InfoPointSelected.Publish();
+
             CheckRaycast(pointerPosition);
         }
     }
@@ -75,6 +70,8 @@ public class MouseRaycastLayerCheck : MonoBehaviour
 
             if (infoPoint != null)
             {
+                Events.InfoPointSelected.Publish();
+
                 Vector3 destination = hit.point;
 
                 Transform orientation = infoPoint.GetInfoPointPlayerOrientation();
