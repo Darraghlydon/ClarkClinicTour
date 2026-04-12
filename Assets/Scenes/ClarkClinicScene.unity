@@ -9029,6 +9029,7 @@ MonoBehaviour:
   _mobileSkipButton: {fileID: 662547725}
   _mobileOnScreenSticks: {fileID: 1706706599}
   _subtitles: {fileID: 1894991716}
+  _heading: {fileID: 1220943835}
   _infoText: {fileID: 691836261}
 --- !u!4 &500597928
 Transform:

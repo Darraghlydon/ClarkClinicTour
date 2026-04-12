@@ -121,7 +121,7 @@ public class PlayerNavigationController : MonoBehaviour
         }
     }
 
-    private void CancelNavigationIfManualInputDetected()
+    private void CancelNavigation()
     {
         if (_navigationMode == NavigationMode.None)
             return;
