@@ -7,7 +7,7 @@ public class InfoPointController : MonoBehaviour
     [SerializeField] private GameObject _infoSign;
     [SerializeField] private bool _movePlayerToInfoPoint = true;
     [SerializeField] private Transform _playerOrientation;
-    [SerializeField] private string _infoPointHeading;
+    [SerializeField] private string _infoPointHeadingText;
     [SerializeField] private string _subtitleText;
 
     private AudioSource _audioSource;
@@ -30,6 +30,21 @@ public class InfoPointController : MonoBehaviour
         {
             _attachedToCharacter = true;
         }
+    }
+
+    void OnEnable()
+    {
+        Events.InfoPointSelected.Subscribe(OnInfoPointSelected);
+    }
+
+    void OnDisable()
+    {
+        Events.InfoPointSelected.Unsubscribe(OnInfoPointSelected);
+    }
+
+    void OnInfoPointSelected()
+    {
+        StopAudioExternally();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -65,6 +80,7 @@ public class InfoPointController : MonoBehaviour
             _audioSource.Play();
             Events.InfoPointStart.Publish(this);
             Events.DisplaySubtitles.Publish(_subtitleText, _audioSource.clip.length);
+            Events.DisplayInfoPointHeading.Publish(_infoPointHeadingText);
 
             if (!_attachedToCharacter)
                 _rend.enabled = false;
@@ -105,6 +121,8 @@ public class InfoPointController : MonoBehaviour
             _audioSource.Stop();
             Events.InfoPointStop.Publish(this);
         }
+        Events.SubtitlesSkip.Publish();
+        Events.ClearInfoPointHeading.Publish();
         CancelInvoke(nameof(NotifyAudioFinished));
     }
 

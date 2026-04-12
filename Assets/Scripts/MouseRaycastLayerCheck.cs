@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class MouseRaycastLayerCheck : MonoBehaviour
 {
@@ -9,31 +10,62 @@ public class MouseRaycastLayerCheck : MonoBehaviour
     [SerializeField] private LayerMask _raycastLayers;
     [SerializeField] private PlayerNavigationController _playerNavigationController;
     [SerializeField] private float _navMeshSampleDistance = 2f;
+    [SerializeField] private KeyboardAndMouseController _keyboardAndMouseController;
 
     private void Awake()
     {
+        if (!PlatformManager.IsTouchScreen())
+        {
+            this.enabled=false;
+        }
         if (_targetCamera == null)
             _targetCamera = Camera.main;
     }
 
     private void Update()
     {
-        if (Mouse.current == null)
-            return;
 
-        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        if (TryGetPointerReleasePosition(out Vector2 pointerPosition))
         {
-            CheckMouseRaycast();
+            //if (_keyboardAndMouseController != null && _keyboardAndMouseController.IsInfoPointInteractionActive())
+            //{
+            //    return;
+            //}
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Over GUI Element");
+                return;
+            }
+            Events.InfoPointSelected.Publish();
+            CheckRaycast(pointerPosition);
         }
     }
 
-    private void CheckMouseRaycast()
+    private bool TryGetPointerReleasePosition(out Vector2 pointerPosition)
+    {
+        pointerPosition = default;
+
+        if (Mouse.current != null && Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            pointerPosition = Mouse.current.position.ReadValue();
+            return true;
+        }
+
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
+        {
+            pointerPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+            return true;
+        }
+
+        return false;
+    }
+
+    private void CheckRaycast(Vector2 screenPosition)
     {
         if (_targetCamera == null || _playerNavigationController == null)
             return;
 
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Ray ray = _targetCamera.ScreenPointToRay(mousePosition);
+        Ray ray = _targetCamera.ScreenPointToRay(screenPosition);
 
         if (Physics.Raycast(ray, out RaycastHit hit, _maxDistance, _raycastLayers))
         {

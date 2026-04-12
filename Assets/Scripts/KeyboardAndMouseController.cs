@@ -76,7 +76,6 @@ public class KeyboardAndMouseController : MonoBehaviour
     {
         if (_activeInfoPointController != null)
             _activeInfoPointController.StopAudioExternally();
-        Events.SubtitlesSkip.Publish();
     }
 
     public void BeginLevelView()
@@ -327,4 +326,10 @@ public class KeyboardAndMouseController : MonoBehaviour
         myTransform.Translate(Vector3.forward * (_moveDirection.z * Time.deltaTime * keyboardForwardSpeed));
         myTransform.Translate(Vector3.right * (_moveDirection.x * Time.deltaTime * keyboardHorizontalSpeed));
     }
+
+    public bool IsInfoPointInteractionActive()
+    {
+        return _isInfoPointAudioActive || _isAutoAligning || _activeInfoPointController != null;
+    }
+
 }

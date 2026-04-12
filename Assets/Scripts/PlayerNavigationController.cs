@@ -42,7 +42,7 @@ public class PlayerNavigationController : MonoBehaviour
 
     private void Update()
     {
-        CancelNavigationIfManualInputDetected();
+        //CancelNavigationIfManualInputDetected();
 
         switch (_navigationMode)
         {

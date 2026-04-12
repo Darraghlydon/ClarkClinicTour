@@ -142,7 +142,7 @@ public class GUIManager : MonoBehaviour
     {
         if (!PlatformManager.IsTouchScreen())
         {
-            //Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -150,7 +150,7 @@ public class GUIManager : MonoBehaviour
     {
         if (!PlatformManager.IsTouchScreen())
         {
-            //Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

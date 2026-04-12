@@ -90,7 +90,12 @@ public static class Events
     // Audio
     public static readonly GameEvent<InfoPointController> InfoPointStart = new();
     public static readonly GameEvent<InfoPointController> InfoPointStop = new();
+    public static readonly GameEvent InfoPointSelected = new();
     public static readonly GameEvent AudioSkip = new(); // global command
+
+    // InfoPoint heading
+    public static readonly GameEvent<string> DisplayInfoPointHeading = new();
+    public static readonly GameEvent ClearInfoPointHeading = new();
 
     // Subtitles
     public static readonly GameEvent<string,float> DisplaySubtitles = new();

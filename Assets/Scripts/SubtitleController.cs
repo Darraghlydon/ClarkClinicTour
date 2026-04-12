@@ -127,6 +127,7 @@ public class SubtitleController : MonoBehaviour
         _subtitleTextField.text = "";
         isDisplaying = false;
         Events.SubtitlesStop.Publish();
+        Events.ClearInfoPointHeading.Publish();
     }
 
     private List<string> SplitIntoChunks(string text, int maxChars)
