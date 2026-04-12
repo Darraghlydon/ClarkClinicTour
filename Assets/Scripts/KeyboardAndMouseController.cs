@@ -267,6 +267,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     public void SetManualMovementEnabled(bool enabled)
     {
         _manualMovementEnabled = enabled;
+        _pauseMovement = !enabled;
+        _pauseLook = !enabled;
     }
 
     private void TryRestoreControl()
@@ -291,6 +293,8 @@ public class KeyboardAndMouseController : MonoBehaviour
         _isInfoPointAudioActive = false;
         TryRestoreControl();
     }
+
+
 
     private void HandleMovement()
     {

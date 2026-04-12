@@ -82,6 +82,7 @@ public class PlayerNavigationController : MonoBehaviour
         _currentTargetInfoPoint = infoPoint;
 
         agent.isStopped = false;
+        Debug.Log("Destination: " + destination);
         agent.SetDestination(destination);
 
         SetManualMovementEnabled(false);

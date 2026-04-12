@@ -168,12 +168,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: Dirty laundry is handled here. When nurses wash your child's clothes,
+        they will be left here for you to collect.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointSluice
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -4117,12 +4126,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: These are bed spaces. We ask you to keep this area as clear as possible
+        so that nurses can move freely around the bed in order to access equipment
+        at all times.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointBedSpaces
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -7956,12 +7975,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is a monitor attached to your child. It measures your child's oxygen
+        saturation, heart   rate and heart rhythm. When the alarm or warning bell
+        goes off, the nursing team will get an alert at the nurse's station and will
+        take action as needed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointMonitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -8033,12 +8063,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: "This is our nurse\u2019s station. Please do not disturb staff during
+        handover unless it is an emergency. There is a central monitor here that
+        links to each bed space. This allows the nursing team to remotely monitor
+        your child's vitals at all times."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointNursesStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -9212,12 +9253,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is our playroom. The play specialist will provide age-appropriate
+        toys for your child to bring to their bedside.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointPlayroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -9999,12 +10049,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is one of our side rooms these are for infectious patients, so
+        we have to prioritise their usage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointSideRoom (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -10900,12 +10959,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is one of our side rooms these are for infectious patients, so
+        we have to prioritise their usage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointSideRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -12545,9 +12613,6 @@ PrefabInstance:
       addedObject: {fileID: 654998726}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 654998723}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 654998727}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &654998711 stripped
@@ -12696,25 +12761,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &654998723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654998712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: Hi, I'm the play specialist on Clark Clinic. I wear a yellow uniform.
-    Sometimes when you have to come into hospital, you can feel a wee bit anxious.
-    But my job on the ward is to come and introduce myself to you and find out what
-    you're interested in so that I can find in my many cupboards something to occupy
-    you while you're in hospital to make your day go a wee bit more quickly and more
-    enjoyable for you.
 --- !u!114 &654998726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12742,8 +12788,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 302925494}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 406917454}
+  _infoPointHeading: 
+  _subtitleText: Hi, I'm the play specialist on Clark Clinic. I wear a yellow uniform.
+    Sometimes when you have to come into hospital, you can feel a wee bit anxious.
+    But my job on the ward is to come and introduce myself to you and find out what
+    you're interested in so that I can find in my many cupboards something to occupy
+    you while you're in hospital to make your day go a wee bit more quickly and more
+    enjoyable for you.
   WaitingForCooldown: 0
 --- !u!1001 &659401842
 PrefabInstance:
@@ -18297,12 +18350,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is a monitor attached to your child. It measures your child's oxygen
+        saturation, heart   rate and heart rhythm. When the alarm or warning bell
+        goes off, the nursing team will get an alert at the nurse's station and will
+        take action as needed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointMonitor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -19288,12 +19352,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is a monitor attached to your child. It measures your child's oxygen
+        saturation, heart   rate and heart rhythm. When the alarm or warning bell
+        goes off, the nursing team will get an alert at the nurse's station and will
+        take action as needed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointMonitor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -20298,12 +20373,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is the linen cupboard, where you will find spare linen. If you
+        are staying in Children's Heartbeat Trust's parent accommodation, please
+        take sheets and pillows with you on the way out of the ward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointLinenCupboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -22594,9 +22679,6 @@ PrefabInstance:
       addedObject: {fileID: 1196302670}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1196302667}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1196302671}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1196302655 stripped
@@ -22745,26 +22827,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1196302667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196302656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: Hi, I'm a family support worker for Children's Heartbeat Trust,
-    a local children's charity offering practical and emotional support to families
-    in Northern Ireland who have a child with congenital heart disease. We have a
-    great relationship here with the Team on Clark Clinic and you can find a member
-    of our support team here three times a week with a friendly face, a listening
-    ear and lots of ways to help support local heart families through our specialist
-    support services at each stage of your journey with congenital heart disease.
 --- !u!114 &1196302670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22792,8 +22854,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 515497449}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 2165195986465151114}
+  _infoPointHeading: 
+  _subtitleText: Hi, I'm a family support worker for Children's Heartbeat Trust,
+    a local children's charity offering practical and emotional support to families
+    in Northern Ireland who have a child with congenital heart disease. We have a
+    great relationship here with the Team on Clark Clinic and you can find a member
+    of our support team here three times a week with a friendly face, a listening
+    ear and lots of ways to help support local heart families through our specialist
+    support services at each stage of your journey with congenital heart disease.
   WaitingForCooldown: 0
 --- !u!1001 &1217176319
 PrefabInstance:
@@ -24574,6 +24644,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InfoPointCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 3667194728881294540, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667194728881294540, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7170761750397029449, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24614,7 +24692,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.068
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26142,9 +26221,6 @@ PrefabInstance:
       addedObject: {fileID: 1332882506}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1332882503}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1332882507}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1332882491 stripped
@@ -26293,27 +26369,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1332882503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332882492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: We have a very long name, Cardiac Physiologists. We are a group
-    of staff who carry out a range of tests which help the doctor to diagnose and
-    monitor your heart condition. These include ECG, ECHO, exercise stress test,
-    ambulatory ECG monitoring and pacemaker checks. Sometimes we       come to you
-    on the ward to do these tests but usually you come downstairs to see us in our
-    room. We have iPads to entertain you so it's great fun. Even when you're not
-    in Clark Clinic you may come back to visit us in a department downstairs and
-    have all these tests done.
 --- !u!114 &1332882506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26341,8 +26396,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 538768194}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 522187056}
+  _infoPointHeading: 
+  _subtitleText: We have a very long name, Cardiac Physiologists. We are a group
+    of staff who carry out a range of tests which help the doctor to diagnose and
+    monitor your heart condition. These include ECG, ECHO, exercise stress test,
+    ambulatory ECG monitoring and pacemaker checks. Sometimes we       come to you
+    on the ward to do these tests but usually you come downstairs to see us in our
+    room. We have iPads to entertain you so it's great fun. Even when you're not
+    in Clark Clinic you may come back to visit us in a department downstairs and
+    have all these tests done.
   WaitingForCooldown: 0
 --- !u!1001 &1338957112
 PrefabInstance:
@@ -26542,12 +26606,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is a fire exit, please use in case of emergency only, otherwise
+        these are for staff access at all times.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointFireExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -28021,9 +28094,6 @@ PrefabInstance:
       addedObject: {fileID: 1411354562}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1411354572}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1411354575}
   m_SourcePrefab: {fileID: 100100000, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
 --- !u!4 &1411354560 stripped
@@ -28185,22 +28255,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1411354572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411354561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: I am one of the consultant paediatric cardiologists here on Clark
-    Clinic. My job is looking after babies and children with heart problems. You
-    might see me on the ward or at the outpatient clinic. I hope you enjoy the tour.
 --- !u!114 &1411354575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28215,8 +28269,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 1760577996}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 340680638}
+  _infoPointHeading: 
+  _subtitleText: I am one of the consultant paediatric cardiologists here on Clark
+    Clinic. My job is looking after babies and children with heart problems. You
+    might see me on the ward or at the outpatient clinic. I hope you enjoy the tour.
   WaitingForCooldown: 0
 --- !u!1 &1416129081
 GameObject:
@@ -30624,12 +30682,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: Welcome to Clark Clinic, the regional paediatric cardiology ward in
+        Northern Ireland. Our visiting times here are unrestricted, and we allow
+        up to two adult visitors per bed space. Unfortunately, visiting children
+        are not permitted on the ward unless under exceptional circumstances and
+        must be approved by the nurse in charge. Where possible, we ask that you
+        are here for handover, which takes place at 7.30am and 7.30pm each day.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointWelcomeToClark
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -35867,12 +35938,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is the room we use for making up medicines, which requires full
+        concentration. For this reason, it is important that you do not disturb nurses
+        when they are here unless it's an emergency.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointDrugRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -36120,12 +36201,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is a patient bathroom. Parents can use this whilst on the ward.
+        Showers and toilets are also available in the children's heartbeat trust
+        parent accommodation within the hospital. If you need to access these facilities,
+        please ask the nurse in charge for your key.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointParentsToilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -37596,9 +37688,6 @@ PrefabInstance:
       addedObject: {fileID: 1731731488}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1731731497}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1731731500}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1731731485 stripped
@@ -37760,23 +37849,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1731731497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731731486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: Hi, I'm the ward manager. I wear a red coloured tunic. My job is
-    to ensure the smooth running of the ward, managing all the staff behind the scenes
-    and being at hand if you or your parents have any questions. You will also see
-    me helping out on the ward and looking after patients as well.
 --- !u!114 &1731731500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37791,8 +37863,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 1890517260}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 475390644}
+  _infoPointHeading: 
+  _subtitleText: Hi, I'm the ward manager. I wear a red coloured tunic. My job is
+    to ensure the smooth running of the ward, managing all the staff behind the scenes
+    and being at hand if you or your parents have any questions. You will also see
+    me helping out on the ward and looking after patients as well.
   WaitingForCooldown: 0
 --- !u!1001 &1745933654
 PrefabInstance:
@@ -38873,9 +38950,6 @@ PrefabInstance:
       addedObject: {fileID: 1789217538}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1789217548}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1789217551}
   m_SourcePrefab: {fileID: 100100000, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
 --- !u!4 &1789217536 stripped
@@ -39037,23 +39111,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1789217548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789217537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: Hello, I'm a staff nurse here at Clark Clinic. You may see me around
-    helping to look after you. I'll be doing possibly some observations with you,
-    for example blood pressure, temperature, counting your breathing. I may maybe
-    need to give you some medication also or put up some feeds for you.
 --- !u!114 &1789217551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39068,8 +39125,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 812576015}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 898559232}
+  _infoPointHeading: 
+  _subtitleText: Hello, I'm a staff nurse here at Clark Clinic. You may see me around
+    helping to look after you. I'll be doing possibly some observations with you,
+    for example blood pressure, temperature, counting your breathing. I may maybe
+    need to give you some medication also or put up some feeds for you.
   WaitingForCooldown: 0
 --- !u!1 &1792076531
 GameObject:
@@ -39891,12 +39953,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: This is our ward kitchen, which parents are not permitted to access,
+        however there are communal kitchen facilities available within our parent
+        accommodation. If you need to access these facilities, ask your nurse for
+        a key. For sterilising bottles and other feeding equipment, please speak
+        to your named nurse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointWardKitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
@@ -40437,12 +40511,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: Because our patients are vulnerable, please adhere to strict hand washing
+        and hand sanitizing guidelines using the sinks provided.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointSinks
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43354,9 +43437,6 @@ PrefabInstance:
       addedObject: {fileID: 1989120804}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1989120813}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1989120816}
   m_SourcePrefab: {fileID: 100100000, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
 --- !u!4 &1989120801 stripped
@@ -43518,32 +43598,6 @@ CapsuleCollider:
   m_Height: 2.4264317
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1989120813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989120802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleHeading: 
-  _subtitleText: Clinical psychologists are part of the care team in Clark Clinic.
-    Our role with inpatients is to help support children and their families to cope
-    with the experience of being in hospital and the many challenges this brings.
-    This might be offering emotional support to parents while their child is awaiting
-    surgery and helping them think about useful coping skills or how best to support
-    siblings. It might be supporting and preparing children if they are anxious about
-    procedures such as blood tests, cannulas or surgery. Or helping young people
-    understand their heart condition and manage the demands of being unwell and in
-    hospital, including if they are feeling worried or low in mood. Clinical psychology
-    support is available to all inpatients during their stay in Clark Clinic. If
-    you would like to speak with a clinical psychologist, please ask your nurse or
-    doctor to make a referral for you, and we will arrange to meet with you as soon
-    as we can.
 --- !u!114 &1989120816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43558,8 +43612,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 180
   _infoSign: {fileID: 845170301}
-  movePlayerToInfoPoint: 0
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 1176295681}
+  _infoPointHeading: 
+  _subtitleText: Clinical psychologists are part of the care team in Clark Clinic.
+    Our role with inpatients is to help support children and their families to cope
+    with the experience of being in hospital and the many challenges this brings.
+    This might be offering emotional support to parents while their child is awaiting
+    surgery and helping them think about useful coping skills or how best to support
+    siblings. It might be supporting and preparing children if they are anxious about
+    procedures such as blood tests, cannulas or surgery. Or helping young people
+    understand their heart condition and manage the demands of being unwell and in
+    hospital, including if they are feeling worried or low in mood. Clinical psychology
+    support is available to all inpatients during their stay in Clark Clinic. If
+    you would like to speak with a clinical psychologist, please ask your nurse or
+    doctor to make a referral for you, and we will arrange to meet with you as soon
+    as we can.
   WaitingForCooldown: 0
 --- !u!4 &1993781164 stripped
 Transform:
@@ -44337,12 +44405,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: _subtitleText
+      value: You may notice there are lots of PCs present on the ward. As the trust
+        is now paperless, we use Encompass to catalogue patient information. Staff
+        will also use iPhone-like devices called Rovers to handle patient checks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3159635902519941919, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_Name
       value: InfoPointEncompass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3214998453494395885, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText

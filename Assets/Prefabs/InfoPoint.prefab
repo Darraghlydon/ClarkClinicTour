@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2208492814550551327}
   - component: {fileID: 6947259178206989630}
   - component: {fileID: 6349502749347307868}
-  - component: {fileID: 3214998453494395885}
   - component: {fileID: 2892922969026672317}
   m_Layer: 6
   m_Name: InfoPoint
@@ -177,20 +176,6 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
---- !u!114 &3214998453494395885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3159635902519941919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
-  _subtitleText: Because our patients are vulnerable, please adhere to strict hand
-    washing and hand sanitizing guidelines using the sinks provided.
 --- !u!114 &2892922969026672317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,8 +190,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InfoPointController
   _resetTriggerTimeSeconds: 80
   _infoSign: {fileID: 4575717636044998872}
-  movePlayerToInfoPoint: 1
+  _movePlayerToInfoPoint: 1
   _playerOrientation: {fileID: 2165195987547046454}
+  _infoPointHeading: 
+  _subtitleText: 
   WaitingForCooldown: 0
 --- !u!1001 &3578931748422722975
 PrefabInstance:

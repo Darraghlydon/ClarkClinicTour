@@ -5,8 +5,10 @@ public class InfoPointController : MonoBehaviour
 {
     [SerializeField] private float _resetTriggerTimeSeconds = 80f;
     [SerializeField] private GameObject _infoSign;
-    [SerializeField] private bool movePlayerToInfoPoint = true;
+    [SerializeField] private bool _movePlayerToInfoPoint = true;
     [SerializeField] private Transform _playerOrientation;
+    [SerializeField] private string _infoPointHeading;
+    [SerializeField] private string _subtitleText;
 
     private AudioSource _audioSource;
     private Renderer _rend;
@@ -62,6 +64,7 @@ public class InfoPointController : MonoBehaviour
         {
             _audioSource.Play();
             Events.InfoPointStart.Publish(this);
+            Events.DisplaySubtitles.Publish(_subtitleText, _audioSource.clip.length);
 
             if (!_attachedToCharacter)
                 _rend.enabled = false;
@@ -111,6 +114,6 @@ public class InfoPointController : MonoBehaviour
     }
     public bool ShouldMovePlayerToInfoPoint()
     {
-        return movePlayerToInfoPoint;
+        return _movePlayerToInfoPoint;
     }
 }

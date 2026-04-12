@@ -19,7 +19,7 @@ public class MouseRaycastLayerCheck : MonoBehaviour
         if (Mouse.current == null)
             return;
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             CheckMouseRaycast();
         }
@@ -50,10 +50,12 @@ public class MouseRaycastLayerCheck : MonoBehaviour
                 }
 
                 _playerNavigationController.MoveToInfoPoint(destination, infoPoint);
+                Debug.Log("Infopoint: " + hit.collider.gameObject.name);
             }
             else
             {
                 _playerNavigationController.MoveToPoint(hit.point);
+                Debug.Log("Other: " + hit.collider.gameObject.name);
             }
         }
     }
