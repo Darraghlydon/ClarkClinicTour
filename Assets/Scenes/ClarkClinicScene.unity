@@ -12879,7 +12879,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -19465,7 +19465,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.71
+      value: 5.785
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19473,7 +19473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.91
+      value: -11.422
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22958,7 +22958,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -26551,7 +26551,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.4, y: 1, z: 0.4}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -27906,7 +27906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.631
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27914,7 +27914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.722
+      value: -24.688
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e771b84726246a34086f7ada0140e1c0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28441,7 +28441,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -28927,12 +28927,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 351343936}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.322
+      value: 0.372
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f39263a4c2e95124cba138039de7048b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38215,7 +38219,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -39477,7 +39481,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -41007,7 +41011,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.68
+      value: 3.323
       objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42605,7 +42609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.206
+      value: -7.143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03b967d8562de9d45bfe45868d771a67, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44108,7 +44112,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -47239,6 +47243,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 846396402}
     m_Modifications:
+    - target: {fileID: 268984204283335243, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 616699125831430425, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -165
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066176031489934133, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731036498309090001, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2126175436247781896, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -47253,7 +47273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2594589318908806874, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3905357064941306785, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_Pivot.x
@@ -47335,13 +47355,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4352635432738759256, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793676078810943118, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_text
+      value: '- Use left joystick to move and right joystick to look around.  Press
+        the Start button to view the Pause Menu.  Press the A button to make a selection
+        on menu screens or to skip narration during the tour.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4814791144202228473, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 500597927}
+    - target: {fileID: 5264079231383647267, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109456972584683792, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882834961769882066, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011832600744169380, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9129874321471957917, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_text
-      value: '- Use the WASD/Arrow keys and Mouse to move and look around.'
+      value: '- Use the WASD/Arrow keys and Mouse to move and look around.  The E/Space
+        Key or left mouse button can be used to skip narration during the tour.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47608,6 +47655,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_AutoBraking
       value: 1
       objectReference: {fileID: 0}
@@ -47621,7 +47676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_StoppingDistance
-      value: 0.4
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 6395220667515791421, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -47639,9 +47694,13 @@ PrefabInstance:
       propertyPath: lookSensitivity
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: _playerNavigationController
+      value: 
+      objectReference: {fileID: 896725090674080875}
     - target: {fileID: 7874182560115034790, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_Radius
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

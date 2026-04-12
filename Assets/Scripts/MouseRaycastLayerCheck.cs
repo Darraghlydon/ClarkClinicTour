@@ -32,6 +32,12 @@ public class MouseRaycastLayerCheck : MonoBehaviour
                 return;
             }
 
+            if (_playerNavigationController != null && _playerNavigationController.IsNavigationActive())
+            {
+                Debug.Log("Already navigating, raycast ignored.");
+                return;
+            }
+
             CheckRaycast(pointerPosition);
         }
     }

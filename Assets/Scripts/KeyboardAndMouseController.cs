@@ -13,6 +13,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     [SerializeField] private float mouseSmooth = 18f;
     
     [SerializeField] private float _levelViewSpeed = 180f;
+    [SerializeField] private PlayerNavigationController _playerNavigationController;
+
     private bool _levelViewWhileNavigating;
 
     private float _targetXRotation;
@@ -68,6 +70,7 @@ public class KeyboardAndMouseController : MonoBehaviour
 
     private void Update()
     {
+        //_playerNavigationController.SyncAgentToTransform();
         HandleMovement();
         HandleLook();
     }
@@ -127,6 +130,18 @@ public class KeyboardAndMouseController : MonoBehaviour
 
         if (_updateOrientationCoroutine != null)
             StopCoroutine(_updateOrientationCoroutine);
+
+        _updateOrientationCoroutine = StartCoroutine(BeginAlignmentWhenNavigationStops());
+    }
+
+    private IEnumerator BeginAlignmentWhenNavigationStops()
+    {
+        while (_playerNavigationController != null && _playerNavigationController.IsNavigationActive())
+        {
+            yield return null;
+        }
+
+        yield return null;
 
         _updateOrientationCoroutine = StartCoroutine(UpdatePlayerOrientation());
     }
@@ -301,6 +316,7 @@ public class KeyboardAndMouseController : MonoBehaviour
 
             _activeInfoPointController = null;
             _infoPointPlayerOrientation = null;
+            _playerNavigationController.RestoreAgentAfterInfoPoint();
         }
     }
 
