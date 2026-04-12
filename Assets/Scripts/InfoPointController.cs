@@ -32,10 +32,23 @@ public class InfoPointController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !WaitingForCooldown)
+        if (!other.CompareTag("Player") || WaitingForCooldown)
+            return;
+
+        PlayerNavigationController navigation = other.GetComponentInParent<PlayerNavigationController>();
+
+        if (navigation != null)
         {
-            PlayAudio();
+            if (navigation.IsNavigationActive())
+            {
+                if (!navigation.IsNavigatingToInfoPoint(this))
+                    return;
+
+                navigation.StopAtInfoPoint(this);
+            }
         }
+
+        PlayAudio();
     }
 
     public bool IsAudioPlaying()

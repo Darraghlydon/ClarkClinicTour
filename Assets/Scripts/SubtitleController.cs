@@ -13,11 +13,10 @@ public class SubtitleController : MonoBehaviour
     [Header("Subtitle Timing")]
     [SerializeField] private int _maxCharsPerChunk = 45;
 
-    // Optional safety clamps
-    [SerializeField] private float _minimumChunkWaitTime = 0.15f; // avoids 0-second waits
-    [SerializeField] private float _minimumLastChunkWaitTime = 2f; // if you still want the last chunk to linger
+    [SerializeField] private float _minimumChunkWaitTime = 0.15f;
+    [SerializeField] private float _minimumLastChunkWaitTime = 2f;
 
-    private Coroutine currentCoroutine;
+    private Coroutine _currentCoroutine;
 
     private struct SubtitleChunk
     {
@@ -41,7 +40,6 @@ public class SubtitleController : MonoBehaviour
 
     private void OnEnable()
     {
-        // IMPORTANT: your event must now publish (string subtitle, float audioLengthSeconds)
         Events.DisplaySubtitles.Subscribe(OnSubtitleRequested);
         Events.SubtitlesSkip.Subscribe(SkipSubtitles);
     }
@@ -54,10 +52,10 @@ public class SubtitleController : MonoBehaviour
 
     private void SkipSubtitles()
     {
-        if (currentCoroutine != null)
+        if (_currentCoroutine != null)
         {
-            StopCoroutine(currentCoroutine);
-            currentCoroutine = null;
+            StopCoroutine(_currentCoroutine);
+            _currentCoroutine = null;
         }
 
         subtitleQueue.Clear();
@@ -67,10 +65,10 @@ public class SubtitleController : MonoBehaviour
 
     private void OnSubtitleRequested(string fullSubtitle, float audioLengthSeconds)
     {
-        if (currentCoroutine != null)
+        if (_currentCoroutine != null)
         {
-            StopCoroutine(currentCoroutine);
-            currentCoroutine = null;
+            StopCoroutine(_currentCoroutine);
+            _currentCoroutine = null;
         }
 
         _subtitlePanel.SetActive(true);
@@ -110,7 +108,7 @@ public class SubtitleController : MonoBehaviour
             }
         }
 
-        currentCoroutine = StartCoroutine(ProcessQueue());
+        _currentCoroutine = StartCoroutine(ProcessQueue());
     }
 
     private IEnumerator ProcessQueue()

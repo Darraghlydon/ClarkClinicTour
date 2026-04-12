@@ -32,6 +32,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     private bool _isAutoAligning;
     private bool _isInfoPointAudioActive;
     private Coroutine _updateOrientationCoroutine;
+    private bool _manualMovementEnabled = true;
 
     private void Awake()
     {
@@ -263,6 +264,11 @@ public class KeyboardAndMouseController : MonoBehaviour
         TryRestoreControl();
     }
 
+    public void SetManualMovementEnabled(bool enabled)
+    {
+        _manualMovementEnabled = enabled;
+    }
+
     private void TryRestoreControl()
     {
         // Only restore movement when both audio and auto-alignment are finished
@@ -288,7 +294,7 @@ public class KeyboardAndMouseController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (_pauseMovement) return;
+        if (_pauseMovement || !_manualMovementEnabled) return;
 
         Vector2 moveVector = _playerActions.Player.Move.ReadValue<Vector2>();
         _moveDirection = new Vector3(moveVector.x, 0, moveVector.y);

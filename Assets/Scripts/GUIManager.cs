@@ -103,7 +103,7 @@ public class GUIManager : MonoBehaviour
         Events.InfoPointStop.Unsubscribe(OnAudioStopped);
 
         Events.SubtitlesSkip.Unsubscribe(SubtitlesSkip);
-        Events.SubtitlesStop.Unsubscribe(OnSubtitlesStopped); // FIXED
+        Events.SubtitlesStop.Unsubscribe(OnSubtitlesStopped); 
     }
 
     private void OnAudioStarted(InfoPointController infoPointController)
@@ -117,7 +117,7 @@ public class GUIManager : MonoBehaviour
         if (_activeInfoPointController == infoPointController)
             _activeInfoPointController = null;
 
-        AudioSkip(); // keep your existing GUI skip-flag flow
+        AudioSkip(); 
     }
 
     private void OnSubtitlesStopped()
@@ -142,7 +142,7 @@ public class GUIManager : MonoBehaviour
     {
         if (!PlatformManager.IsTouchScreen())
         {
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -150,7 +150,7 @@ public class GUIManager : MonoBehaviour
     {
         if (!PlatformManager.IsTouchScreen())
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

@@ -1170,7 +1170,7 @@ Transform:
   m_GameObject: {fileID: 91324011}
   serializedVersion: 2
   m_LocalRotation: {x: -0.71753097, y: -0, z: 0.6965266, w: 0}
-  m_LocalPosition: {x: -0.936, y: 1.942, z: -4.54}
+  m_LocalPosition: {x: -0.963, y: 1.942, z: -4.541}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2954,7 +2954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be4d97d86f3214aa5ad4d5eb6bba0456, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.551
+      value: 7.473
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be4d97d86f3214aa5ad4d5eb6bba0456, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12708,6 +12708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: Hi, I'm the play specialist on Clark Clinic. I wear a yellow uniform.
     Sometimes when you have to come into hospital, you can feel a wee bit anxious.
     But my job on the ward is to come and introduce myself to you and find out what
@@ -14485,6 +14486,11 @@ Transform:
   - {fileID: 1411354560}
   m_Father: {fileID: 966252460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &757403413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6084015797555049584, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+  m_PrefabInstance: {fileID: 8118585072821173004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766223027
 GameObject:
   m_ObjectHideFlags: 0
@@ -16940,13 +16946,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935819910}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.71753097, y: -0, z: 0.6965266, w: 0}
-  m_LocalPosition: {x: -0.936, y: 1.942, z: 7.416}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: -0.939, y: 1.942, z: 7.465}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1799570059}
-  m_LocalEulerAnglesHint: {x: 0, y: -91.702, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 180}
 --- !u!114 &935819915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19334,7 +19340,7 @@ Transform:
   m_GameObject: {fileID: 1099348197}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 1.4419, y: 1.918, z: -8.046}
+  m_LocalPosition: {x: 1.438, y: 1.918, z: -8.046}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19916,6 +19922,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!20 &1136242750 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4137520934644799897, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+  m_PrefabInstance: {fileID: 8118585072821173004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1143880153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22746,6 +22757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: Hi, I'm a family support worker for Children's Heartbeat Trust,
     a local children's charity offering practical and emotional support to families
     in Northern Ireland who have a child with congenital heart disease. We have a
@@ -26293,6 +26305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: We have a very long name, Cardiac Physiologists. We are a group
     of staff who carry out a range of tests which help the doctor to diagnose and
     monitor your heart condition. These include ECG, ECHO, exercise stress test,
@@ -28184,6 +28197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: I am one of the consultant paediatric cardiologists here on Clark
     Clinic. My job is looking after babies and children with heart problems. You
     might see me on the ward or at the outpatient clinic. I hope you enjoy the tour.
@@ -37758,6 +37772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: Hi, I'm the ward manager. I wear a red coloured tunic. My job is
     to ensure the smooth running of the ward, managing all the staff behind the scenes
     and being at hand if you or your parents have any questions. You will also see
@@ -39034,6 +39049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: Hello, I'm a staff nurse here at Clark Clinic. You may see me around
     helping to look after you. I'll be doing possibly some observations with you,
     for example blood pressure, temperature, counting your breathing. I may maybe
@@ -39399,7 +39415,7 @@ Transform:
   m_GameObject: {fileID: 1817820737}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 1.4419, y: 2.047, z: 2.785}
+  m_LocalPosition: {x: 1.4958, y: 2.047, z: 2.785}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39729,7 +39745,7 @@ Transform:
   m_GameObject: {fileID: 1842822494}
   serializedVersion: 2
   m_LocalRotation: {x: -0.71753097, y: -0, z: 0.6965266, w: 0}
-  m_LocalPosition: {x: -0.936, y: 1.942, z: -13.28}
+  m_LocalPosition: {x: -0.964, y: 1.942, z: -13.323}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40218,7 +40234,7 @@ Transform:
   m_GameObject: {fileID: 1908715440}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 1.52, y: 2.047, z: 1.682}
+  m_LocalPosition: {x: 1.5216, y: 2.047, z: 1.682}
   m_LocalScale: {x: 0.25108895, y: 0.107997954, z: 0.0009452689}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43514,6 +43530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc8ab9f1b8439742a65d9538fc2b302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSource
+  _subtitleHeading: 
   _subtitleText: Clinical psychologists are part of the care team in Clark Clinic.
     Our role with inpatients is to help support children and their families to cope
     with the experience of being in hospital and the many challenges this brings.
@@ -46480,7 +46497,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
   m_PrefabInstance: {fileID: 8118585072821173004}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 757403413}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43b84de41b48adb4fb095f35f49c1b37, type: 3}
@@ -46491,6 +46508,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 986685423661736075, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
   m_PrefabInstance: {fileID: 8118585072821173004}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &896725090674080872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757403413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c889b305af18a7144903ee42850be3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseRaycastLayerCheck
+  _targetCamera: {fileID: 1136242750}
+  _maxDistance: 100
+  _raycastLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  _playerNavigationController: {fileID: 896725090674080875}
+--- !u!195 &896725090674080874 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+  m_PrefabInstance: {fileID: 8118585072821173004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &896725090674080875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757403413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bd86c7147276242878d035b166c942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigationController
+  agent: {fileID: 896725090674080874}
+  keyboardController: {fileID: 896725090674080870}
+  freeMoveArrivalDistance: 0.2
 --- !u!4 &2165195986465151114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7170761750397029449, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
@@ -46697,7 +46752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3667194728881294540, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170761750397029449, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46956,6 +47011,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 583454711}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6084015797555049584, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 896725090674080872}
+    - targetCorrespondingSourceObject: {fileID: 6084015797555049584, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 896725090674080875}
     - targetCorrespondingSourceObject: {fileID: 6503532842499964925, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1136242749}
