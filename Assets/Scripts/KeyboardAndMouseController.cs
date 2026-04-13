@@ -11,7 +11,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     [SerializeField] private float lookSensitivity = 1f;
 
     [SerializeField] private float mouseSmooth = 18f;
-    
+    [SerializeField] private float _verticalRotationDegreesClamp = 70f;
+
     [SerializeField] private float _levelViewSpeed = 180f;
     [SerializeField] private PlayerNavigationController _playerNavigationController;
 
@@ -107,7 +108,7 @@ public class KeyboardAndMouseController : MonoBehaviour
         _targetYRotation += lookVector.x * lookSensitivity;
         _targetXRotation -= lookVector.y * lookSensitivity;
 
-        _targetXRotation = Mathf.Clamp(_targetXRotation, -70f, 70f);
+        _targetXRotation = Mathf.Clamp(_targetXRotation, -_verticalRotationDegreesClamp, _verticalRotationDegreesClamp);
 
         _xRotation = Mathf.LerpAngle(_xRotation, _targetXRotation, mouseSmooth * Time.deltaTime);
         _yRotation = Mathf.LerpAngle(_yRotation, _targetYRotation, mouseSmooth * Time.deltaTime);

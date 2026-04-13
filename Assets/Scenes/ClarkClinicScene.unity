@@ -8076,14 +8076,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
-      value: "This is our nurse\u2019s station. Please do not disturb staff during
+      value: "This is our nurses\u2019 station. Please do not disturb staff during
         handover unless it is an emergency. There is a central monitor here that
         links to each bed space. This allows the nursing team to remotely monitor
         your child's vitals at all times."
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _infoPointHeadingText
-      value: Nurses Station
+      value: Nurses' Station
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
@@ -24137,7 +24137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1294444481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36336,7 +36336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _infoPointHeadingText
-      value: Drug Room
+      value: Medicine Room
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
@@ -41052,11 +41052,11 @@ PrefabInstance:
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _subtitleText
       value: Because our patients are vulnerable, please adhere to strict hand washing
-        and hand sanitizing guidelines using the sinks provided.
+        and hand sanitising guidelines using the sinks provided.
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _infoPointHeadingText
-      value: Sinks
+      value: Hand Sanitisation
       objectReference: {fileID: 0}
     - target: {fileID: 2892922969026672317, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: _resetTriggerTimeSeconds
@@ -47273,7 +47273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2594589318908806874, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3905357064941306785, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_Pivot.x
@@ -47698,9 +47698,13 @@ PrefabInstance:
       propertyPath: _playerNavigationController
       value: 
       objectReference: {fileID: 896725090674080875}
+    - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: _verticalRotationDegreesClamp
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7874182560115034790, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: m_Radius
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
