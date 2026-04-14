@@ -12,8 +12,6 @@ public class CheckifPlayerisLooking : MonoBehaviour
     public TMP_Text infoText;
     public string textFieldData;
 
-
-
     private void OnEnable()
     {
         infoText.enabled = false;

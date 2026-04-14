@@ -5,85 +5,84 @@ using UnityEngine.UI;
 
 public class DrawSinewaveScript : MonoBehaviour
 {
-    public int width = 50;
-    public int height = 10;
-    public float frequency = 1f;
-    public float amplitude = 0.5f;
-    public float speed = 1f;
-
-    public RawImage ecgDisplay;
-
-    [SerializeField] private int lineThickness = 3;
-    [SerializeField] private Color lineColor = Color.green;
+    [Header("Appearance")]
+    [SerializeField] public int _width = 50;
+    [SerializeField] public int _height = 10;
+    [SerializeField] public float _frequency = 1f;
+    [SerializeField] public float _amplitude = 0.5f;
+    [SerializeField] public float _speed = 1f;
+    [SerializeField] private int _lineThickness = 3;
+    [SerializeField] public RawImage _ecgDisplay;
+    [SerializeField] private Color _lineColor = Color.green;
 
     [Header("Update Control")]
-    [SerializeField] private float secondsPerUpdate = 0.02f; // Time between redraws
+    [SerializeField] private float _secondsPerUpdate = 0.02f; // Time between redraws
     [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0.3f);
 
-    private Texture2D texture;
-    private float time;
-    private Color[] pixels;
-    private float updateTimer;
+    private Texture2D _texture;
+    private float _time;
+    private float _updateTimer;
+    private Color[] _pixels;
 
     void Awake()
     {
-        texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
-        texture.filterMode = FilterMode.Point;
-        texture.wrapMode = TextureWrapMode.Clamp;
+        _texture = new Texture2D(_width, _height, TextureFormat.RGBA32, false);
+        _texture.filterMode = FilterMode.Point;
+        _texture.wrapMode = TextureWrapMode.Clamp;
 
-        ecgDisplay.texture = texture;
-        pixels = new Color[width * height];
+        _ecgDisplay.texture = _texture;
+        _pixels = new Color[_width * _height];
 
-        lineThickness = Mathf.Max(1, lineThickness);
-        secondsPerUpdate = Mathf.Max(0.001f, secondsPerUpdate);
+        _lineThickness = Mathf.Max(1, _lineThickness);
+        _secondsPerUpdate = Mathf.Max(0.001f, _secondsPerUpdate);
 
         DrawECG();
     }
 
     void Update()
     {
-        updateTimer += Time.deltaTime;
+        _updateTimer += Time.deltaTime;
 
-        if (updateTimer < secondsPerUpdate)
+        if (_updateTimer < _secondsPerUpdate)
             return;
 
-        time += updateTimer * speed;
-        updateTimer = 0f;
+        _time += _updateTimer * _speed;
+        _updateTimer = 0f;
 
         DrawECG();
     }
 
     void DrawECG()
     {
-        for (int i = 0; i < pixels.Length; i++)
+        for (int i = 0; i < _pixels.Length; i++)
         {
-            pixels[i] = _backgroundColor;
+            _pixels[i] = _backgroundColor;
         }
 
-        for (int x = 0; x < width; x++)
+        for (int x = 0; x < _width; x++)
         {
-            float yValue = Mathf.Sin((x + time * 100f) * frequency * Mathf.PI / 180f) * amplitude;
-            int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
-            y = Mathf.Clamp(y, 0, height - 1);
+            float yValue = Mathf.Sin((x + _time * 100f) * _frequency * Mathf.PI / 180f) * _amplitude;
+            int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (_height - 1));
+            y = Mathf.Clamp(y, 0, _height - 1);
 
-            DrawThickPixel(x, y, lineColor);
+            DrawThickPixel(x, y, _lineColor);
         }
 
-        texture.SetPixels(pixels);
-        texture.Apply();
+        _texture.SetPixels(_pixels);
+        _texture.Apply();
     }
 
     void DrawThickPixel(int x, int y, Color color)
     {
-        int halfThickness = lineThickness / 2;
+        int halfThickness = _lineThickness / 2;
 
         for (int offset = -halfThickness; offset <= halfThickness; offset++)
         {
             int drawY = y + offset;
 
-            if (drawY >= 0 && drawY < height)
+            if (drawY >= 0 && drawY < _height)
             {
-                pixels[x + drawY * width] = color;
+                _pixels[x + drawY * _width] = color;
             }
         }
     }

@@ -30,8 +30,7 @@ public class SubtitleController : MonoBehaviour
         }
     }
 
-    private Queue<SubtitleChunk> subtitleQueue = new Queue<SubtitleChunk>();
-    private bool isDisplaying = false;
+    private Queue<SubtitleChunk> _subtitleQueue = new Queue<SubtitleChunk>();
 
     private void Awake()
     {
@@ -58,7 +57,7 @@ public class SubtitleController : MonoBehaviour
             _currentCoroutine = null;
         }
 
-        subtitleQueue.Clear();
+        _subtitleQueue.Clear();
         _subtitleTextField.text = "";
         _subtitlePanel.SetActive(false);
     }
@@ -72,7 +71,7 @@ public class SubtitleController : MonoBehaviour
         }
 
         _subtitlePanel.SetActive(true);
-        subtitleQueue.Clear();
+        _subtitleQueue.Clear();
         _subtitleTextField.text = "";
 
         // Split into text chunks
@@ -85,7 +84,7 @@ public class SubtitleController : MonoBehaviour
         {
             // Fallback: just enqueue with a small default duration so something displays
             foreach (var c in chunks)
-                subtitleQueue.Enqueue(new SubtitleChunk(c, _minimumChunkWaitTime));
+                _subtitleQueue.Enqueue(new SubtitleChunk(c, _minimumChunkWaitTime));
         }
         else
         {
@@ -104,7 +103,7 @@ public class SubtitleController : MonoBehaviour
                 if (isLast)
                     duration = Mathf.Max(duration, _minimumLastChunkWaitTime);
 
-                subtitleQueue.Enqueue(new SubtitleChunk(chunkText, duration));
+                _subtitleQueue.Enqueue(new SubtitleChunk(chunkText, duration));
             }
         }
 
@@ -113,11 +112,10 @@ public class SubtitleController : MonoBehaviour
 
     private IEnumerator ProcessQueue()
     {
-        isDisplaying = true;
 
-        while (subtitleQueue.Count > 0)
+        while (_subtitleQueue.Count > 0)
         {
-            SubtitleChunk next = subtitleQueue.Dequeue();
+            SubtitleChunk next = _subtitleQueue.Dequeue();
             _subtitleTextField.text = next.Text;
 
             yield return new WaitForSeconds(next.Duration);
@@ -125,7 +123,6 @@ public class SubtitleController : MonoBehaviour
 
         _subtitlePanel.SetActive(false);
         _subtitleTextField.text = "";
-        isDisplaying = false;
         Events.SubtitlesStop.Publish();
         Events.ClearInfoPointHeading.Publish();
     }

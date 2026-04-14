@@ -2,17 +2,18 @@
 
 public class CharacterRotationController : MonoBehaviour
 {
-    public float rotationSpeed = 180f;
-
+    [SerializeField] private float _rotationSpeed = 180f;
     private Quaternion _originalRotation;
     private bool _shouldRotateToTarget = false;
     private Transform _target;
+    private Transform _transform;
     private InfoPointController _infoPointController;
 
     void Start()
     {
         _originalRotation = transform.rotation;
         _infoPointController = GetComponentInChildren<InfoPointController>();
+        _transform = transform;
     }
 
     void Update()
@@ -27,10 +28,10 @@ public class CharacterRotationController : MonoBehaviour
             {
                 Quaternion targetRot = Quaternion.LookRotation(direction);
 
-                transform.rotation = Quaternion.RotateTowards(
-                    transform.rotation,
+                _transform.rotation = Quaternion.RotateTowards(
+                    _transform.rotation,
                     targetRot,
-                    rotationSpeed * Time.deltaTime
+                    _rotationSpeed * Time.deltaTime
                 );
             }
         }
@@ -39,7 +40,7 @@ public class CharacterRotationController : MonoBehaviour
             // Rotate back to original rotation (Y only)
             // Extract only Y from original rotation
             Vector3 originalEuler = _originalRotation.eulerAngles;
-            Vector3 currentEuler = transform.eulerAngles;
+            Vector3 currentEuler = _transform.eulerAngles;
 
             Quaternion targetRot = Quaternion.Euler(
                 0f,
@@ -47,10 +48,10 @@ public class CharacterRotationController : MonoBehaviour
                 0f
             );
 
-            transform.rotation = Quaternion.RotateTowards(
-                transform.rotation,
+            _transform.rotation = Quaternion.RotateTowards(
+                _transform.rotation,
                 targetRot,
-                rotationSpeed * Time.deltaTime
+                _rotationSpeed * Time.deltaTime
             );
         }
     }

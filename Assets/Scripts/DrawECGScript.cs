@@ -5,56 +5,53 @@ using UnityEngine.UI;
 
 public class DrawECGScript : MonoBehaviour
 {
-    public int width = 50; // Width of the texture
-    public int height = 10; // Height of the texture
-    public float speed = 1f; // Speed at which the wave moves through its cycle
-
-    public float pWaveMultiplier;
-    public float qWaveMultiplier;
-    public float rWaveMultiplier;
-    public float sWaveMultiplier;
-    public float tWaveMultiplier;
-
-    [SerializeField] private int lineThickness = 3;
-
-    [Header("Update Control")]
-    [SerializeField] private float secondsPerStep = 0.02f; // Time between ECG column updates
-    [SerializeField] private int maxStepsPerFrame = 10;    // Prevent too many catch-up steps in one frame
-
     [Header("Appearance")]
     [SerializeField] private Color _backgroundColor = new Color(0f, 0f, 0f, 0f);
+    [SerializeField] private int _width = 50; // Width of the texture
+    [SerializeField] private int _height = 10; // Height of the texture
+    [SerializeField] private float _speed = 1f; // Speed at which the wave moves through its cycle
 
-    public RawImage ecgDisplay; // Reference to the RawImage component
-    public Color textureColor = Color.green;
+    [SerializeField] private float _pWaveMultiplier;
+    [SerializeField] private float _qWaveMultiplier;
+    [SerializeField] private float _rWaveMultiplier;
+    [SerializeField] private float _sWaveMultiplier;
+    [SerializeField] private float _tWaveMultiplier;
 
-    private Texture2D texture;
-    private float time;
-    private int currentX;
-    private Renderer rend;
+    [SerializeField] private int _lineThickness = 3;
+    [SerializeField] private RawImage _ecgDisplay; // Reference to the RawImage component
+    [SerializeField] private Color _textureColor = Color.green;
 
-    private float stepTimer;
+    [Header("Update Control")]
+    [SerializeField] private float _secondsPerStep = 0.02f; // Time between ECG column updates
+    [SerializeField] private int _maxStepsPerFrame = 10;    // Prevent too many catch-up steps in one frame
 
-    private bool hasPreviousPoint;
-    private int previousY;
+    private Texture2D _texture;
+    private float _time;
+    private float _stepTimer;
+    private int _currentX;
+    private int _previousY;
+    private Renderer _rend;
+    private bool _hasPreviousPoint;
+
 
     void Awake()
     {
         // Initialize the texture
-        texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
-        texture.filterMode = FilterMode.Point;
-        texture.wrapMode = TextureWrapMode.Clamp;
+        _texture = new Texture2D(_width, _height, TextureFormat.RGBA32, false);
+        _texture.filterMode = FilterMode.Point;
+        _texture.wrapMode = TextureWrapMode.Clamp;
 
         // Assign the texture to the RawImage component
-        ecgDisplay.texture = texture;
+        _ecgDisplay.texture = _texture;
 
         // Clear the texture initially
         ClearTexture();
 
-        rend = GetComponent<Renderer>();
+        _rend = GetComponent<Renderer>();
 
-        lineThickness = Mathf.Max(1, lineThickness);
-        secondsPerStep = Mathf.Max(0.001f, secondsPerStep);
-        maxStepsPerFrame = Mathf.Max(1, maxStepsPerFrame);
+        _lineThickness = Mathf.Max(1, _lineThickness);
+        _secondsPerStep = Mathf.Max(0.001f, _secondsPerStep);
+        _maxStepsPerFrame = Mathf.Max(1, _maxStepsPerFrame);
     }
 
     public void InitialiseDisplay()
@@ -64,16 +61,16 @@ public class DrawECGScript : MonoBehaviour
 
     void Update()
     {
-        stepTimer += Time.deltaTime;
+        _stepTimer += Time.deltaTime;
 
         int stepsThisFrame = 0;
 
-        while (stepTimer >= secondsPerStep && stepsThisFrame < maxStepsPerFrame)
+        while (_stepTimer >= _secondsPerStep && stepsThisFrame < _maxStepsPerFrame)
         {
-            stepTimer -= secondsPerStep;
+            _stepTimer -= _secondsPerStep;
 
             // Advance time
-            time += secondsPerStep * speed;
+            _time += _secondsPerStep * _speed;
 
             // Draw new ECG data
             DrawECGStep();
@@ -84,25 +81,25 @@ public class DrawECGScript : MonoBehaviour
         // Apply the changes to the texture
         if (stepsThisFrame > 0)
         {
-            texture.Apply();
+            _texture.Apply();
         }
     }
 
     void ClearTexture()
     {
-        for (int y = 0; y < height; y++)
+        for (int y = 0; y < _height; y++)
         {
-            for (int x = 0; x < width; x++)
+            for (int x = 0; x < _width; x++)
             {
-                texture.SetPixel(x, y, _backgroundColor);
+                _texture.SetPixel(x, y, _backgroundColor);
             }
         }
-        texture.Apply();
+        _texture.Apply();
     }
 
     void DrawThickPixel(int x, int y, Color color)
     {
-        int halfThickness = lineThickness / 2;
+        int halfThickness = _lineThickness / 2;
 
         for (int offsetX = -halfThickness; offsetX <= halfThickness; offsetX++)
         {
@@ -111,9 +108,9 @@ public class DrawECGScript : MonoBehaviour
                 int drawX = x + offsetX;
                 int drawY = y + offsetY;
 
-                if (drawX >= 0 && drawX < width && drawY >= 0 && drawY < height)
+                if (drawX >= 0 && drawX < _width && drawY >= 0 && drawY < _height)
                 {
-                    texture.SetPixel(drawX, drawY, color);
+                    _texture.SetPixel(drawX, drawY, color);
                 }
             }
         }
@@ -155,63 +152,63 @@ public class DrawECGScript : MonoBehaviour
     void DrawECGStep()
     {
         // Generate a new ECG value
-        float t = time % 1f; // Simulate one heartbeat cycle per second
+        float t = _time % 1f; // Simulate one heartbeat cycle per second
         float yValue = SimulateECG(t);
-        int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
-        y = Mathf.Clamp(y, 0, height - 1);
+        int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (_height - 1));
+        y = Mathf.Clamp(y, 0, _height - 1);
 
-        int drawX = currentX;
-        int prevX = (currentX - 1 + width) % width;
+        int drawX = _currentX;
+        int prevX = (_currentX - 1 + _width) % _width;
 
         // Draw the ECG value at the current position
-        DrawThickPixel(drawX, y, textureColor);
+        DrawThickPixel(drawX, y, _textureColor);
 
         // Join this point to the previous one so jumps do not appear isolated
-        if (hasPreviousPoint)
+        if (_hasPreviousPoint)
         {
-            DrawLine(prevX, previousY, drawX, y, textureColor);
+            DrawLine(prevX, _previousY, drawX, y, _textureColor);
         }
 
-        previousY = y;
-        hasPreviousPoint = true;
+        _previousY = y;
+        _hasPreviousPoint = true;
 
         // Clear the previous column before moving on to the next
         ClearPreviousColumn();
 
         // Move to the next x position
-        currentX = (currentX + 1) % width;
+        _currentX = (_currentX + 1) % _width;
     }
 
     void DrawECGOnce()
     {
         int previousDrawY = -1;
 
-        for (int x = 0; x < width; x++)
+        for (int x = 0; x < _width; x++)
         {
-            float t = (float)x / (width - 1);   // 0 to 1 across the width
+            float t = (float)x / (_width - 1);   // 0 to 1 across the width
             float yValue = SimulateECG(t);
 
-            int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (height - 1));
-            y = Mathf.Clamp(y, 0, height - 1);
+            int y = Mathf.FloorToInt((yValue + 1f) * 0.5f * (_height - 1));
+            y = Mathf.Clamp(y, 0, _height - 1);
 
-            DrawThickPixel(x, y, textureColor);
+            DrawThickPixel(x, y, _textureColor);
 
-            // Optional: join gaps between points so it looks like a line
+            // join gaps between points so it looks like a line
             if (previousDrawY != -1)
             {
-                DrawLine(x - 1, previousDrawY, x, y, textureColor);
+                DrawLine(x - 1, previousDrawY, x, y, _textureColor);
             }
 
             previousDrawY = y;
         }
 
-        texture.Apply();
+        _texture.Apply();
     }
 
     void ClearPreviousColumn()
     {
-        int halfThickness = lineThickness / 2;
-        int clearXCenter = (currentX + 1) % width;
+        int halfThickness = _lineThickness / 2;
+        int clearXCenter = (_currentX + 1) % _width;
 
         for (int offsetX = -halfThickness; offsetX <= halfThickness; offsetX++)
         {
@@ -219,14 +216,14 @@ public class DrawECGScript : MonoBehaviour
 
             while (clearX < 0)
             {
-                clearX += width;
+                clearX += _width;
             }
 
-            clearX %= width;
+            clearX %= _width;
 
-            for (int y = 0; y < height; y++)
+            for (int y = 0; y < _height; y++)
             {
-                texture.SetPixel(clearX, y, _backgroundColor);
+                _texture.SetPixel(clearX, y, _backgroundColor);
             }
         }
     }
@@ -234,15 +231,15 @@ public class DrawECGScript : MonoBehaviour
     float SimulateECG(float t)
     {
         // P Wave: small upward wave
-        float pWave = pWaveMultiplier * Mathf.Sin(2 * Mathf.PI * (t - 0.2f) * 10) * Mathf.Exp(-((t - 0.2f) * 30) * ((t - 0.2f) * 30));
+        float pWave = _pWaveMultiplier * Mathf.Sin(2 * Mathf.PI * (t - 0.2f) * 10) * Mathf.Exp(-((t - 0.2f) * 30) * ((t - 0.2f) * 30));
 
         // QRS Complex: sharp peak and trough
-        float qWave = qWaveMultiplier * Mathf.Exp(-((t - 0.35f) * 50) * ((t - 0.35f) * 50));
-        float rWave = rWaveMultiplier * Mathf.Exp(-((t - 0.4f) * 100) * ((t - 0.4f) * 100));
-        float sWave = sWaveMultiplier * Mathf.Exp(-((t - 0.45f) * 50) * ((t - 0.45f) * 50));
+        float qWave = _qWaveMultiplier * Mathf.Exp(-((t - 0.35f) * 50) * ((t - 0.35f) * 50));
+        float rWave = _rWaveMultiplier * Mathf.Exp(-((t - 0.4f) * 100) * ((t - 0.4f) * 100));
+        float sWave = _sWaveMultiplier * Mathf.Exp(-((t - 0.45f) * 50) * ((t - 0.45f) * 50));
 
         // T Wave: smaller, longer upward wave
-        float tWave = tWaveMultiplier * Mathf.Sin(2 * Mathf.PI * (t - 0.6f) * 5) * Mathf.Exp(-((t - 0.6f) * 20) * ((t - 0.6f) * 20));
+        float tWave = _tWaveMultiplier * Mathf.Sin(2 * Mathf.PI * (t - 0.6f) * 5) * Mathf.Exp(-((t - 0.6f) * 20) * ((t - 0.6f) * 20));
 
         // Combined ECG signal
         return pWave + qWave + rWave + sWave + tWave;

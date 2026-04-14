@@ -18,7 +18,6 @@ public class FPSCounter : MonoBehaviour
         }
     }
 
-    // Optional: Provide a way to access the frame count
     public int GetFrameCount()
     {
         return _frameCount;
