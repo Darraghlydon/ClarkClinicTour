@@ -47892,8 +47892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bd86c7147276242878d035b166c942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigationController
-  _agent: {fileID: 0}
-  _keyboardController: {fileID: 0}
+  _agent: {fileID: 8118585072821173005}
+  _keyboardController: {fileID: 896725090674080870}
   _freeMoveArrivalDistance: 0.2
 --- !u!4 &2165195986465151114 stripped
 Transform:
@@ -48609,6 +48609,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1136242749}
   m_SourcePrefab: {fileID: 100100000, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+--- !u!195 &8118585072821173005 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 6219332484105723403, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+  m_PrefabInstance: {fileID: 8118585072821173004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8273988842193722665
 PrefabInstance:
   m_ObjectHideFlags: 0
