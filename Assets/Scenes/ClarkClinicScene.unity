@@ -31722,6 +31722,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 948996574}
     m_Modifications:
+    - target: {fileID: 1359918255246597254, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2165195987547046454, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.26537
@@ -31800,6 +31804,10 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: b09a1611967db6e47a5ba356e57bb015, type: 3}
+    - target: {fileID: 7773039351337633615, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47876,7 +47884,7 @@ MonoBehaviour:
   _maxDistance: 100
   _raycastLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   _playerNavigationController: {fileID: 896725090674080875}
   _navMeshSampleDistance: 2
   _keyboardAndMouseController: {fileID: 896725090674080870}
@@ -48302,9 +48310,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: InfoPointCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 1959179257703160319, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3667194728881294540, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075264202946101814, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7170761750397029449, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
       propertyPath: m_LocalPosition.x
