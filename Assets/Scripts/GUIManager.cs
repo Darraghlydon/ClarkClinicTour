@@ -205,6 +205,18 @@ public class GUIManager : MonoBehaviour
         DeactivateTouchControls();
     }
 
+    public void StartTour()
+    {
+        DeactivateScreens();
+        if (!SessionStateManager.Instance.HasViewedControlsThisSession)
+        {
+            SessionStateManager.Instance.MarkControlsAsViewed();
+            _currentState = UIState.Default;
+            SwitchState(UIState.ControlMethodSelection);
+            return;
+        }
+    }
+
     void Unpause()
     {
         _subtitles.SetActive(true);
@@ -299,6 +311,7 @@ public class GUIManager : MonoBehaviour
 
     public void DisplayControlMethodScreen()
     {
+        SessionStateManager.Instance.MarkControlsAsViewed();
         DeactivateScreens();
         SwitchState(UIState.ControlMethodSelection);
     }
