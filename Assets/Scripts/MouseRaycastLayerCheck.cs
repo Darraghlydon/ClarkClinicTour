@@ -97,18 +97,18 @@ public class MouseRaycastLayerCheck : MonoBehaviour
                     Debug.LogWarning("Could not find nearby NavMesh position for info point: " + infoPoint.name);
                 }
             }
-            else
-            {
-                Vector3 destination = hit.point;
+            //else
+            //{
+            //    Vector3 destination = hit.point;
 
-                if (NavMesh.SamplePosition(destination, out NavMeshHit navHit, _navMeshSampleDistance, NavMesh.AllAreas))
-                {
-                    destination = navHit.position;
-                }
+            //    if (NavMesh.SamplePosition(destination, out NavMeshHit navHit, _navMeshSampleDistance, NavMesh.AllAreas))
+            //    {
+            //        destination = navHit.position;
+            //    }
 
-                _playerNavigationController.MoveToPoint(destination);
-                Debug.Log("Other destination: " + destination);
-            }
+            //    _playerNavigationController.MoveToPoint(destination);
+            //    Debug.Log("Other destination: " + destination);
+            //}
         }
     }
 }

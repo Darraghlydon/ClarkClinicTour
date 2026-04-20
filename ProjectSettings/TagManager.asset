@@ -16,7 +16,7 @@ TagManager:
   - InfoPoint
   - Ceiling
   - InfoPointRaycastReceiver
-  - 
+  - WallCollider
   - 
   - 
   - 
