@@ -24,6 +24,9 @@ public class MouseRaycastLayerCheck : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         if (TryGetPointerReleasePosition(out Vector2 pointerPosition))
         {
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
