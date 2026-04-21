@@ -213,7 +213,6 @@ public class GUIManager : MonoBehaviour
             SessionStateManager.Instance.MarkControlsAsViewed();
             _currentState = UIState.Default;
             SwitchState(UIState.ControlMethodSelection);
-            return;
         }
     }
 
