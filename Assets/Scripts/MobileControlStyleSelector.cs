@@ -12,26 +12,28 @@ public class ControlStyleSelector : MonoBehaviour
     private const string ControlStylePrefKey = "MobileControlStyle";
 
     [Header("References")]
-    [SerializeField] private GUIManager guiManager;
+    [SerializeField] private GUIManager _guiManager;
 
     [Header("Buttons")]
-    [SerializeField] private Button joystickButton;
-    [SerializeField] private Button buttonModeButton;
+    [SerializeField] private Button _joystickButton;
+    [SerializeField] private Button _buttonModeButton;
 
     [Header("Button Background Images")]
-    [SerializeField] private Image joystickButtonImage;
-    [SerializeField] private Image buttonModeButtonImage;
+    [SerializeField] private Image _joystickButtonImage;
+    [SerializeField] private Image _buttonModeButtonImage;
 
-    [Header("Optional Selected Indicators")]
-    [SerializeField] private GameObject joystickSelectedIndicator;
-    [SerializeField] private GameObject buttonSelectedIndicator;
+    [Header("Instructions")]
+    [SerializeField] private GameObject _joystickInstructionsImageObject;
+    [SerializeField] private GameObject _joystickInsructionsObject;
+    [SerializeField] private GameObject _buttonInstructionsImageObject;
+    [SerializeField] private GameObject _buttonInsructionsObject;
 
     [Header("Colours")]
-    [SerializeField] private Color selectedColor = new Color(0.10f, 0.85f, 0.95f, 1f);
-    [SerializeField] private Color deselectedColor = new Color(0.25f, 0.25f, 0.60f, 1f);
+    [SerializeField] private Color _selectedColor = new Color(0.10f, 0.85f, 0.95f, 1f);
+    [SerializeField] private Color _deselectedColor = new Color(0.25f, 0.25f, 0.60f, 1f);
 
     [Header("Fallback Default")]
-    [SerializeField] private MobileControlStyle defaultStyle = MobileControlStyle.Joysticks;
+    [SerializeField] private MobileControlStyle _defaultStyle = MobileControlStyle.Joysticks;
 
     private MobileControlStyle _currentStyle;
 
@@ -39,14 +41,20 @@ public class ControlStyleSelector : MonoBehaviour
 
     private void Awake()
     {
-        if (joystickButton != null)
-            joystickButton.onClick.AddListener(SelectJoysticks);
+        if (_joystickButton != null)
+            _joystickButton.onClick.AddListener(SelectJoysticks);
 
-        if (buttonModeButton != null)
-            buttonModeButton.onClick.AddListener(SelectButtons);
+        if (_buttonModeButton != null)
+            _buttonModeButton.onClick.AddListener(SelectButtons);
     }
 
     private void Start()
+    {
+        MobileControlStyle savedStyle = LoadSavedControlStyle();
+        ApplySelection(savedStyle, true);
+    }
+
+    private void OnEnable()
     {
         MobileControlStyle savedStyle = LoadSavedControlStyle();
         ApplySelection(savedStyle, true);
@@ -72,8 +80,8 @@ public class ControlStyleSelector : MonoBehaviour
         SaveControlStyle(_currentStyle);
         UpdateVisuals();
 
-        if (guiManager != null)
-            guiManager.SetControlStyle(_currentStyle);
+        if (_guiManager != null)
+            _guiManager.SetControlStyle(_currentStyle);
     }
 
     private void UpdateVisuals()
@@ -81,17 +89,18 @@ public class ControlStyleSelector : MonoBehaviour
         bool joystickSelected = _currentStyle == MobileControlStyle.Joysticks;
         bool buttonsSelected = _currentStyle == MobileControlStyle.Buttons;
 
-        if (joystickButtonImage != null)
-            joystickButtonImage.color = joystickSelected ? selectedColor : deselectedColor;
+        if (_joystickButtonImage != null)
+            _joystickButtonImage.color = joystickSelected ? _selectedColor : _deselectedColor;
 
-        if (buttonModeButtonImage != null)
-            buttonModeButtonImage.color = buttonsSelected ? selectedColor : deselectedColor;
 
-        if (joystickSelectedIndicator != null)
-            joystickSelectedIndicator.SetActive(joystickSelected);
+        if (_buttonModeButtonImage != null)
+            _buttonModeButtonImage.color = buttonsSelected ? _selectedColor : _deselectedColor;
 
-        if (buttonSelectedIndicator != null)
-            buttonSelectedIndicator.SetActive(buttonsSelected);
+        _joystickInstructionsImageObject.SetActive(joystickSelected);
+        _joystickInsructionsObject.SetActive(joystickSelected);
+        _buttonInstructionsImageObject.SetActive(buttonsSelected);
+        _buttonInsructionsObject.SetActive(buttonsSelected);
+
     }
 
     private void SaveControlStyle(MobileControlStyle style)
@@ -102,12 +111,12 @@ public class ControlStyleSelector : MonoBehaviour
 
     private MobileControlStyle LoadSavedControlStyle()
     {
-        int defaultValue = (int)defaultStyle;
+        int defaultValue = (int)_defaultStyle;
         int savedValue = PlayerPrefs.GetInt(ControlStylePrefKey, defaultValue);
 
         if (System.Enum.IsDefined(typeof(MobileControlStyle), savedValue))
             return (MobileControlStyle)savedValue;
 
-        return defaultStyle;
+        return _defaultStyle;
     }
 }

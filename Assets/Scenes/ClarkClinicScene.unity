@@ -9214,16 +9214,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334cc2783139c0940ada17a2b53f189a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlStyleSelector
-  guiManager: {fileID: 500597927}
-  joystickButton: {fileID: 1159942582}
-  buttonModeButton: {fileID: 1655418034}
-  joystickButtonImage: {fileID: 1159942583}
-  buttonModeButtonImage: {fileID: 1655418035}
-  joystickSelectedIndicator: {fileID: 0}
-  buttonSelectedIndicator: {fileID: 0}
-  selectedColor: {r: 0.1, g: 0.85, b: 0.95, a: 1}
-  deselectedColor: {r: 0.25, g: 0.25, b: 0.6, a: 1}
-  defaultStyle: 0
+  _guiManager: {fileID: 500597927}
+  _joystickButton: {fileID: 1159942582}
+  _buttonModeButton: {fileID: 1655418034}
+  _joystickButtonImage: {fileID: 1159942583}
+  _buttonModeButtonImage: {fileID: 1655418035}
+  _joystickInstructionsImageObject: {fileID: 1221861323}
+  _joystickInsructionsObject: {fileID: 1387940378}
+  _buttonInstructionsImageObject: {fileID: 1690364294}
+  _buttonInsructionsObject: {fileID: 1000910717}
+  _selectedColor: {r: 0.1, g: 0.85, b: 0.95, a: 1}
+  _deselectedColor: {r: 0.25, g: 0.25, b: 0.6, a: 1}
+  _defaultStyle: 0
 --- !u!4 &475390644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7170761750397029449, guid: 4bb80574b85c7634abf67ac4cf1b2d10, type: 3}
@@ -20590,6 +20592,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f75e7cb78be1d07488fd202c2f6110d0, type: 3}
+--- !u!1 &1000910717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1698274984940951658, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+  m_PrefabInstance: {fileID: 5069501816320714551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1007907485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25992,6 +25999,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2931298607360757045, guid: 878c4ed2c2232224dabaab1c4f3a2636, type: 3}
   m_PrefabInstance: {fileID: 1221235741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1221861323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1066176031489934133, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+  m_PrefabInstance: {fileID: 5069501816320714551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224016798
 GameObject:
   m_ObjectHideFlags: 0
@@ -30147,6 +30159,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9fe4b88b7a637140b59cb478adcdea0, type: 3}
   m_PrefabInstance: {fileID: 1381454929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1387940378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8019212881397216413, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+  m_PrefabInstance: {fileID: 5069501816320714551}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1388839675
 PrefabInstance:
@@ -39725,6 +39742,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688349630}
   m_CullTransparentMesh: 1
+--- !u!1 &1690364294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1317709126556022730, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+  m_PrefabInstance: {fileID: 5069501816320714551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1691272403
 GameObject:
   m_ObjectHideFlags: 0
@@ -51991,9 +52013,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 846396402}
     m_Modifications:
+    - target: {fileID: 1317709126556022730, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698274984940951658, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2594589318908806874, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_Name
       value: Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628898932876493670, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Name
+      value: JoystickControls
       objectReference: {fileID: 0}
     - target: {fileID: 3905357064941306785, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_Pivot.x
@@ -52075,22 +52109,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4084002892166829228, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084002892166829228, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084002892166829228, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 1655418035}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.9607843
+      objectReference: {fileID: 0}
     - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 474168090}
     - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectButtons
+      value: SelectJoysticks
       objectReference: {fileID: 0}
     - target: {fileID: 4152750013935694880, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ControlStyleSelector, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4328349152299098605, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -156
+      objectReference: {fileID: 0}
     - target: {fileID: 4814791144202228473, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 500597927}
+    - target: {fileID: 4962722258330889949, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -111
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750805175114835208, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 228
+      objectReference: {fileID: 0}
     - target: {fileID: 6622491205664647840, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -52102,6 +52192,34 @@ PrefabInstance:
     - target: {fileID: 6622491205664647840, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ControlStyleSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895123637577182305, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Name
+      value: ButtonControls
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019212881397216413, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177279982806966367, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177279982806966367, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177279982806966367, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752961286731171868, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 206
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752961286731171868, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -158
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

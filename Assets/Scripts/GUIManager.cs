@@ -237,12 +237,13 @@ public class GUIManager : MonoBehaviour
         ActivateTouchControls();
     }
 
-    private void DeactivateTouchControls(bool forceDeactivation=false)
+    private void DeactivateTouchControls(bool forceDeactivation = false)
     {
-        if (_useTouchControls||forceDeactivation)
-        { 
+        if (_useTouchControls || forceDeactivation)
+        {
             _mobilePauseButton.SetActive(false);
-            if (_mobileSkipButton.activeSelf == true)
+
+            if (_mobileSkipButton.activeSelf)
             {
                 _isMobileSkipEnabled = true;
                 _mobileSkipButton.SetActive(false);
@@ -251,7 +252,12 @@ public class GUIManager : MonoBehaviour
             {
                 _isMobileSkipEnabled = false;
             }
-            _mobileOnScreenSticks.SetActive(false);
+
+            if (_mobileOnScreenSticks != null)
+                _mobileOnScreenSticks.SetActive(false);
+
+            if (_mobileOnScreenButtons != null)
+                _mobileOnScreenButtons.SetActive(false);
         }
     }
 
@@ -260,11 +266,13 @@ public class GUIManager : MonoBehaviour
         if (_useTouchControls)
         {
             _mobilePauseButton.SetActive(true);
+
             if (_isMobileSkipEnabled)
             {
                 _mobileSkipButton.SetActive(true);
             }
-            _mobileOnScreenSticks.SetActive(true);
+
+            ApplyTouchControlStyle();
         }
     }
 
@@ -309,7 +317,7 @@ public class GUIManager : MonoBehaviour
 
     public void ResetSavedControlStyle()
     {
-        PlayerPrefs.DeleteKey("ControlStyle");
+        PlayerPrefs.DeleteKey("MobileControlStyle");
         PlayerPrefs.Save();
     }
 
