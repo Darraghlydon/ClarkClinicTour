@@ -28,12 +28,11 @@ public class ControlStyleSelector : MonoBehaviour
     [SerializeField] private GameObject _buttonInstructionsImageObject;
     [SerializeField] private GameObject _buttonInsructionsObject;
 
-    [Header("Colours")]
-    [SerializeField] private Color _selectedColor = new Color(0.10f, 0.85f, 0.95f, 1f);
-    [SerializeField] private Color _deselectedColor = new Color(0.25f, 0.25f, 0.60f, 1f);
-
     [Header("Fallback Default")]
     [SerializeField] private MobileControlStyle _defaultStyle = MobileControlStyle.Joysticks;
+
+    private Color _joystickBaseColor;
+    private Color _buttonModeBaseColor;
 
     private MobileControlStyle _currentStyle;
 
@@ -46,6 +45,12 @@ public class ControlStyleSelector : MonoBehaviour
 
         if (_buttonModeButton != null)
             _buttonModeButton.onClick.AddListener(SelectButtons);
+
+        if (_joystickButtonImage != null)
+            _joystickBaseColor = _joystickButtonImage.color;
+
+        if (_buttonModeButtonImage != null)
+            _buttonModeBaseColor = _buttonModeButtonImage.color;
     }
 
     private void Start()
@@ -84,23 +89,47 @@ public class ControlStyleSelector : MonoBehaviour
             _guiManager.SetControlStyle(_currentStyle);
     }
 
+
+    private void ApplyButtonVisual(Button button, Image buttonImage, Color baseColor, bool isSelected)
+    {
+        if (button == null || buttonImage == null)
+            return;
+
+        ColorBlock colors = button.colors;
+        Color tintColor = isSelected ? colors.selectedColor : colors.normalColor;
+
+        buttonImage.color = MultiplyColors(baseColor, tintColor);
+    }
+
+    private Color MultiplyColors(Color a, Color b)
+    {
+        return new Color(
+            a.r * b.r,
+            a.g * b.g,
+            a.b * b.b,
+            a.a * b.a
+        );
+    }
+
     private void UpdateVisuals()
     {
         bool joystickSelected = _currentStyle == MobileControlStyle.Joysticks;
         bool buttonsSelected = _currentStyle == MobileControlStyle.Buttons;
 
-        if (_joystickButtonImage != null)
-            _joystickButtonImage.color = joystickSelected ? _selectedColor : _deselectedColor;
+        ApplyButtonVisual(_joystickButton, _joystickButtonImage, _joystickBaseColor, joystickSelected);
+        ApplyButtonVisual(_buttonModeButton, _buttonModeButtonImage, _buttonModeBaseColor, buttonsSelected);
 
+        if (_joystickInstructionsImageObject != null)
+            _joystickInstructionsImageObject.SetActive(joystickSelected);
 
-        if (_buttonModeButtonImage != null)
-            _buttonModeButtonImage.color = buttonsSelected ? _selectedColor : _deselectedColor;
+        if (_joystickInsructionsObject != null)
+            _joystickInsructionsObject.SetActive(joystickSelected);
 
-        _joystickInstructionsImageObject.SetActive(joystickSelected);
-        _joystickInsructionsObject.SetActive(joystickSelected);
-        _buttonInstructionsImageObject.SetActive(buttonsSelected);
-        _buttonInsructionsObject.SetActive(buttonsSelected);
+        if (_buttonInstructionsImageObject != null)
+            _buttonInstructionsImageObject.SetActive(buttonsSelected);
 
+        if (_buttonInsructionsObject != null)
+            _buttonInsructionsObject.SetActive(buttonsSelected);
     }
 
     private void SaveControlStyle(MobileControlStyle style)
