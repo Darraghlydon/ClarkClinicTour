@@ -9524,7 +9524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
-  m_ControlPath: <Keyboard>/d
+  m_ControlPath: <Keyboard>/x
 --- !u!114 &483017983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42269,7 +42269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
-  m_ControlPath: <Keyboard>/a
+  m_ControlPath: <Keyboard>/z
 --- !u!114 &1737915107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52425,6 +52425,10 @@ PrefabInstance:
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: lookSensitivity
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: _mobileTurnSpeed
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: _playerNavigationController

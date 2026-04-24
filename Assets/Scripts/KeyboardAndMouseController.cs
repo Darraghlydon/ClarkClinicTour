@@ -15,7 +15,10 @@ public class KeyboardAndMouseController : MonoBehaviour
     [SerializeField] private float _verticalRotationDegreesClamp = 50f;
 
     [SerializeField] private float _levelViewSpeed = 180f;
+    [SerializeField] private float _mobileTurnSpeed = 180f;
     [SerializeField] private PlayerNavigationController _playerNavigationController;
+
+    private bool _isMobile;
 
     private bool _levelViewWhileNavigating;
     private bool _pauseMovement;
@@ -47,6 +50,8 @@ public class KeyboardAndMouseController : MonoBehaviour
 
         _transform = transform;
         _cameraTransform = _mainCamera.transform;
+
+        _isMobile = PlatformManager.IsTouchScreen();
     }
 
     private void OnEnable()
@@ -106,6 +111,13 @@ public class KeyboardAndMouseController : MonoBehaviour
         Vector2 lookVector = _playerActions.Player.Look.ReadValue<Vector2>();
 
         _targetYRotation += lookVector.x * _lookSensitivity;
+
+        if (_isMobile)
+        {
+            float mobileTurn = _playerActions.Player.MobileTurn.ReadValue<float>();
+            _targetYRotation += mobileTurn * _mobileTurnSpeed * Time.deltaTime;
+        }
+
         _targetXRotation -= lookVector.y * _lookSensitivity;
 
         _targetXRotation = Mathf.Clamp(_targetXRotation, -_verticalRotationDegreesClamp, _verticalRotationDegreesClamp);
