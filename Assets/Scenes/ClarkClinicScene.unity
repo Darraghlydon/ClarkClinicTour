@@ -52015,13 +52015,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -62.6
       objectReference: {fileID: 0}
+    - target: {fileID: 2126175436247781896, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2292839960239847673, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2594589318908806874, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_Name
       value: ControlsScreen
       objectReference: {fileID: 0}
     - target: {fileID: 2594589318908806874, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3905357064941306785, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
       propertyPath: m_Pivot.x
@@ -52111,6 +52119,14 @@ PrefabInstance:
       propertyPath: _guiManager
       value: 
       objectReference: {fileID: 500597927}
+    - target: {fileID: 6287437284654746478, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: _keyboardAndMouseController
+      value: 
+      objectReference: {fileID: 896725090674080870}
+    - target: {fileID: 8744286804552290457, guid: 30806b76930639f439be38be9b3a31f5, type: 3}
+      propertyPath: m_text
+      value: Simple
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

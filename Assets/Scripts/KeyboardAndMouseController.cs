@@ -26,6 +26,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     private bool _isAutoAligning;
     private bool _isInfoPointAudioActive;
     private bool _manualMovementEnabled = true;
+    private bool _simpleControlsActive;
 
     private float _targetXRotation;
     private float _targetYRotation;
@@ -42,6 +43,7 @@ public class KeyboardAndMouseController : MonoBehaviour
     private Transform _infoPointPlayerOrientation;
     private Coroutine _updateOrientationCoroutine;
 
+    private const string ControlStylePrefKey = "MobileControlStyle";
 
     private void Awake()
     {
@@ -52,6 +54,8 @@ public class KeyboardAndMouseController : MonoBehaviour
         _cameraTransform = _mainCamera.transform;
 
         _isMobile = PlatformManager.IsTouchScreen();
+
+        ApplySavedControlStyle();
     }
 
     private void OnEnable()
@@ -59,12 +63,13 @@ public class KeyboardAndMouseController : MonoBehaviour
         _playerActions.Player.Enable();
         Events.InfoPointStart.Subscribe(PauseMovementForAudio);
         Events.InfoPointStop.Subscribe(UnPauseMovement);
+        ApplySavedControlStyle();
+
     }
 
     private void OnDisable()
     {
         _playerActions.Player.Disable();
-
         Events.InfoPointStart.Unsubscribe(PauseMovementForAudio);
         Events.InfoPointStop.Unsubscribe(UnPauseMovement);
     }
@@ -112,15 +117,23 @@ public class KeyboardAndMouseController : MonoBehaviour
 
         _targetYRotation += lookVector.x * _lookSensitivity;
 
-        if (_isMobile)
+        //if (_isMobile)
+        //{
+        //    float mobileTurn = _playerActions.Player.MobileTurn.ReadValue<float>();
+        //    _targetYRotation += mobileTurn * _mobileTurnSpeed * Time.deltaTime;
+        //}
+
+        if (!_simpleControlsActive)
+        {
+            _targetXRotation -= lookVector.y * _lookSensitivity;
+            _targetXRotation = Mathf.Clamp(_targetXRotation, -_verticalRotationDegreesClamp, _verticalRotationDegreesClamp);
+        }
+        else
         {
             float mobileTurn = _playerActions.Player.MobileTurn.ReadValue<float>();
             _targetYRotation += mobileTurn * _mobileTurnSpeed * Time.deltaTime;
+            _targetXRotation = 0f;
         }
-
-        _targetXRotation -= lookVector.y * _lookSensitivity;
-
-        _targetXRotation = Mathf.Clamp(_targetXRotation, -_verticalRotationDegreesClamp, _verticalRotationDegreesClamp);
 
         _xRotation = Mathf.LerpAngle(_xRotation, _targetXRotation, _mouseSmooth * Time.deltaTime);
         _yRotation = Mathf.LerpAngle(_yRotation, _targetYRotation, _mouseSmooth * Time.deltaTime);
@@ -145,6 +158,24 @@ public class KeyboardAndMouseController : MonoBehaviour
             StopCoroutine(_updateOrientationCoroutine);
 
         _updateOrientationCoroutine = StartCoroutine(BeginAlignmentWhenNavigationStops());
+    }
+
+    public void SetSimpleControlsActive(bool enabled)
+    {
+        _simpleControlsActive = enabled;
+        _levelViewWhileNavigating = enabled;
+
+        if (enabled)
+            _targetXRotation = 0f;
+    }
+
+    private void ApplySavedControlStyle()
+    {
+        bool simpleControlsEnabled =
+            PlayerPrefs.GetInt(ControlStylePrefKey, (int)MobileControlStyle.Joysticks)
+            == (int)MobileControlStyle.Buttons;
+
+        SetSimpleControlsActive(simpleControlsEnabled);
     }
 
     private IEnumerator BeginAlignmentWhenNavigationStops()

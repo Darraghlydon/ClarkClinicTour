@@ -13,6 +13,7 @@ public class ControlStyleSelector : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GUIManager _guiManager;
+    [SerializeField] private KeyboardAndMouseController _keyboardAndMouseController;
 
     [Header("Buttons")]
     [SerializeField] private Button _joystickButton;
@@ -62,7 +63,7 @@ public class ControlStyleSelector : MonoBehaviour
     private void OnEnable()
     {
         MobileControlStyle savedStyle = LoadSavedControlStyle();
-        ApplySelection(savedStyle, true);
+        //ApplySelection(savedStyle, true);
     }
 
     public void SelectJoysticks()
@@ -85,8 +86,13 @@ public class ControlStyleSelector : MonoBehaviour
         SaveControlStyle(_currentStyle);
         UpdateVisuals();
 
+        bool useSimpleControls = _currentStyle == MobileControlStyle.Buttons;
+
         if (_guiManager != null)
             _guiManager.SetControlStyle(_currentStyle);
+
+        if (_keyboardAndMouseController != null)
+            _keyboardAndMouseController.SetSimpleControlsActive(useSimpleControls);
     }
 
 
