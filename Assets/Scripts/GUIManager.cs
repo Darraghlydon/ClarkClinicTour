@@ -351,6 +351,7 @@ public class GUIManager : MonoBehaviour
                 _activeInfoPointController.StopAudioExternally();
 
             Events.SubtitlesSkip.Publish();
+            Events.ClearInfoPointHeading.Publish();
         }
     }
 
