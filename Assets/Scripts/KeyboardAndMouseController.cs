@@ -128,10 +128,12 @@ public class KeyboardAndMouseController : MonoBehaviour
         );
 
         _targetYRotation += mouseLook.x * _mouseLookSensitivity;
-        _targetYRotation += _smoothedGamepadLook.x * _gamepadLookSpeed * Time.deltaTime;
 
         if (!_simpleControlsActive)
         {
+            // Joystick / gamepad look mode
+            _targetYRotation += _smoothedGamepadLook.x * _gamepadLookSpeed * Time.deltaTime;
+
             _targetXRotation -= mouseLook.y * _mouseLookSensitivity;
             _targetXRotation -= _smoothedGamepadLook.y * _gamepadLookSpeed * Time.deltaTime;
 
@@ -143,6 +145,7 @@ public class KeyboardAndMouseController : MonoBehaviour
         }
         else
         {
+            // Simple button mode
             float mobileTurn = _playerActions.Player.MobileTurn.ReadValue<float>();
             _targetYRotation += mobileTurn * _mobileTurnSpeed * Time.deltaTime;
             _targetXRotation = 0f;

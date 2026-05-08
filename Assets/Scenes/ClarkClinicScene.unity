@@ -52901,7 +52901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: _gamepadLookSpeed
-      value: 80
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: _playerNavigationController
