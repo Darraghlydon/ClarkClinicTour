@@ -52888,6 +52888,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
+      propertyPath: _mouseSmooth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: lookSensitivity
       value: 0.2
       objectReference: {fileID: 0}
@@ -52897,7 +52901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: _gamepadLookSpeed
-      value: 26
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7243041303962933988, guid: 6371b8149cda2b540bf49b7e93f4e19a, type: 3}
       propertyPath: _playerNavigationController
