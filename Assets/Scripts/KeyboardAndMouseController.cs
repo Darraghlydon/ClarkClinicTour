@@ -9,7 +9,8 @@ public class KeyboardAndMouseController : MonoBehaviour
     [SerializeField] private float _keyboardHorizontalSpeed = 2;
 
     [SerializeField] private Camera _mainCamera;
-    [SerializeField] private float _lookSensitivity = 0.2f;
+    [SerializeField] private float _mouseLookSensitivity = 0.2f;
+    [SerializeField] private float _gamepadLookSpeed = 120f;
 
     [SerializeField] private float _mouseSmooth = 30f;
     [SerializeField] private float _verticalRotationDegreesClamp = 50f;
@@ -111,22 +112,24 @@ public class KeyboardAndMouseController : MonoBehaviour
             _cameraTransform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         }
 
-
         if (_pauseLook) return;
-        Vector2 lookVector = _playerActions.Player.Look.ReadValue<Vector2>();
 
-        _targetYRotation += lookVector.x * _lookSensitivity;
+        Vector2 mouseLook = _playerActions.Player.MouseLook.ReadValue<Vector2>();
+        Vector2 gamepadLook = _playerActions.Player.GamepadLook.ReadValue<Vector2>();
 
-        //if (_isMobile)
-        //{
-        //    float mobileTurn = _playerActions.Player.MobileTurn.ReadValue<float>();
-        //    _targetYRotation += mobileTurn * _mobileTurnSpeed * Time.deltaTime;
-        //}
+        _targetYRotation += mouseLook.x * _mouseLookSensitivity;
+        _targetYRotation += gamepadLook.x * _gamepadLookSpeed * Time.deltaTime;
 
         if (!_simpleControlsActive)
         {
-            _targetXRotation -= lookVector.y * _lookSensitivity;
-            _targetXRotation = Mathf.Clamp(_targetXRotation, -_verticalRotationDegreesClamp, _verticalRotationDegreesClamp);
+            _targetXRotation -= mouseLook.y * _mouseLookSensitivity;
+            _targetXRotation -= gamepadLook.y * _gamepadLookSpeed * Time.deltaTime;
+
+            _targetXRotation = Mathf.Clamp(
+                _targetXRotation,
+                -_verticalRotationDegreesClamp,
+                _verticalRotationDegreesClamp
+            );
         }
         else
         {
@@ -135,8 +138,10 @@ public class KeyboardAndMouseController : MonoBehaviour
             _targetXRotation = 0f;
         }
 
-        _xRotation = Mathf.LerpAngle(_xRotation, _targetXRotation, _mouseSmooth * Time.deltaTime);
-        _yRotation = Mathf.LerpAngle(_yRotation, _targetYRotation, _mouseSmooth * Time.deltaTime);
+        float lookLerp = Mathf.Clamp01(_mouseSmooth * Time.deltaTime);
+
+        _xRotation = Mathf.LerpAngle(_xRotation, _targetXRotation, lookLerp);
+        _yRotation = Mathf.LerpAngle(_yRotation, _targetYRotation, lookLerp);
 
         _cameraTransform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         _transform.rotation = Quaternion.Euler(0f, _yRotation + 180f, 0f);

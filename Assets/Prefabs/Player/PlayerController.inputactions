@@ -16,9 +16,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Look",
+                    "name": "MouseLook",
                     "type": "Value",
                     "id": "5dbfc6a1-80f4-4835-a5d6-57e2bd3d7979",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "GamepadLook",
+                    "type": "Value",
+                    "id": "4c03c827-4a06-4d2f-b541-3d7d1d032330",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -165,23 +174,23 @@
                 },
                 {
                     "name": "",
-                    "id": "e3d4318e-aa4a-4c28-8e46-49dc396848a5",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=12,y=12)",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "961d8ce2-4d68-47c6-8514-d0c73dacb560",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Look",
+                    "action": "MouseLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c1bb9f5-5883-4b35-b357-5528d23e2002",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=8,y=12)",
+                    "groups": "",
+                    "action": "GamepadLook",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
